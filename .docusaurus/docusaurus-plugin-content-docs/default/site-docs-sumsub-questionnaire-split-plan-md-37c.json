@@ -1,0 +1,14 @@
+{
+  "id": "sumsub-questionnaire-split-plan",
+  "title": "Sumsub 开户问卷拆分方案",
+  "description": "1. 职业信息 / Employment Information / 職業資訊",
+  "source": "@site/docs/sumsub-questionnaire-split-plan.md",
+  "sourceDirName": ".",
+  "slug": "/sumsub-questionnaire-split-plan",
+  "permalink": "/sumsub-questionnaire-split-plan",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

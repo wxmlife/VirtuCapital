@@ -1,0 +1,29 @@
+{
+  "id": "guides/assets",
+  "title": "查看账户资产",
+  "description": "1. 进入底部“资产”。",
+  "source": "@site/docs/guides/assets.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/assets",
+  "permalink": "/guides/assets",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "id": "assets",
+    "title": "查看账户资产",
+    "slug": "/guides/assets",
+    "sidebar_position": 6
+  },
+  "sidebar": "guideSidebar",
+  "previous": {
+    "title": "开户与身份认证",
+    "permalink": "/account-opening"
+  },
+  "next": {
+    "title": "如何通过国际电汇入金",
+    "permalink": "/guides/deposit-international"
+  }
+}

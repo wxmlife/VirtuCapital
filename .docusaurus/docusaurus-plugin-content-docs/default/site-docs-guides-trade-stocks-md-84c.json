@@ -1,0 +1,30 @@
+{
+  "id": "guides/trade-stocks",
+  "title": "如何买入和卖出股票",
+  "description": "在 Virtu Capital APP 搜索股票、填写订单并查看状态",
+  "source": "@site/docs/guides/trade-stocks.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/trade-stocks",
+  "permalink": "/guides/trade-stocks",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "trade-stocks",
+    "title": "如何买入和卖出股票",
+    "slug": "/guides/trade-stocks",
+    "description": "在 Virtu Capital APP 搜索股票、填写订单并查看状态",
+    "sidebar_position": 3
+  },
+  "sidebar": "guideSidebar",
+  "previous": {
+    "title": "查看股票详情",
+    "permalink": "/guides/stock-detail"
+  },
+  "next": {
+    "title": "查询与筛选订单",
+    "permalink": "/guides/orders"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "guides/watchlist",
+  "title": "管理自选股",
+  "description": "1. 进入底部“自选”。",
+  "source": "@site/docs/guides/watchlist.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/watchlist",
+  "permalink": "/guides/watchlist",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "watchlist",
+    "title": "管理自选股",
+    "slug": "/guides/watchlist",
+    "sidebar_position": 3
+  },
+  "sidebar": "guideSidebar",
+  "previous": {
+    "title": "平台内股票转让",
+    "permalink": "/guides/stock-transfer"
+  },
+  "next": {
+    "title": "查看股票详情",
+    "permalink": "/guides/stock-detail"
+  }
+}

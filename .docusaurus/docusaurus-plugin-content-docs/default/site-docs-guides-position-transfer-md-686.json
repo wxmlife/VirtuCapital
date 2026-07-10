@@ -1,0 +1,29 @@
+{
+  "id": "guides/position-transfer",
+  "title": "转入与转出股票",
+  "description": "进入“资产 → 转仓”。转仓分为“转入股票”和“转出股票”，两者都需要准备券商资料、账户资料和持仓结单。",
+  "source": "@site/docs/guides/position-transfer.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/position-transfer",
+  "permalink": "/guides/position-transfer",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "position-transfer",
+    "title": "转入与转出股票",
+    "slug": "/guides/position-transfer",
+    "sidebar_position": 1
+  },
+  "sidebar": "guideSidebar",
+  "previous": {
+    "title": "如何通过国际电汇出金",
+    "permalink": "/guides/withdraw-international"
+  },
+  "next": {
+    "title": "平台内股票转让",
+    "permalink": "/guides/stock-transfer"
+  }
+}

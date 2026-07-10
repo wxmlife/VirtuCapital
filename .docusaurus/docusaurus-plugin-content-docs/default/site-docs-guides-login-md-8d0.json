@@ -1,0 +1,29 @@
+{
+  "id": "guides/login",
+  "title": "登录与注册",
+  "description": "登录",
+  "source": "@site/docs/guides/login.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/login",
+  "permalink": "/guides/login",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "login",
+    "title": "登录与注册",
+    "slug": "/guides/login",
+    "sidebar_position": 2
+  },
+  "sidebar": "guideSidebar",
+  "previous": {
+    "title": "APP 新手指南",
+    "permalink": "/app-guide"
+  },
+  "next": {
+    "title": "开户与身份认证",
+    "permalink": "/account-opening"
+  }
+}

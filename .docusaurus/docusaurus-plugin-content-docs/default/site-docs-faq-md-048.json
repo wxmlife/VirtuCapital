@@ -1,0 +1,26 @@
+{
+  "id": "faq",
+  "title": "常见问题",
+  "description": "Virtu Capital 入金、交易、出金、转仓和账户常见问题",
+  "source": "@site/docs/faq.md",
+  "sourceDirName": ".",
+  "slug": "/faq",
+  "permalink": "/faq",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "faq",
+    "title": "常见问题",
+    "slug": "/faq",
+    "description": "Virtu Capital 入金、交易、出金、转仓和账户常见问题",
+    "sidebar_position": 3
+  },
+  "sidebar": "guideSidebar",
+  "previous": {
+    "title": "提交意见反馈",
+    "permalink": "/guides/feedback"
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "questionnaireId": "employmentAndFinanci",
+  "clientId": "virtu_capital.com",
+  "title": "职业与财务信息",
+  "reference": "黄河证券 App 开户流程：基础信息、住址资料、投资经验、合规问卷、风险披露、申请确认",
+  "defaultRequired": true,
+  "sections": [
+    {
+      "id": "employment_status_section",
+      "title": "职业性质",
+      "questions": [
+        {
+          "id": "employment_status",
+          "label": "您目前的职业性质是？",
+          "type": "single_select",
+          "required": true,
+          "options": ["受雇", "自雇 / 企业主", "退休", "学生", "家庭主妇 / 主夫", "待业", "其他"]
+        }
+      ]
+    },
+    {
+      "id": "employed_branch",
+      "title": "受雇信息",
+      "showIf": {"employment_status": "受雇"},
+      "questions": [
+        {"id": "employer_name", "label": "公司 / 雇主名称", "type": "text", "required": true},
+        {"id": "employer_industry", "label": "公司所属行业", "type": "single_select", "required": true, "options": ["金融服务", "科技 / 互联网", "贸易 / 零售", "制造业", "房地产 / 建筑", "专业服务", "教育", "医疗", "政府 / 公共机构", "餐饮 / 旅游", "运输 / 物流", "其他"]},
+        {"id": "job_title", "label": "职位 / 职衔", "type": "text", "required": true},
+        {"id": "employment_years", "label": "在现公司任职年限", "type": "single_select", "required": true, "options": ["少于 1 年", "1-3 年", "3-5 年", "5-10 年", "10 年以上"]},
+        {"id": "employer_country_region", "label": "公司所在国家 / 地区", "type": "country_region", "required": true},
+        {"id": "employer_address", "label": "公司详细地址", "type": "textarea", "required": true},
+        {"id": "employer_phone", "label": "公司联系电话", "type": "phone", "required": false}
+      ]
+    },
+    {
+      "id": "self_employed_branch",
+      "title": "自雇 / 企业主信息",
+      "showIf": {"employment_status": "自雇 / 企业主"},
+      "questions": [
+        {"id": "business_name", "label": "公司 / 商号名称", "type": "text", "required": true},
+        {"id": "business_nature", "label": "业务性质 / 行业", "type": "single_select", "required": true, "options": ["金融服务", "科技 / 互联网", "贸易 / 零售", "制造业", "房地产 / 建筑", "专业服务", "教育", "医疗", "餐饮 / 旅游", "运输 / 物流", "其他"]},
+        {"id": "business_role", "label": "您在该业务中的身份", "type": "single_select", "required": true, "options": ["独资经营者", "合伙人", "股东", "董事", "自由职业者", "其他"]},
+        {"id": "business_years", "label": "经营年限", "type": "single_select", "required": true, "options": ["少于 1 年", "1-3 年", "3-5 年", "5-10 年", "10 年以上"]},
+        {"id": "business_country_region", "label": "公司 / 业务所在国家 / 地区", "type": "country_region", "required": true},
+        {"id": "business_address", "label": "公司 / 业务详细地址", "type": "textarea", "required": true},
+        {"id": "business_registration_no", "label": "商业登记 / 注册编号", "type": "text", "required": false}
+      ]
+    },
+    {
+      "id": "retired_branch",
+      "title": "退休信息",
+      "showIf": {"employment_status": "退休"},
+      "questions": [
+        {"id": "retired_previous_industry", "label": "退休前所属行业", "type": "single_select", "required": true, "options": ["金融服务", "科技 / 互联网", "贸易 / 零售", "制造业", "房地产 / 建筑", "专业服务", "教育", "医疗", "政府 / 公共机构", "其他"]},
+        {"id": "retired_previous_position", "label": "退休前职位 / 职衔", "type": "text", "required": true},
+        {"id": "retired_years", "label": "已退休年限", "type": "single_select", "required": true, "options": ["少于 1 年", "1-3 年", "3-5 年", "5-10 年", "10 年以上"]},
+        {"id": "retired_fund_source", "label": "当前主要资金来源", "type": "multi_select", "required": true, "options": ["退休金", "储蓄", "投资收益", "租金收入", "家庭支持", "其他"]}
+      ]
+    },
+    {
+      "id": "student_branch",
+      "title": "学生信息",
+      "showIf": {"employment_status": "学生"},
+      "questions": [
+        {"id": "school_name", "label": "学校名称", "type": "text", "required": true},
+        {"id": "study_level", "label": "就读阶段", "type": "single_select", "required": true, "options": ["高中 / 中专", "大专", "本科", "硕士", "博士", "其他"]},
+        {"id": "expected_graduation_year", "label": "预计毕业年份", "type": "year", "required": true},
+        {"id": "student_fund_source", "label": "交易资金来源", "type": "multi_select", "required": true, "options": ["家庭支持", "个人储蓄", "奖学金", "兼职收入", "投资收益", "其他"]}
+      ]
+    },
+    {
+      "id": "homemaker_branch",
+      "title": "家庭主妇 / 主夫信息",
+      "showIf": {"employment_status": "家庭主妇 / 主夫"},
+      "questions": [
+        {"id": "homemaker_work_experience", "label": "是否曾有工作经验？", "type": "single_select", "required": true, "options": ["是", "否"]},
+        {"id": "homemaker_previous_industry", "label": "过往工作所属行业", "type": "single_select", "required": true, "showIf": {"homemaker_work_experience": "是"}, "options": ["金融服务", "科技 / 互联网", "贸易 / 零售", "制造业", "房地产 / 建筑", "专业服务", "教育", "医疗", "政府 / 公共机构", "其他"]},
+        {"id": "homemaker_previous_position", "label": "过往职位 / 职衔", "type": "text", "required": true, "showIf": {"homemaker_work_experience": "是"}},
+        {"id": "homemaker_work_years", "label": "过往累计工作年限", "type": "single_select", "required": true, "showIf": {"homemaker_work_experience": "是"}, "options": ["少于 1 年", "1-3 年", "3-5 年", "5-10 年", "10 年以上"]},
+        {"id": "homemaker_fund_source", "label": "当前主要资金来源", "type": "multi_select", "required": true, "options": ["配偶 / 家庭支持", "个人储蓄", "投资收益", "租金收入", "遗产 / 赠与", "其他"]}
+      ]
+    },
+    {
+      "id": "unemployed_branch",
+      "title": "待业信息",
+      "showIf": {"employment_status": "待业"},
+      "questions": [
+        {"id": "unemployed_work_experience", "label": "是否曾有工作经验？", "type": "single_select", "required": true, "options": ["是", "否"]},
+        {"id": "unemployed_previous_industry", "label": "过往工作所属行业", "type": "single_select", "required": true, "showIf": {"unemployed_work_experience": "是"}, "options": ["金融服务", "科技 / 互联网", "贸易 / 零售", "制造业", "房地产 / 建筑", "专业服务", "教育", "医疗", "政府 / 公共机构", "其他"]},
+        {"id": "unemployed_previous_position", "label": "过往职位 / 职衔", "type": "text", "required": true, "showIf": {"unemployed_work_experience": "是"}},
+        {"id": "unemployed_work_years", "label": "过往累计工作年限", "type": "single_select", "required": true, "showIf": {"unemployed_work_experience": "是"}, "options": ["少于 1 年", "1-3 年", "3-5 年", "5-10 年", "10 年以上"]},
+        {"id": "unemployed_duration", "label": "当前待业时长", "type": "single_select", "required": true, "options": ["少于 3 个月", "3-6 个月", "6-12 个月", "1-3 年", "3 年以上"]},
+        {"id": "unemployed_fund_source", "label": "当前主要资金来源", "type": "multi_select", "required": true, "options": ["个人储蓄", "家庭支持", "投资收益", "租金收入", "遣散费 / 补偿金", "遗产 / 赠与", "其他"]}
+      ]
+    },
+    {
+      "id": "financial_profile",
+      "title": "收入与资产",
+      "questions": [
+        {"id": "annual_income", "label": "个人年收入范围", "type": "single_select", "required": true, "options": ["低于 HKD 150,000", "HKD 150,000-300,000", "HKD 300,001-500,000", "HKD 500,001-1,000,000", "HKD 1,000,001-3,000,000", "高于 HKD 3,000,000"]},
+        {"id": "net_worth", "label": "个人净资产范围", "type": "single_select", "required": true, "options": ["低于 HKD 500,000", "HKD 500,000-1,000,000", "HKD 1,000,001-3,000,000", "HKD 3,000,001-8,000,000", "HKD 8,000,001-40,000,000", "高于 HKD 40,000,000"]},
+        {"id": "liquid_assets", "label": "可投资 / 流动资产范围", "type": "single_select", "required": true, "options": ["低于 HKD 100,000", "HKD 100,000-500,000", "HKD 500,001-1,000,000", "HKD 1,000,001-3,000,000", "HKD 3,000,001-8,000,000", "高于 HKD 8,000,000"]},
+        {"id": "source_of_wealth", "label": "主要财富来源", "type": "multi_select", "required": true, "options": ["薪金 / 就业收入", "经营 / 公司利润", "投资收益", "个人储蓄", "退休金", "租金收入", "遗产", "家庭赠与", "出售资产", "其他"]},
+        {"id": "source_of_funds", "label": "本账户入金资金来源", "type": "multi_select", "required": true, "options": ["银行储蓄", "薪金收入", "经营收入", "投资收益", "出售资产所得", "租金收入", "退休金", "家庭赠与", "其他"]},
+        {"id": "initial_deposit_amount", "label": "预计首次入金金额", "type": "single_select", "required": true, "options": ["低于 HKD 10,000", "HKD 10,000-50,000", "HKD 50,001-200,000", "HKD 200,001-500,000", "HKD 500,001-1,000,000", "高于 HKD 1,000,000"]},
+        {"id": "expected_monthly_deposit", "label": "预计每月入金金额", "type": "single_select", "required": true, "options": ["无固定入金", "低于 HKD 10,000", "HKD 10,000-50,000", "HKD 50,001-200,000", "高于 HKD 200,000"]}
+      ]
+    },
+    {
+      "id": "investment_experience",
+      "title": "投资经验",
+      "questions": [
+        {"id": "investment_objective", "label": "投资目标", "type": "multi_select", "required": true, "options": ["资本增值", "股息 / 利息收入", "短线交易", "长期投资", "对冲", "资产配置", "其他"]},
+        {"id": "investment_horizon", "label": "预计投资年期", "type": "single_select", "required": true, "options": ["少于 1 年", "1-3 年", "3-5 年", "5 年以上"]},
+        {"id": "risk_tolerance", "label": "可承受投资风险程度", "type": "single_select", "required": true, "options": ["低", "中低", "中", "中高", "高"]},
+        {"id": "stocks_experience", "label": "股票投资经验", "type": "single_select", "required": true, "options": ["无经验", "少于 1 年", "1-3 年", "3-5 年", "5 年以上"]},
+        {"id": "funds_bonds_experience", "label": "基金 / 债券投资经验", "type": "single_select", "required": true, "options": ["无经验", "少于 1 年", "1-3 年", "3-5 年", "5 年以上"]},
+        {"id": "derivatives_experience", "label": "衍生产品 / 期权 / 期货投资经验", "type": "single_select", "required": true, "options": ["无经验", "少于 1 年", "1-3 年", "3-5 年", "5 年以上"]},
+        {"id": "margin_experience", "label": "保证金 / 杠杆交易经验", "type": "single_select", "required": true, "options": ["无经验", "少于 1 年", "1-3 年", "3-5 年", "5 年以上"]},
+        {"id": "virtual_assets_experience", "label": "虚拟资产相关产品投资经验", "type": "single_select", "required": true, "options": ["无经验", "少于 1 年", "1-3 年", "3-5 年", "5 年以上"]},
+        {"id": "trade_frequency", "label": "过去 12 个月交易频率", "type": "single_select", "required": true, "options": ["无交易", "1-5 次", "6-20 次", "21-50 次", "50 次以上"]}
+      ]
+    },
+    {
+      "id": "compliance_declarations",
+      "title": "合规声明",
+      "questions": [
+        {"id": "third_party_funds", "label": "本账户资金是否来自第三方，或由第三方实际控制？", "type": "single_select", "required": true, "options": ["否", "是"], "reviewIf": "是"},
+        {"id": "beneficial_owner_self", "label": "您是否为本账户的最终实益拥有人？", "type": "single_select", "required": true, "options": ["是", "否"], "reviewIf": "否"},
+        {"id": "pep_status", "label": "您或您的直系亲属 / 关系密切人士是否为政治公众人物？", "type": "single_select", "required": true, "options": ["否", "是"], "reviewIf": "是"},
+        {"id": "tax_residence_confirm", "label": "您是否确认已如实申报税务居民身份？", "type": "single_select", "required": true, "options": ["是", "否"], "reviewIf": "否"},
+        {"id": "bankruptcy_status", "label": "您是否正处于破产、清盘或债务重组程序？", "type": "single_select", "required": true, "options": ["否", "是"], "reviewIf": "是"},
+        {"id": "sanctioned_country_connection", "label": "您是否与受制裁国家 / 地区存在居住、经营、资金来源或交易关系？", "type": "single_select", "required": true, "options": ["否", "是"], "reviewIf": "是"}
+      ]
+    },
+    {
+      "id": "risk_acknowledgements",
+      "title": "风险确认",
+      "questions": [
+        {"id": "risk_disclosure_ack", "label": "我已阅读并理解证券、基金、债券、衍生产品、保证金交易及其他相关产品的风险披露，明白投资可能导致本金损失。", "type": "checkbox", "required": true},
+        {"id": "info_accuracy_ack", "label": "我确认以上职业、财务、投资经验及合规声明均真实、准确、完整，并同意如资料变更会及时通知 Virtu Capital。", "type": "checkbox", "required": true}
+      ]
+    }
+  ]
+}

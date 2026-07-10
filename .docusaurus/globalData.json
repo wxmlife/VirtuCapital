@@ -1,0 +1,122 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/",
+          "mainDocId": "index",
+          "docs": [
+            {
+              "id": "account-and-security",
+              "path": "/account-and-security",
+              "sidebar": "guideSidebar"
+            },
+            {
+              "id": "account-opening",
+              "path": "/account-opening",
+              "sidebar": "guideSidebar"
+            },
+            {
+              "id": "app-guide",
+              "path": "/app-guide",
+              "sidebar": "guideSidebar"
+            },
+            {
+              "id": "education/stock-selection-basics",
+              "path": "/education/stock-selection-basics",
+              "sidebar": "guideSidebar"
+            },
+            {
+              "id": "faq",
+              "path": "/faq",
+              "sidebar": "guideSidebar"
+            },
+            {
+              "id": "guides/assets",
+              "path": "/guides/assets",
+              "sidebar": "guideSidebar"
+            },
+            {
+              "id": "guides/deposit-international",
+              "path": "/guides/deposit-international",
+              "sidebar": "guideSidebar"
+            },
+            {
+              "id": "guides/feedback",
+              "path": "/guides/feedback",
+              "sidebar": "guideSidebar"
+            },
+            {
+              "id": "guides/login",
+              "path": "/guides/login",
+              "sidebar": "guideSidebar"
+            },
+            {
+              "id": "guides/market",
+              "path": "/guides/market",
+              "sidebar": "guideSidebar"
+            },
+            {
+              "id": "guides/orders",
+              "path": "/guides/orders",
+              "sidebar": "guideSidebar"
+            },
+            {
+              "id": "guides/position-transfer",
+              "path": "/guides/position-transfer",
+              "sidebar": "guideSidebar"
+            },
+            {
+              "id": "guides/settings",
+              "path": "/guides/settings",
+              "sidebar": "guideSidebar"
+            },
+            {
+              "id": "guides/stock-detail",
+              "path": "/guides/stock-detail",
+              "sidebar": "guideSidebar"
+            },
+            {
+              "id": "guides/stock-transfer",
+              "path": "/guides/stock-transfer",
+              "sidebar": "guideSidebar"
+            },
+            {
+              "id": "guides/trade-stocks",
+              "path": "/guides/trade-stocks",
+              "sidebar": "guideSidebar"
+            },
+            {
+              "id": "guides/watchlist",
+              "path": "/guides/watchlist",
+              "sidebar": "guideSidebar"
+            },
+            {
+              "id": "guides/withdraw-international",
+              "path": "/guides/withdraw-international",
+              "sidebar": "guideSidebar"
+            },
+            {
+              "id": "index",
+              "path": "/"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "guideSidebar": {
+              "link": {
+                "path": "/app-guide",
+                "label": "APP 新手指南"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

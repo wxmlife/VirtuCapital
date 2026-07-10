@@ -1,0 +1,29 @@
+{
+  "id": "guides/settings",
+  "title": "设置语言与偏好",
+  "description": "1. 进入“我的 → 设置”。",
+  "source": "@site/docs/guides/settings.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/settings",
+  "permalink": "/guides/settings",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "id": "settings",
+    "title": "设置语言与偏好",
+    "slug": "/guides/settings",
+    "sidebar_position": 12
+  },
+  "sidebar": "guideSidebar",
+  "previous": {
+    "title": "账户与安全",
+    "permalink": "/account-and-security"
+  },
+  "next": {
+    "title": "提交意见反馈",
+    "permalink": "/guides/feedback"
+  }
+}

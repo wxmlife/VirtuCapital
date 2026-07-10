@@ -1,0 +1,29 @@
+{
+  "id": "guides/stock-detail",
+  "title": "查看股票详情",
+  "description": "股票详情页包含最新价、涨跌幅、开盘/最高/最低、成交量、成交额、估值数据、图表、逐笔成交和买卖盘。",
+  "source": "@site/docs/guides/stock-detail.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/stock-detail",
+  "permalink": "/guides/stock-detail",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "id": "stock-detail",
+    "title": "查看股票详情",
+    "slug": "/guides/stock-detail",
+    "sidebar_position": 5
+  },
+  "sidebar": "guideSidebar",
+  "previous": {
+    "title": "管理自选股",
+    "permalink": "/guides/watchlist"
+  },
+  "next": {
+    "title": "如何买入和卖出股票",
+    "permalink": "/guides/trade-stocks"
+  }
+}
