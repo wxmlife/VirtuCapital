@@ -1,13 +1,15 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 
+const isGitHubPages = process.env.DEPLOY_TARGET === 'github-pages';
+
 export default {
   title: 'Virtu Capital 帮助中心',
   tagline: '面向投资者的产品使用指南',
   favicon: 'img/logoVC.png',
-  url: 'https://help.virtucapital.com',
-  baseUrl: '/',
-  organizationName: 'virtucapital',
-  projectName: 'help-center',
+  url: isGitHubPages ? 'https://wxmlife.github.io' : 'https://help.virtucapital.com',
+  baseUrl: isGitHubPages ? '/virtu-capital-help-center/' : '/',
+  organizationName: 'wxmlife',
+  projectName: 'virtu-capital-help-center',
   onBrokenLinks: 'throw',
   markdown: {hooks: {onBrokenMarkdownLinks: 'warn'}},
   i18n: {defaultLocale: 'zh-Hans', locales: ['zh-Hans']},
