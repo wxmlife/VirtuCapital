@@ -1,14 +1,21 @@
 # Virtu Capital 帮助中心
 
-这是一个由 Markdown 驱动的 APP 使用指南网站，视觉结构参考主流金融 APP 帮助中心。
+这是一个由 Markdown 驱动的使用指南仓库，包含两套独立网站：
+
+- 根目录：面向普通投资者的公开 APP 使用指南。
+- `admin-guide/`：面向获授权管理员、运营和风控人员的内部管理员手册。
+
+两个站点共享开发仓库和视觉规范，但拥有独立的内容、导航、构建产物与部署出口。公开用户站不会生成管理员手册页面，也不提供管理员站入口。
 
 ## 内容维护
 
-- 主指南：`docs/VirtuCapital_APP用户指南.md`
-- 截图目录：`docs/assets/`
+- 用户指南：`docs/`
+- 用户截图：`docs/assets/`
+- 管理员指南：`admin-guide/docs/`
+- 管理员截图：`admin-guide/docs/assets/`
 - 新文章模板：`docs/新建指南模板.md.example`
-- 全站视觉：`src/css/custom.css`
-- 左侧目录：`sidebars.js`
+- 用户站视觉与目录：`src/css/custom.css`、`sidebars.js`
+- 管理员站视觉与目录：`admin-guide/src/css/custom.css`、`admin-guide/sidebars.js`
 
 编辑 Markdown 或替换同名截图后，网页会自动更新，无需修改 HTML。
 
@@ -16,19 +23,21 @@
 
 ```bash
 npm install
-npm start
+npm run start:user
+npm run start:admin
 ```
 
-默认打开 `http://localhost:3000`。修改 Markdown 后开发服务器会自动刷新。
+用户站默认使用 `http://localhost:3000`，管理员站使用 `http://localhost:3001`。修改对应 Markdown 后开发服务器会自动刷新。
 
 ## 生产构建
 
 ```bash
-npm run build
-npm run serve
+npm run build:user
+npm run build:admin
+npm run build:all
 ```
 
-构建产物位于 `build/`，可部署到任意静态网站托管服务。
+用户站构建产物位于 `build/`，管理员站构建产物位于 `admin-guide/build/`。管理员站上线时必须另行配置身份认证、VPN 或访问白名单，不应直接部署到公开 GitHub Pages。
 
 ## 推荐写作规范
 

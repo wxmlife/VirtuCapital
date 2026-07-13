@@ -1,0 +1,44 @@
+:root {
+  --ifm-color-primary: #d98f20;
+  --ifm-color-primary-dark: #c27b13;
+  --ifm-color-primary-darker: #b87312;
+  --ifm-color-primary-darkest: #965e0f;
+  --ifm-color-primary-light: #e7a538;
+  --ifm-color-primary-lighter: #efb44d;
+  --ifm-color-primary-lightest: #fff4df;
+  --ifm-navbar-height: 68px;
+  --ifm-font-family-base: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --ifm-heading-font-weight: 700;
+  --ifm-line-height-base: 1.75;
+  --doc-sidebar-width: 286px;
+}
+
+body { background: #fff; color: #20212a; }
+.navbar { background: #fff; border-bottom: 1px solid #eceff3; box-shadow: 0 1px 2px rgba(15, 23, 42, .06); padding: 0 28px; }
+.navbar__logo { height: 38px; width: 38px; object-fit: contain; }
+.navbar__title { font-size: 18px; }
+.navbar-start { background: var(--ifm-color-primary); border-radius: 999px; color: #fff !important; padding: 9px 18px; }
+.theme-doc-sidebar-container { border-right: 1px solid #eceff3 !important; }
+.menu { padding: 24px 16px; font-size: 14px; }
+.menu__link { border-radius: 9px; }
+.menu__link--active { background: #f7f7f8; color: var(--ifm-color-primary); font-weight: 650; }
+.theme-doc-markdown { max-width: 980px; }
+.theme-doc-markdown h1 { font-size: 2.35rem; letter-spacing: -.035em; }
+.theme-doc-markdown h2 { border-top: 1px solid #eceff3; font-size: 1.6rem; margin-top: 3rem; padding-top: 2rem; }
+.theme-doc-markdown h3 { font-size: 1.2rem; margin-top: 2rem; }
+.theme-doc-markdown img { display: block; width: min(100%, 960px); max-height: 760px; object-fit: contain; margin: 24px auto 38px; border-radius: 12px; box-shadow: 0 8px 24px rgba(15, 23, 42, .08), 0 0 0 1px rgba(15, 23, 42, .06); }
+.theme-doc-markdown table { display: table; width: 100%; }
+.alert { border: 1px solid #e5e7eb; border-radius: 12px; box-shadow: none; }
+.pagination-nav__link { border: 1px solid #dadee5; border-radius: 12px; }
+.footer { border-top: 1px solid #eceff3; }
+
+.docs-doc-id-index .theme-doc-markdown table { border-collapse: separate; border-spacing: 14px; margin: 12px -14px 28px; width: calc(100% + 28px); overflow: visible; }
+.docs-doc-id-index .theme-doc-markdown td { background: #fff; border: 1px solid #dadee5; border-radius: 14px; box-shadow: 0 2px 8px rgba(15, 23, 42, .045); padding: 20px 22px; vertical-align: top; width: 50%; }
+.docs-doc-id-index .theme-doc-markdown td:hover { box-shadow: 0 6px 18px rgba(15, 23, 42, .075); transform: translateY(-1px); }
+.docs-doc-id-index .theme-doc-markdown td a { display: block; font-size: 1.08rem; font-weight: 700; margin-bottom: 6px; }
+
+@media (max-width: 996px) {
+  .navbar { padding: 0 14px; }
+  .theme-doc-markdown h1 { font-size: 1.9rem; }
+  .docs-doc-id-index .theme-doc-markdown td { display: block; width: auto; margin-bottom: 8px; }
+}

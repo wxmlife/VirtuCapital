@@ -4,7 +4,12 @@
   "private": true,
   "scripts": {
     "start": "docusaurus start",
+    "start:user": "docusaurus start",
+    "start:admin": "npm --prefix admin-guide start",
     "build": "docusaurus build",
+    "build:user": "docusaurus build",
+    "build:admin": "npm --prefix admin-guide run build",
+    "build:all": "npm run build:user && npm run build:admin",
     "serve": "docusaurus serve"
   },
   "dependencies": {
