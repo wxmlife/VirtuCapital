@@ -24,20 +24,15 @@ export default {
             'guides/deposit-international',
             'guides/withdraw-international',
             'guides/position-transfer',
-            'guides/stock-transfer'
+            'guides/stock-transfer',
+            'guides/statements'
           ]
         },
         {
           type: 'category',
           label: '股票交易',
           collapsed: true,
-          items: ['guides/watchlist', 'guides/stock-detail', 'guides/trade-stocks', 'guides/orders']
-        },
-        {
-          type: 'category',
-          label: '市场探索',
-          collapsed: true,
-          items: ['guides/market']
+          items: ['guides/watchlist', 'guides/market', 'guides/stock-detail', 'guides/trade-stocks', 'guides/orders']
         },
         {
           type: 'category',
@@ -47,9 +42,9 @@ export default {
         },
         {
           type: 'category',
-          label: '账户与支持',
+          label: '账户支持',
           collapsed: true,
-          items: ['account-and-security', 'guides/settings', 'guides/feedback']
+          items: ['guides/profile', 'account-and-security', 'guides/settings', 'guides/feedback']
         }
       ]
     },
