@@ -32,6 +32,84 @@ body { background: #fff; color: #20212a; }
 .pagination-nav__link { border: 1px solid #dadee5; border-radius: 12px; }
 .footer { border-top: 1px solid #eceff3; }
 
+.admin-auth-page {
+  align-items: center;
+  background: #0f172a;
+  display: flex;
+  min-height: 100vh;
+  padding: 32px;
+}
+
+.admin-auth-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .28);
+  margin: 0 auto;
+  max-width: 420px;
+  padding: 36px;
+  width: 100%;
+}
+
+.admin-auth-card img {
+  height: 48px;
+  margin-bottom: 18px;
+  width: 48px;
+}
+
+.admin-auth-card h1 {
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+
+.admin-auth-kicker,
+.admin-auth-copy {
+  color: #64748b;
+  margin: 0 0 8px;
+}
+
+.admin-auth-card label {
+  color: #334155;
+  display: block;
+  font-weight: 650;
+  margin: 24px 0 8px;
+}
+
+.admin-auth-card input {
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font: inherit;
+  padding: 12px 14px;
+  width: 100%;
+}
+
+.admin-auth-card input:focus {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px rgba(217, 143, 32, .18);
+  outline: none;
+}
+
+.admin-auth-card button {
+  background: var(--ifm-color-primary);
+  border: 0;
+  border-radius: 999px;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  margin-top: 18px;
+  padding: 12px 18px;
+  width: 100%;
+}
+
+.admin-auth-error {
+  color: #dc2626;
+  font-size: 14px;
+  margin: 8px 0 0;
+}
+
 .docs-doc-id-index .theme-doc-markdown table { border-collapse: separate; border-spacing: 14px; margin: 12px -14px 28px; width: calc(100% + 28px); overflow: visible; }
 .docs-doc-id-index .theme-doc-markdown td { background: #fff; border: 1px solid #dadee5; border-radius: 14px; box-shadow: 0 2px 8px rgba(15, 23, 42, .045); padding: 20px 22px; vertical-align: top; width: 50%; }
 .docs-doc-id-index .theme-doc-markdown td:hover { box-shadow: 0 6px 18px rgba(15, 23, 42, .075); transform: translateY(-1px); }

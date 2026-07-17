@@ -1,0 +1,46 @@
+{
+  "link.title.产品": {
+    "message": "產品",
+    "description": "The title of the footer links column with title=产品 in the footer"
+  },
+  "link.title.支持": {
+    "message": "支持",
+    "description": "The title of the footer links column with title=支持 in the footer"
+  },
+  "link.title.合规": {
+    "message": "合規",
+    "description": "The title of the footer links column with title=合规 in the footer"
+  },
+  "link.item.label.APP 新手指南": {
+    "message": "APP 新手指南",
+    "description": "The label of footer link with label=APP 新手指南 linking to /app-guide"
+  },
+  "link.item.label.功能总览": {
+    "message": "功能總覽",
+    "description": "The label of footer link with label=功能总览 linking to /"
+  },
+  "link.item.label.帮助中心": {
+    "message": "幫助中心",
+    "description": "The label of footer link with label=帮助中心 linking to /"
+  },
+  "link.item.label.意见反馈": {
+    "message": "意見反饋",
+    "description": "The label of footer link with label=意见反馈 linking to /guides/feedback"
+  },
+  "link.item.label.常见问题": {
+    "message": "常見問題",
+    "description": "The label of footer link with label=常见问题 linking to /faq"
+  },
+  "link.item.label.账户与安全": {
+    "message": "賬戶與安全",
+    "description": "The label of footer link with label=账户与安全 linking to /account-and-security"
+  },
+  "link.item.label.开户与身份认证": {
+    "message": "開戶與身份認證",
+    "description": "The label of footer link with label=开户与身份认证 linking to /account-opening"
+  },
+  "copyright": {
+    "message": "Copyright © 2026 Virtu Capital. All rights reserved.",
+    "description": "The footer copyright"
+  }
+}

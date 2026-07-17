@@ -1,0 +1,38 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.adminSidebar.category.管理员使用指南": {
+    "message": "管理員使用指南",
+    "description": "The label for category '管理员使用指南' in sidebar 'adminSidebar'"
+  },
+  "sidebar.adminSidebar.category.入门与仪表盘": {
+    "message": "入門與儀表盤",
+    "description": "The label for category '入门与仪表盘' in sidebar 'adminSidebar'"
+  },
+  "sidebar.adminSidebar.category.用户与客户管理": {
+    "message": "用戶與客戶管理",
+    "description": "The label for category '用户与客户管理' in sidebar 'adminSidebar'"
+  },
+  "sidebar.adminSidebar.category.股票与市场数据": {
+    "message": "股票與市場數據",
+    "description": "The label for category '股票与市场数据' in sidebar 'adminSidebar'"
+  },
+  "sidebar.adminSidebar.category.审核与风控": {
+    "message": "審覈與風控",
+    "description": "The label for category '审核与风控' in sidebar 'adminSidebar'"
+  },
+  "sidebar.adminSidebar.category.系统管理": {
+    "message": "系統管理",
+    "description": "The label for category '系统管理' in sidebar 'adminSidebar'"
+  },
+  "sidebar.adminSidebar.category.消息与支持": {
+    "message": "消息與支持",
+    "description": "The label for category '消息与支持' in sidebar 'adminSidebar'"
+  },
+  "sidebar.adminSidebar.category.参考资料": {
+    "message": "參考資料",
+    "description": "The label for category '参考资料' in sidebar 'adminSidebar'"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "Virtu Capital",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Virtu Capital",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.帮助中心": {
+    "message": "幫助中心",
+    "description": "Navbar item with label 帮助中心"
+  },
+  "item.label.APP 新手指南": {
+    "message": "APP 新手指南",
+    "description": "Navbar item with label APP 新手指南"
+  },
+  "item.label.开始使用": {
+    "message": "開始使用",
+    "description": "Navbar item with label 开始使用"
+  }
+}

@@ -7,12 +7,20 @@ export default {
   tagline: '面向投资者的产品使用指南',
   favicon: 'img/logoVC.png',
   url: isGitHubPages ? 'https://wxmlife.github.io' : 'https://help.virtucapital.com',
-  baseUrl: isGitHubPages ? '/virtu-capital-help-center/' : '/',
+  baseUrl: isGitHubPages ? '/VirtuCapital/' : '/',
   organizationName: 'wxmlife',
   projectName: 'virtu-capital-help-center',
   onBrokenLinks: 'throw',
   markdown: {hooks: {onBrokenMarkdownLinks: 'warn'}},
-  i18n: {defaultLocale: 'zh-Hans', locales: ['zh-Hans']},
+  i18n: {
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans', 'zh-Hant', 'en'],
+    localeConfigs: {
+      'zh-Hans': {label: '简体中文'},
+      'zh-Hant': {label: '繁體中文'},
+      en: {label: 'English'}
+    }
+  },
   presets: [
     ['classic', {
       docs: {
@@ -48,6 +56,7 @@ export default {
         {to: '/', label: '帮助中心', position: 'left'},
         {to: '/app-guide', label: 'APP 新手指南', position: 'left'},
         {to: '/app-guide', label: '开始使用', position: 'right', className: 'navbar-download'},
+        {type: 'localeDropdown', position: 'right'},
         {type: 'search', position: 'right'}
       ]
     },
