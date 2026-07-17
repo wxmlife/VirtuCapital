@@ -1,7 +1,7 @@
 ---
 id: profile
 title: 使用“我的”页面
-slug: /guides/profile
+slug: /app-guide/guides/profile
 sidebar_position: 1
 ---
 

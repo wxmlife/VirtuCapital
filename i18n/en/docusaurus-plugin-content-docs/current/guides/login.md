@@ -1,7 +1,7 @@
 ---
 id: login
 title: Login and registration
-slug: /guides/login
+slug: /app-guide/guides/login
 sidebar_position: 2
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: account-opening
 title: Account opening and identity authentication
-slug: /account-opening
+slug: /app-guide/account-opening
 sidebar_position: 1
 ---
 

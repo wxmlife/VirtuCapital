@@ -1,12 +1,13 @@
 ---
 id: account-and-security
 title: Account and Security
+slug: /app-guide/account-and-security
 sidebar_position: 2
 ---
 
 #Account and Security
 
-For account information, login password, transaction password and security suggestions, please view [Account and Security](/account-and-security), [Language and Preferences](/guides/settings) and [FAQ](/faq).
+For account information, login password, transaction password and security suggestions, please view [Account and Security](/app-guide/account-and-security), [Language and Preferences](/app-guide/guides/settings) and [FAQ](/faq).
 
 ![Account profile page](./assets/11_account_info.png)
 

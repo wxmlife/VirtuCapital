@@ -4,3 +4,9 @@ build/
 .DS_Store
 *.log
 .tmp_*
+tmp/
+output/
+archive/
+assets/
+specs/
+hatch-pet-khepri/

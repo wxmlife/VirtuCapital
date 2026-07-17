@@ -1,12 +1,13 @@
 ---
 id: account-and-security
 title: 賬戶與安全
+slug: /app-guide/account-and-security
 sidebar_position: 2
 ---
 
 # 賬戶與安全
 
-賬戶資料、登錄密碼、交易密碼與安全建議請查看 [賬戶與安全](/account-and-security)、[設置語言與偏好](/guides/settings) 和 [常見問題](/faq)。
+賬戶資料、登錄密碼、交易密碼與安全建議請查看 [賬戶與安全](/app-guide/account-and-security)、[設置語言與偏好](/app-guide/guides/settings) 和 [常見問題](/faq)。
 
 ![賬戶資料頁面](./assets/11_account_info.png)
 

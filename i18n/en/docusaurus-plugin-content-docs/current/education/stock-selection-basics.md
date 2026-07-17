@@ -1,5 +1,6 @@
 ---
 title: Getting Started with Stock Picking
+slug: /app-guide/education/stock-selection-basics
 sidebar_position: 1
 ---
 

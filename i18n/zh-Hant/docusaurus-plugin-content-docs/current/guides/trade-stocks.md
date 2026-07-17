@@ -1,7 +1,7 @@
 ---
 id: trade-stocks
 title: 如何買入和賣出股票
-slug: /guides/trade-stocks
+slug: /app-guide/guides/trade-stocks
 description: 在 Virtu Capital APP 搜索股票、填寫訂單並查看狀態
 sidebar_position: 3
 ---

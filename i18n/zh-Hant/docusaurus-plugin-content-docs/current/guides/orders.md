@@ -1,7 +1,7 @@
 ---
 id: orders
 title: 查詢與篩選訂單
-slug: /guides/orders
+slug: /app-guide/guides/orders
 sidebar_position: 10
 ---
 

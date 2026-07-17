@@ -1,7 +1,7 @@
 ---
 id: feedback
 title: 提交意见反馈
-slug: /guides/feedback
+slug: /app-guide/guides/feedback
 sidebar_position: 11
 ---
 

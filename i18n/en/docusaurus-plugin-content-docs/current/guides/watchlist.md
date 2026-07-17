@@ -1,7 +1,7 @@
 ---
 id: watchlist
 title: Manage discretionary stocks
-slug: /guides/watchlist
+slug: /app-guide/guides/watchlist
 sidebar_position: 3
 ---
 

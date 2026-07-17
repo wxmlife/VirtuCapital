@@ -1,7 +1,7 @@
 ---
 id: watchlist
 title: 管理自选股
-slug: /guides/watchlist
+slug: /app-guide/guides/watchlist
 sidebar_position: 3
 ---
 

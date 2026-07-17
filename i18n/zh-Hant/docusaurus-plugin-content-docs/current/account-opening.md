@@ -1,7 +1,7 @@
 ---
 id: account-opening
 title: 開戶與身份認證
-slug: /account-opening
+slug: /app-guide/account-opening
 sidebar_position: 1
 ---
 

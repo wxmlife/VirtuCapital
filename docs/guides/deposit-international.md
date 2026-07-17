@@ -1,7 +1,7 @@
 ---
 id: deposit-international
 title: 入金说明
-slug: /guides/deposit-international
+slug: /app-guide/guides/deposit-international
 description: Virtu Capital APP 国际电汇入金完整操作教程
 sidebar_position: 1
 ---

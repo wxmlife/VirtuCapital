@@ -1,7 +1,7 @@
 ---
 id: assets
 title: 查看账户资产
-slug: /guides/assets
+slug: /app-guide/guides/assets
 sidebar_position: 6
 ---
 

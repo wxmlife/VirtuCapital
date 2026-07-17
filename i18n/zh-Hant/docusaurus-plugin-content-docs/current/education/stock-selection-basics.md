@@ -1,5 +1,6 @@
 ---
 title: 選股入門
+slug: /app-guide/education/stock-selection-basics
 sidebar_position: 1
 ---
 

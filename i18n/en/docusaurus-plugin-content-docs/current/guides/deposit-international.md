@@ -1,7 +1,7 @@
 ---
 id: deposit-international
 title: How to deposit money via international wire transfer
-slug: /guides/deposit-international
+slug: /app-guide/guides/deposit-international
 description: Virtu Capital APP International Wire Transfer Complete Operation Tutorial
 sidebar_position: 1
 ---

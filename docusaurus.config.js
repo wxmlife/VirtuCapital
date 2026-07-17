@@ -26,15 +26,7 @@ export default {
       docs: {
         routeBasePath: '/',
         sidebarPath: './sidebars.js',
-        exclude: [
-          'VirtuCapital功能树状思维导图.md',
-          'VirtuCapital技术栈与开发者分析指南.md',
-          'VirtuCapital_APP用户指南.md',
-          'APK深度拆解覆盖清单.md',
-          'sumsub-职业与财务问卷-黄河证券参考.md',
-          'sumsub-questionnaire-split-plan.md',
-          '**/*.md.example'
-        ],
+        exclude: ['**/*.md.example'],
         breadcrumbs: true,
         // 当前素材仓库尚无 Git 提交记录；正式接入版本库后可改为 true。
         showLastUpdateTime: false,
@@ -42,6 +34,25 @@ export default {
       },
       blog: false,
       theme: {customCss: './src/css/custom.css'}
+    }]
+  ],
+  plugins: [
+    ['@docusaurus/plugin-client-redirects', {
+      createRedirects(existingPath) {
+        if (existingPath.startsWith('/app-guide/guides/')) {
+          return [existingPath.replace('/app-guide', '')];
+        }
+        if (existingPath.startsWith('/app-guide/education/')) {
+          return [existingPath.replace('/app-guide', '')];
+        }
+        if (existingPath === '/app-guide/account-opening') {
+          return ['/account-opening'];
+        }
+        if (existingPath === '/app-guide/account-and-security') {
+          return ['/account-and-security'];
+        }
+        return undefined;
+      }
     }]
   ],
   themeConfig: {
@@ -64,8 +75,8 @@ export default {
       style: 'light',
       links: [
         {title: '产品', items: [{label: 'APP 新手指南', to: '/app-guide'}, {label: '功能总览', to: '/'}]},
-        {title: '支持', items: [{label: '帮助中心', to: '/'}, {label: '意见反馈', to: '/guides/feedback'}, {label: '常见问题', to: '/faq'}]},
-        {title: '合规', items: [{label: '账户与安全', to: '/account-and-security'}, {label: '开户与身份认证', to: '/account-opening'}]}
+        {title: '支持', items: [{label: '帮助中心', to: '/'}, {label: '意见反馈', to: '/app-guide/guides/feedback'}, {label: '常见问题', to: '/faq'}]},
+        {title: '合规', items: [{label: '账户与安全', to: '/app-guide/account-and-security'}, {label: '开户', to: '/app-guide/account-opening'}]}
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Virtu Capital. All rights reserved.`
     },

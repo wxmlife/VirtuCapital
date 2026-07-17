@@ -1,7 +1,7 @@
 ---
 id: feedback
 title: Submit feedback
-slug: /guides/feedback
+slug: /app-guide/guides/feedback
 sidebar_position: 11
 ---
 

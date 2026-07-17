@@ -1,7 +1,7 @@
 ---
 id: market
 title: 查看市場行情
-slug: /guides/market
+slug: /app-guide/guides/market
 sidebar_position: 4
 ---
 

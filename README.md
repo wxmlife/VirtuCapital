@@ -13,11 +13,20 @@
 - 用户截图：`docs/assets/`
 - 管理员指南：`admin-guide/docs/`
 - 管理员截图：`admin-guide/docs/assets/`
-- 新文章模板：`docs/新建指南模板.md.example`
 - 用户站视觉与目录：`src/css/custom.css`、`sidebars.js`
 - 管理员站视觉与目录：`admin-guide/src/css/custom.css`、`admin-guide/sidebars.js`
 
 编辑 Markdown 或替换同名截图后，网页会自动更新，无需修改 HTML。
+
+## 一键发布
+
+在 Finder 中双击根目录的 `一键发布指南.command`，或运行：
+
+```bash
+npm run publish
+```
+
+脚本会构建两套网站、提交正式内容、推送 `main`，并更新 GitHub Pages。
 
 ## 本地预览
 

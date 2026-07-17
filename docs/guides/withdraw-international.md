@@ -1,7 +1,7 @@
 ---
 id: withdraw-international
 title: 如何通过国际电汇出金
-slug: /guides/withdraw-international
+slug: /app-guide/guides/withdraw-international
 description: Virtu Capital APP 国际电汇出金完整操作教程
 sidebar_position: 2
 ---

@@ -1,7 +1,7 @@
 ---
 id: stock-transfer
 title: Stock transfer within the platform
-slug: /guides/stock-transfer
+slug: /app-guide/guides/stock-transfer
 sidebar_position: 2
 ---
 

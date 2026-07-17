@@ -1,7 +1,7 @@
 ---
 id: stock-detail
 title: 查看股票詳情
-slug: /guides/stock-detail
+slug: /app-guide/guides/stock-detail
 sidebar_position: 5
 ---
 

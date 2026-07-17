@@ -1,7 +1,7 @@
 ---
 id: login
 title: 注册与登录
-slug: /guides/login
+slug: /app-guide/guides/login
 sidebar_position: 2
 ---
 

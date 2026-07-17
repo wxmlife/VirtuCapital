@@ -1,7 +1,7 @@
 ---
 id: account-opening
 title: 开户
-slug: /account-opening
+slug: /app-guide/account-opening
 sidebar_position: 1
 ---
 

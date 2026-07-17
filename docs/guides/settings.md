@@ -1,7 +1,7 @@
 ---
 id: settings
 title: 设置语言与偏好
-slug: /guides/settings
+slug: /app-guide/guides/settings
 sidebar_position: 12
 ---
 

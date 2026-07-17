@@ -1,7 +1,7 @@
 ---
 id: orders
 title: 查询与筛选订单
-slug: /guides/orders
+slug: /app-guide/guides/orders
 sidebar_position: 10
 ---
 

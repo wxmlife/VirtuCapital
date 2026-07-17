@@ -1,7 +1,7 @@
 ---
 id: trade-stocks
 title: How to buy and sell stocks
-slug: /guides/trade-stocks
+slug: /app-guide/guides/trade-stocks
 description: Search stocks, fill orders and check status on the Virtu Capital APP
 sidebar_position: 3
 ---

@@ -1,7 +1,7 @@
 ---
 id: orders
 title: Query and filter orders
-slug: /guides/orders
+slug: /app-guide/guides/orders
 sidebar_position: 10
 ---
 

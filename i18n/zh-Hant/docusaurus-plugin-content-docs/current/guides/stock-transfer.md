@@ -1,7 +1,7 @@
 ---
 id: stock-transfer
 title: 平臺內股票轉讓
-slug: /guides/stock-transfer
+slug: /app-guide/guides/stock-transfer
 sidebar_position: 2
 ---
 

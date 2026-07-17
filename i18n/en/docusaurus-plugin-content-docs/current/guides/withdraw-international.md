@@ -1,7 +1,7 @@
 ---
 id: withdraw-international
 title: How to withdraw money via international wire transfer
-slug: /guides/withdraw-international
+slug: /app-guide/guides/withdraw-international
 description: Virtu Capital APP International Wire Transfer Withdrawal Complete Operation Tutorial
 sidebar_position: 2
 ---

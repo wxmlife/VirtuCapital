@@ -1,7 +1,7 @@
 ---
 id: statements
 title: 查看与获取结单
-slug: /guides/statements
+slug: /app-guide/guides/statements
 sidebar_position: 5
 ---
 

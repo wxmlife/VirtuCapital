@@ -1,7 +1,7 @@
 ---
 id: position-transfer
 title: 转入与转出股票
-slug: /guides/position-transfer
+slug: /app-guide/guides/position-transfer
 sidebar_position: 3
 ---
 

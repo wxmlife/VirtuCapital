@@ -1,7 +1,7 @@
 ---
 id: assets
 title: View account assets
-slug: /guides/assets
+slug: /app-guide/guides/assets
 sidebar_position: 6
 ---
 

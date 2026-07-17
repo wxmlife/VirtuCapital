@@ -1,7 +1,7 @@
 ---
 id: stock-detail
 title: View stock details
-slug: /guides/stock-detail
+slug: /app-guide/guides/stock-detail
 sidebar_position: 5
 ---
 

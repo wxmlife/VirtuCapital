@@ -1,7 +1,7 @@
 ---
 id: deposit-international
 title: 如何通過國際電匯入金
-slug: /guides/deposit-international
+slug: /app-guide/guides/deposit-international
 description: Virtu Capital APP 國際電匯入金完整操作教程
 sidebar_position: 1
 ---

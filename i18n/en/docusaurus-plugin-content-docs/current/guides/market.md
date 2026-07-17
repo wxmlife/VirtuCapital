@@ -1,7 +1,7 @@
 ---
 id: market
 title: Check market conditions
-slug: /guides/market
+slug: /app-guide/guides/market
 sidebar_position: 4
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: position-transfer
 title: Transferring stocks in and out
-slug: /guides/position-transfer
+slug: /app-guide/guides/position-transfer
 sidebar_position: 1
 ---
 
