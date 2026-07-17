@@ -127,6 +127,24 @@
     .document-card { padding: 15px; border: 1px solid var(--line); border-radius: 8px; }
     .document-card h3 { margin-bottom: 5px; }
     .document-card .document-meta { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 15px; }
+    .document-card.selected { border-color: #c9c0ff; box-shadow: 0 0 0 3px rgba(104,87,229,.07); }
+    .method-options { display: grid; gap: 8px; margin-top: 14px; }
+    .method-option { display: grid; grid-template-columns: 18px 1fr; gap: 9px; align-items: start; padding: 10px; border: 1px solid var(--line); border-radius: 7px; background: #fafbfc; cursor: pointer; }
+    .method-option.active { border-color: #bdb3ff; background: var(--primary-soft); }
+    .method-option input { width: auto; min-height: auto; margin-top: 2px; }
+    .method-option strong { display: block; font-size: 12px; }
+    .method-option small { display: block; margin-top: 3px; color: var(--muted); font-size: 11px; line-height: 1.45; }
+    .method-action { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--line); }
+    .method-action .subtle { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .assist-note { margin-top: 14px; padding: 12px 14px; border: 1px solid #ead9b8; border-radius: 8px; color: #80520d; background: var(--warning-soft); font-size: 12px; line-height: 1.6; }
+    .assist-note.info { border-color: #d7d1ff; color: #5144a6; background: var(--primary-soft); }
+    .tax-gap-group { margin-top: 16px; padding: 15px; border: 1px solid var(--line); border-radius: 8px; background: #fafbfc; }
+    .tax-gap-group + .tax-gap-group { margin-top: 12px; }
+    .tax-gap-group .section-title { margin-bottom: 12px; }
+    .applicability-list { margin-top: 14px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+    .applicability-list td:first-child { width: 34%; font-weight: 650; }
+    .tax-assist-fields[hidden] { display: none; }
+    .hidden-file { display: none; }
     .switch-row { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 14px; border: 1px solid var(--line); border-radius: 8px; }
     .switch { position: relative; width: 42px; height: 24px; flex: 0 0 auto; }
     .switch input { position: absolute; opacity: 0; }
@@ -209,17 +227,18 @@
                 <div class="card-head"><h2>公司资料</h2><span class="tag primary">企业账户</span></div>
                 <div class="card-body">
                   <div class="form-grid">
-                    <div class="field half"><label><span class="required">*</span>公司名称（英文）</label><input data-key="companyNameEn" value="FRONTIER SPC-ASIA PACIFIC GROWTH FUND SP"></div>
-                    <div class="field half"><label>公司名称（中文）</label><input data-key="companyNameZh" placeholder="如适用"></div>
-                    <div class="field"><label><span class="required">*</span>公司类别</label><select data-key="companyType"><option>基金</option><option>有限公司</option><option>合伙企业</option><option>信托</option><option>其他</option></select></div>
-                    <div class="field"><label><span class="required">*</span>注册国家或地区</label><select data-key="country"><option>开曼群岛</option><option>中国香港</option><option>新加坡</option><option>英属维尔京群岛</option></select></div>
-                    <div class="field"><label><span class="required">*</span>注册成立日期</label><input data-key="incorporationDate" type="date" value="2026-01-12"></div>
-                    <div class="field"><label><span class="required">*</span>公司注册编号</label><input data-key="registrationNo" value="430197"></div>
-                    <div class="field"><label>商业登记编号</label><input data-key="businessRegistrationNo" placeholder="香港注册企业填写"></div>
-                    <div class="field"><label><span class="required">*</span>业务性质</label><input data-key="businessNature" value="投资管理"></div>
-                    <div class="field full"><label><span class="required">*</span>注册地址</label><input data-key="registeredAddress" value="89 Nexus Way, Camana Bay, Grand Cayman, KY1-9009"></div>
-                    <div class="field full"><label><span class="required">*</span>业务地址</label><input data-key="businessAddress" value="89 Nexus Way, Camana Bay, Grand Cayman, KY1-9009"></div>
-                    <div class="field full"><label>通讯地址</label><input data-key="mailingAddress" value="89 Nexus Way, Camana Bay, Grand Cayman, KY1-9009"></div>
+                    <div class="field half"><label><span class="required">*</span>公司名称（英文）</label><input data-key="companyNameEn" value="EXAMPLE HARBOR TECHNOLOGY LIMITED"></div>
+                    <div class="field half"><label>公司名称（中文）</label><input data-key="companyNameZh" value="N/A (TEST)"></div>
+                    <div class="field"><label><span class="required">*</span>公司类别</label><select data-key="companyType"><option>有限公司</option><option>基金</option><option>合伙企业</option><option>信托</option><option>其他</option></select></div>
+                    <div class="field"><label><span class="required">*</span>注册国家或地区</label><select data-key="country"><option>中国香港</option><option>开曼群岛</option><option>新加坡</option><option>英属维尔京群岛</option></select></div>
+                    <div class="field"><label><span class="required">*</span>注册成立日期</label><input data-key="incorporationDate" type="date" value="2021-07-16"></div>
+                    <div class="field"><label><span class="required">*</span>公司注册编号</label><input data-key="registrationNo" value="TEST-CI-2026-001"></div>
+                    <div class="field"><label>商业登记编号</label><input data-key="businessRegistrationNo" value="91234567-000-01-26-7"></div>
+                    <div class="field"><label><span class="required">*</span>业务性质</label><input data-key="businessNature" value="软件开发及技术咨询"></div>
+                    <div class="field"><label><span class="required">*</span>经营业务年期</label><input data-key="yearsInBusiness" type="number" value="5"></div>
+                    <div class="field full"><label><span class="required">*</span>注册地址</label><input data-key="registeredAddress" value="Unit 1808, 18/F, Test Tower, 88 Example Road, Wan Chai, Hong Kong"></div>
+                    <div class="field full"><label><span class="required">*</span>业务地址</label><input data-key="businessAddress" value="Unit 1808, 18/F, Test Tower, 88 Example Road, Wan Chai, Hong Kong"></div>
+                    <div class="field full"><label>通讯地址</label><input data-key="mailingAddress" value="Unit 1808, 18/F, Test Tower, 88 Example Road, Wan Chai, Hong Kong"></div>
                   </div>
                 </div>
               </div>
@@ -228,12 +247,13 @@
                 <div class="card-head"><h2>联系方式</h2></div>
                 <div class="card-body">
                   <div class="form-grid">
-                    <div class="field"><label><span class="required">*</span>联系人姓名</label><input data-key="contactName" value="谢元哲"></div>
-                    <div class="field"><label><span class="required">*</span>联系人电话</label><input data-key="contactPhone" value="+852 9264 5499"></div>
-                    <div class="field"><label><span class="required">*</span>联系人邮箱</label><input data-key="contactEmail" type="email" value="xieyuanzhe@chuntai-mgmt.com"></div>
-                    <div class="field"><label><span class="required">*</span>办公室电话</label><input data-key="officePhone" value="+852 3100 8899"></div>
+                    <div class="field"><label><span class="required">*</span>联系人姓名</label><input data-key="contactName" value="Alex Chan"></div>
+                    <div class="field"><label><span class="required">*</span>联系人电话</label><input data-key="contactPhone" value="+852 5555 0188"></div>
+                    <div class="field"><label><span class="required">*</span>联系人邮箱</label><input data-key="contactEmail" type="email" value="alex.chan@example-harbor.test"></div>
+                    <div class="field"><label><span class="required">*</span>办公室电话</label><input data-key="officePhone" value="+852 5555 0100"></div>
                     <div class="field"><label>办公室传真</label><input data-key="officeFax"></div>
-                    <div class="field"><label><span class="required">*</span>电子结单邮箱</label><input data-key="statementEmail" type="email" value="statement@nubright.com"></div>
+                    <div class="field"><label><span class="required">*</span>电子结单邮箱</label><input data-key="statementEmail" type="email" value="statement@example-harbor.test"></div>
+                    <div class="field"><label><span class="required">*</span>App 交易办公室手机</label><input data-key="appTradingMobile" value="+852 5555 0188"></div>
                   </div>
                 </div>
               </div>
@@ -252,9 +272,19 @@
                     <div class="field"><label><span class="required">*</span>投资目的</label><select data-key="objective"><option>资本增值</option><option>股息收入</option><option>投机</option></select></div>
                     <div class="field"><label><span class="required">*</span>投资年期</label><select data-key="horizon"><option>长期</option><option>中期</option><option>短期</option></select></div>
                     <div class="field"><label><span class="required">*</span>每月交易次数</label><select data-key="monthlyTrades"><option>1–10 笔</option><option>11–30 笔</option><option>31 笔以上</option></select></div>
-                    <div class="field"><label>股票投资经验</label><select data-key="sharesExperience"><option>10 年以上</option><option>6–10 年</option><option>1–5 年</option><option>少于 1 年</option></select></div>
-                    <div class="field"><label>衍生品投资经验</label><select data-key="derivativeExperience"><option>10 年以上</option><option>6–10 年</option><option>1–5 年</option><option>没有经验</option></select></div>
-                    <div class="field"><label>债券投资经验</label><select data-key="bondExperience"><option>10 年以上</option><option>6–10 年</option><option>1–5 年</option><option>没有经验</option></select></div>
+                    <div class="field"><label>股票投资经验</label><select data-key="sharesExperience"><option>10 年以上</option><option>6–10 年</option><option>1–5 年</option><option>少于 1 年</option><option>无经验</option></select></div>
+                    <div class="field"><label>指数期权/期货经验</label><select data-key="experienceIndexOptionsFutures"><option>少于 1 年</option><option>1–5 年</option><option>6–10 年</option><option>10 年以上</option><option>无经验</option></select></div>
+                    <div class="field"><label>认股证/股票期权经验</label><select data-key="experienceWarrantsStockOptions"><option>少于 1 年</option><option>1–5 年</option><option>6–10 年</option><option>10 年以上</option><option>无经验</option></select></div>
+                    <div class="field"><label>外汇/黄金经验</label><select data-key="experienceFxBullion"><option>1–5 年</option><option>少于 1 年</option><option>6–10 年</option><option>10 年以上</option><option>无经验</option></select></div>
+                    <div class="field"><label>结构性产品经验</label><select data-key="experienceStructuredProducts"><option>少于 1 年</option><option>1–5 年</option><option>6–10 年</option><option>10 年以上</option><option>无经验</option></select></div>
+                    <div class="field"><label>基金经验</label><select data-key="experienceMutualFunds"><option>1–5 年</option><option>少于 1 年</option><option>6–10 年</option><option>10 年以上</option><option>无经验</option></select></div>
+                    <div class="field"><label>债券经验</label><select data-key="experienceBonds"><option>1–5 年</option><option>少于 1 年</option><option>6–10 年</option><option>10 年以上</option><option>无经验</option></select></div>
+                    <div class="field full"><label>是否计划交易衍生品？</label><div class="choice-row"><label><input type="radio" name="derivativesIntent" data-key="derivativesIntent" value="是">是</label><label><input type="radio" name="derivativesIntent" data-key="derivativesIntent" value="否" checked>否</label></div></div>
+                    <div class="field"><label>完成衍生品培训或课程</label><select data-key="derivativesTraining"><option>不适用</option><option>是</option><option>否</option></select></div>
+                    <div class="field"><label>具有衍生品相关工作经验</label><select data-key="derivativesWorkExperience"><option>不适用</option><option>是</option><option>否</option></select></div>
+                    <div class="field"><label>过去三年完成至少五笔衍生品交易</label><select data-key="derivativesFiveTrades"><option>不适用</option><option>是</option><option>否</option></select></div>
+                    <div class="field half"><label>衍生品知识或经验评估结果</label><select data-key="derivativesKnowledge"><option>不适用（不交易衍生品）</option><option>具备知识或经验</option><option>不具备知识或经验</option></select></div>
+                    <div class="field half"><label>无经验情况下是否确认衍生品风险</label><select data-key="derivativesRiskAcknowledgement"><option>不适用</option><option>已确认</option><option>未确认</option></select></div>
                   </div>
 
                   <div class="section-block">
@@ -282,10 +312,18 @@
                   <div class="section-block" style="margin-top:0;padding-top:0;border-top:0">
                     <div class="form-grid">
                       <div class="field full"><label>贵公司是否为账户最终实益拥有人及最终负责发出指示的人士？</label><div class="choice-row"><label><input type="radio" name="ultimateOwner" data-key="ultimateOwner" value="是">是</label><label><input type="radio" name="ultimateOwner" data-key="ultimateOwner" value="否" checked>否</label></div></div>
+                      <div class="field full"><label>贵公司是否已持有其他 Virtu Capital 账户？</label><div class="choice-row"><label><input type="radio" name="otherVcAccount" data-key="otherVcAccount" value="是">是</label><label><input type="radio" name="otherVcAccount" data-key="otherVcAccount" value="否" checked>否</label></div></div>
                       <div class="field full"><label>董事、合伙人或雇员是否为证监会持牌人、注册人或交易所参与者？</label><div class="choice-row"><label><input type="radio" name="licensedRelation" data-key="licensedRelation" value="是">是</label><label><input type="radio" name="licensedRelation" data-key="licensedRelation" value="否" checked>否</label></div></div>
                       <div class="field full"><label>董事、合伙人或股东是否与 VirtuCapital 董事或雇员有亲属关系？</label><div class="choice-row"><label><input type="radio" name="staffRelation" data-key="staffRelation" value="是">是</label><label><input type="radio" name="staffRelation" data-key="staffRelation" value="否" checked>否</label></div></div>
                       <div class="field full"><label>董事、合伙人、股东或其关系密切人士是否为政治人物？</label><div class="choice-row"><label><input type="radio" name="pep" data-key="pep" value="是">是</label><label><input type="radio" name="pep" data-key="pep" value="否" checked>否</label></div></div>
                       <div class="field full"><label>是否同意通过 App 和邮件接收开户及账户消息？</label><div class="choice-row"><label><input type="radio" name="notices" data-key="notices" value="是" checked>是</label><label><input type="radio" name="notices" data-key="notices" value="否">否</label></div></div>
+                      <div class="field half"><label>其他 Virtu Capital 账户资料</label><input data-key="otherVcAccountDetails" placeholder="回答“是”时填写"></div>
+                      <div class="field half"><label>持牌人/注册人及雇主同意资料</label><input data-key="licensedRelationDetails" placeholder="回答“是”时填写"></div>
+                      <div class="field half"><label>与 VC 董事或雇员关系说明</label><input data-key="staffRelationDetails" placeholder="回答“是”时填写"></div>
+                      <div class="field half"><label>政治人物身份及关系说明</label><input data-key="pepDetails" placeholder="回答“是”时填写"></div>
+                      <div class="field full"><label>最终实益拥有人、最终经济受益人及最终指示人士说明</label><input data-key="ultimateOwnerDetails" placeholder="主体并非全部角色时，关联对应人员并说明"></div>
+                      <div class="field half"><label>指令签署规则</label><select data-key="signingRule"><option>任何一名授权签署人</option><option>任何两名授权签署人共同签署</option><option>全部授权签署人共同签署</option></select></div>
+                      <div class="field half"><label>直销推广渠道</label><select data-key="directMarketingChannels" multiple><option selected>电子渠道</option><option selected>邮件</option><option>专人电话</option></select></div>
                     </div>
                   </div>
 
@@ -324,22 +362,83 @@
 
             <section class="stage" data-stage="3">
               <div class="card">
-                <div class="card-head"><h2>税务资料</h2><span class="tag" id="taxStatus">待校验</span></div>
+                <div class="card-head">
+                  <div><h2>补全 CRS 和 W-8BEN-E（选填）</h2><p class="subtle">工作人员可根据与客户沟通获得的资料代录；客户已自行填表时可跳过</p></div>
+                  <span class="tag" id="taxStatus">待校验</span>
+                </div>
                 <div class="card-body">
-                  <div class="form-grid">
-                    <div class="field"><label><span class="required">*</span>CRS 实体类型</label><select data-key="crsType" id="crsType"><option>金融机构</option><option>主动非财务实体</option><option>被动非财务实体</option></select></div>
-                    <div class="field"><label><span class="required">*</span>税务居民国家或地区</label><select data-key="taxCountry"><option>开曼群岛</option><option>中国香港</option><option>新加坡</option></select></div>
-                    <div class="field"><label><span class="required">*</span>税务编号</label><input data-key="taxId" value="430197"></div>
-                    <div class="field"><label><span class="required">*</span>W-8BEN-E Chapter 3 身份</label><select data-key="chapter3"><option>Corporation</option><option>Partnership</option><option>Complex trust</option></select></div>
-                    <div class="field"><label><span class="required">*</span>W-8BEN-E FATCA 身份</label><select data-key="chapter4" id="chapter4"><option>Reporting Model 1 FFI</option><option>Nonreporting IGA FFI</option><option>Active NFFE</option><option>Passive NFFE</option></select></div>
-                    <div class="field"><label>GIIN</label><input data-key="giin" value="ABCDEF.00000.ME.136"></div>
-                    <div class="field full" id="fatcaConditional"></div>
+                  <div class="switch-row">
+                    <div>
+                      <h3>由工作人员在系统补全税务资料</h3>
+                      <p class="subtle">只补企业开户基础模块没有的税务字段；已有公司、地址和人员资料由系统复用</p>
+                    </div>
+                    <label class="switch"><input id="taxAssistEnabled" type="checkbox" checked><span></span></label>
                   </div>
+                  <div class="tax-assist-fields" id="taxAssistFields">
+                    <div class="assist-note info">系统先根据选择标记“需填写 / 条件填写 / 不适用 / 转人工”，工作人员只在原问题对应的输入框填写或勾选，最终分类与认证仍须客户确认。</div>
 
-                  <div class="section-block">
-                    <div class="section-title"><h3>生成文件</h3><button class="btn" id="validateForms">重新校验</button></div>
-                    <div class="form-card-grid" id="documentCards"></div>
+                    <div class="tax-gap-group">
+                      <div class="section-title"><div><h3>CRS 缺少字段</h3><span>公司名称、商业登记号、地址及人员基础资料不重复填写</span></div><span class="tag primary">工作人员填空 / 勾选</span></div>
+                      <div class="form-grid">
+                        <div class="field"><label><span class="required">*</span>CRS 实体类型</label><select data-key="crsType" id="crsType"><option>主动非财务实体</option><option>金融机构</option><option>被动非财务实体</option></select></div>
+                        <div class="field"><label><span class="required">*</span>CRS 具体子类型</label><select data-key="crsSubtype"><option>其他主动非财务实体</option><option>上市主动非财务实体</option><option>上市公司关联实体</option><option>其他金融机构</option><option>投资实体</option></select></div>
+                        <div class="field"><label>主动 NFE 业务说明</label><input data-key="crsActiveDescription" value="Operating technology company"></div>
+                        <div class="field half"><label>上市实体/关联实体名称</label><input data-key="crsListedEntity" placeholder="对应子类型适用时填写"></div>
+                        <div class="field half"><label>证券市场名称</label><input data-key="crsMarketName" placeholder="对应子类型适用时填写"></div>
+                        <div class="field"><label><span class="required">*</span>税务居民国家或地区</label><select data-key="taxCountry"><option>中国香港</option><option>开曼群岛</option><option>新加坡</option></select></div>
+                        <div class="field"><label>税务编号（TIN）</label><input data-key="taxId" value="91234567"></div>
+                        <div class="field"><label>无 TIN 原因</label><select data-key="noTinReason"><option value="">已有 TIN / 不适用</option><option>A：该司法管辖区不发出 TIN</option><option>B：无法取得 TIN</option><option>C：该司法管辖区不要求提供 TIN</option></select></div>
+                        <div class="field full"><label>无 TIN 原因 B 说明</label><input data-key="noTinExplanation" placeholder="仅选择原因 B 时填写"></div>
+                        <div class="field full"><label>其他税务居民地（可新增多条）</label><div id="additionalTaxResidenceRows"></div><button class="btn small" id="addTaxResidence" type="button" style="margin-top:9px">新增税务居民记录</button></div>
+                        <div class="field half"><label>CRS 控权人</label><select data-key="crsControllingPersons"><option>不适用（主动 NFE）</option><option>从实控人列表选择</option></select></div>
+                        <div class="field full"><label>CRS 分类及自我证明声明</label><div class="choice-row"><label><input type="radio" name="crsCertification" data-key="crsCertification" value="已向客户确认" checked>已向客户确认</label><label><input type="radio" name="crsCertification" data-key="crsCertification" value="待客户确认">待客户确认</label></div></div>
+                      </div>
+                    </div>
+
+                    <div class="tax-gap-group">
+                      <div class="section-title"><div><h3>W-8BEN-E 缺少字段</h3><span>仅展示身份判断、条件章节和认证所需字段</span></div><span class="tag primary">工作人员填空 / 勾选</span></div>
+                      <div class="form-grid">
+                        <div class="field"><label><span class="required">*</span>Chapter 3 身份</label><select data-key="chapter3" id="chapter3"><option>Corporation</option><option>Partnership</option><option>Complex trust</option><option>Simple trust</option><option>Tax-exempt organization</option></select></div>
+                        <div class="field"><label><span class="required">*</span>Chapter 4 / FATCA 身份</label><select data-key="chapter4" id="chapter4"><option>Active NFFE</option><option>Reporting Model 1 FFI</option><option>Nonreporting IGA FFI</option><option>Passive NFFE</option><option>Sponsored FFI</option></select></div>
+                        <div class="field"><label>不予承认实体/分支机构名称</label><input data-key="disregardedEntityName" placeholder="Part I Line 3 适用时填写"></div>
+                        <div class="field"><label>分支所在国家或地区</label><input data-key="branchCountry" placeholder="有分支时填写"></div>
+                        <div class="field"><label>分支 FATCA 身份</label><input data-key="branchFatcaStatus" placeholder="有分支时填写"></div>
+                        <div class="field"><label>美国 TIN</label><input data-key="usTin" placeholder="身份或协定要求时填写"></div>
+                        <div class="field"><label>GIIN</label><input data-key="giin" placeholder="本 Active NFFE 示例不适用"></div>
+                        <div class="field"><label>Foreign TIN</label><input data-key="foreignTin" value="91234567"></div>
+                        <div class="field"><label>是否依法无须取得 Foreign TIN</label><select data-key="foreignTinNotRequired"><option>否</option><option>是</option></select></div>
+                        <div class="field"><label>美国税收协定优惠</label><select data-key="treatyClaim"><option>不申请</option><option>申请</option></select></div>
+                        <div class="field"><label>协定国家、条款及税率</label><input data-key="treatyDetails" placeholder="申请协定优惠时填写"></div>
+                        <div class="field"><label>收入类型及满足条件说明</label><input data-key="treatyExplanation" placeholder="申请协定优惠时填写"></div>
+                        <div class="field half"><label>主要美国所有人</label><select data-key="substantialUsOwners"><option>不适用（Active NFFE）</option><option>无主要美国所有人</option><option>有，单独录入姓名、地址和 TIN</option></select></div>
+                        <div class="field half"><label>FATCA 身份对应认证</label><select data-key="fatcaCertification"><option>已确认 Part XXV Active NFFE 认证</option><option>已确认 Part XXVI Passive NFFE 认证</option><option>待客户确认</option></select></div>
+                        <div class="field"><label>主要美国所有人姓名</label><input data-key="substantialUsOwnerName" placeholder="有主要美国所有人时填写，可新增多条"></div>
+                        <div class="field half"><label>主要美国所有人地址</label><input data-key="substantialUsOwnerAddress" placeholder="有主要美国所有人时填写"></div>
+                        <div class="field"><label>主要美国所有人 TIN</label><input data-key="substantialUsOwnerTin" placeholder="有主要美国所有人时填写"></div>
+                        <div class="field full" id="fatcaConditional"></div>
+                      </div>
+                    </div>
+
+                    <div class="tax-gap-group">
+                      <div class="section-title"><h3>适用性判断结果</h3><span class="tag success">系统判断，工作人员处理</span></div>
+                      <div class="applicability-list" id="taxApplicabilityList"></div>
+                      <div class="assist-note" id="manualTaxRouteNote" hidden>当前选择涉及复杂实体或暂未支持的税务身份：停止自动选择相近身份，改由税务合规人员确认；文件可切换为“客户自行填写签署，工作人员上传”。</div>
+                    </div>
+                    <div class="inline" style="justify-content:flex-end;margin-top:15px">
+                      <button class="btn" id="validateForms">校验补全资料</button>
+                    </div>
                   </div>
+                  <div class="assist-note" id="taxAssistDisabledNote" hidden>已选择不在系统补全。企业 CRS 和 W-8BEN-E 将使用“客户自行填写签署后上传”方式完成。</div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-head">
+                  <div><h2>三份开户文件的完成方式</h2><p class="subtle">工作人员可按每份文件的实际情况分别选择，不要求三份文件使用同一种方式</p></div>
+                  <span class="tag primary">两种方式均支持</span>
+                </div>
+                <div class="card-body">
+                  <div class="form-card-grid" id="documentCards"></div>
                 </div>
               </div>
             </section>
@@ -428,11 +527,16 @@
           <div class="field half"><label><span class="required">*</span>英文姓名</label><input id="personNameEn"></div>
           <div class="field half"><label>中文姓名</label><input id="personNameZh"></div>
           <div class="field"><label><span class="required">*</span>国籍</label><select id="personNationality"><option>中国大陆</option><option>中国香港</option><option>澳大利亚</option><option>新加坡</option></select></div>
+          <div class="field"><label><span class="required">*</span>证件类型</label><select id="personIdType"><option>护照</option><option>香港身份证</option><option>居民身份证</option><option>其他</option></select></div>
           <div class="field"><label><span class="required">*</span>证件号码</label><input id="personIdNo"></div>
           <div class="field"><label>电话号码</label><input id="personPhone"></div>
           <div class="field full"><label><span class="required">*</span>住宅地址</label><input id="personAddress"></div>
           <div class="field" id="ownershipField"><label>股权百分比</label><input id="personOwnership" type="number" min="0" max="100"></div>
           <div class="field" id="taxNoField"><label>税务编号</label><input id="personTaxNo"></div>
+          <div class="field" id="usPersonField"><label><span class="required">*</span>是否美国人士</label><select id="personUsPerson"><option>否</option><option>是</option><option>待客户确认</option></select></div>
+          <div class="field half" id="authorizationScopeField"><label>授权范围</label><select id="personAuthorizationScope"><option>资金、证券、结算及其他指令</option><option>仅交易指令</option><option>仅资金及结算指令</option><option>其他</option></select></div>
+          <div class="field" id="authorizationStartField"><label>授权开始日期</label><input id="personAuthorizationStart" type="date"></div>
+          <div class="field" id="authorizationEndField"><label>授权结束日期</label><input id="personAuthorizationEnd" type="date"></div>
         </div>
       </div>
       <div class="modal-foot"><button class="btn" data-close-modal>取消</button><button class="btn primary" id="savePerson">保存</button></div>
@@ -458,36 +562,48 @@
   <div class="toast" id="toast"></div>
 
   <script>
-    const storageKey = 'vc-corporate-opening-prototype-v4';
+    const storageKey = 'vc-corporate-opening-prototype-v7';
     const defaultState = {
       currentStep: 0,
-      fields: {},
+      fields: {
+        ultimateOwner: '是',
+        otherVcAccount: '否',
+        licensedRelation: '否',
+        staffRelation: '否',
+        pep: '否',
+        notices: '是',
+        derivativesIntent: '否',
+        derivativesKnowledge: '不适用（不交易衍生品）'
+      },
       people: {
         director: [
-          { nameEn: 'LUK TAI LOI', nameZh: '', nationality: '澳大利亚', idNo: 'PB2430876', phone: '', address: 'K 19/F HONC', ownership: '0', taxNo: '' },
-          { nameEn: 'XIE YUANZHE', nameZh: '谢元哲', nationality: '中国大陆', idNo: '320102197010152839', phone: '92645499', address: 'Room 202, No.27, Lane 789, Shanghai, China', ownership: '100', taxNo: '320102197010152839' }
+          { nameEn: 'ALEX CHAN', nameZh: 'N/A (TEST)', nationality: '中国香港', idNo: 'TEST-P1234567', phone: '+852 5555 0188', address: 'Flat A, 18/F, Test Residence, Hong Kong', ownership: '60', taxNo: '91234567' },
+          { nameEn: 'BLAIR LEE', nameZh: '李测试', nationality: '中国香港', idNo: 'TEST-P7654321', phone: '+852 5555 0199', address: 'Flat B, 8/F, Example Court, Hong Kong', ownership: '40', taxNo: '91234567' }
         ],
         shareholder: [
-          { nameEn: 'XIE YUANZHE', nameZh: '谢元哲', nationality: '中国大陆', idNo: '320102197010152839', phone: '92645499', address: 'Room 202, No.27, Lane 789, Shanghai, China', ownership: '100', taxNo: '320102197010152839' }
+          { nameEn: 'ALEX CHAN', nameZh: 'N/A (TEST)', nationality: '中国香港', idNo: 'TEST-P1234567', phone: '+852 5555 0188', address: 'Flat A, 18/F, Test Residence, Hong Kong', ownership: '60', taxNo: '91234567' },
+          { nameEn: 'BLAIR LEE', nameZh: '李测试', nationality: '中国香港', idNo: 'TEST-P7654321', phone: '+852 5555 0199', address: 'Flat B, 8/F, Example Court, Hong Kong', ownership: '40', taxNo: '91234567' }
         ],
         controller: [
-          { nameEn: 'XIE YUANZHE', nameZh: '谢元哲', nationality: '中国大陆', idNo: '320102197010152839', phone: '92645499', address: 'Room 202, No.27, Lane 789, Shanghai, China', ownership: '100', taxNo: '320102197010152839' }
+          { nameEn: 'ALEX CHAN', nameZh: 'N/A (TEST)', nationality: '中国香港', idNo: 'TEST-P1234567', phone: '+852 5555 0188', address: 'Flat A, 18/F, Test Residence, Hong Kong', ownership: '60', taxNo: '91234567' }
         ],
         trader: [
-          { nameEn: 'XIE YUANZHE', nameZh: '谢元哲', nationality: '中国大陆', idNo: '320102197010152839', phone: '92645499', address: 'Room 202, No.27, Lane 789, Shanghai, China', ownership: '', taxNo: '' }
+          { nameEn: 'ALEX CHAN', nameZh: 'N/A (TEST)', nationality: '中国香港', idNo: 'TEST-P1234567', phone: '+852 5555 0188', address: 'Flat A, 18/F, Test Residence, Hong Kong', ownership: '', taxNo: '' }
         ],
         signatory: [
-          { nameEn: 'ZHANG YUNXIA', nameZh: '张云霞', nationality: '中国大陆', idNo: '410303196007250045', phone: '852-94913242', address: '河南省洛阳市涧西区龙鳞路五街坊2栋1门16号', ownership: '', taxNo: '' }
+          { nameEn: 'ALEX CHAN', nameZh: 'N/A (TEST)', nationality: '中国香港', idNo: 'TEST-P1234567', phone: '+852 5555 0188', address: 'Flat A, 18/F, Test Residence, Hong Kong', ownership: '', taxNo: '' }
         ]
       },
       banks: [
-        { currency: 'HKD', name: 'DBS BANK LTD, HONG KONG BRANCH', account: '20004532988', accountName: 'FRONTIER SPC-ASIA PACIFIC GROWTH FUND SP', country: '中国香港' }
+        { currency: 'HKD', name: 'Example Bank (Hong Kong) Limited', account: '012-345678-001', accountName: 'EXAMPLE HARBOR TECHNOLOGY LIMITED', country: '中国香港' }
       ],
       linkedCustomer: null,
+      taxAssistEnabled: true,
+      taxResidences: [],
       documents: {
-        application: 'ready',
-        crs: 'ready',
-        w8: 'ready'
+        application: { method: 'auto', status: 'ready', fileName: '' },
+        crs: { method: 'auto', status: 'ready', fileName: '' },
+        w8: { method: 'auto', status: 'ready', fileName: '' }
       },
       packageStatus: 'draft',
       oslStatus: '未提交',
@@ -505,7 +621,14 @@
     try {
       state = Object.assign(clone(defaultState), JSON.parse(localStorage.getItem(storageKey) || '{}'));
       state.people = Object.assign(clone(defaultState.people), state.people || {});
+      state.taxResidences = Array.isArray(state.taxResidences) ? state.taxResidences : [];
       state.documents = Object.assign(clone(defaultState.documents), state.documents || {});
+      Object.keys(defaultState.documents).forEach(key => {
+        const current = state.documents[key];
+        state.documents[key] = typeof current === 'string'
+          ? { method: 'auto', status: current, fileName: '' }
+          : Object.assign(clone(defaultState.documents[key]), current || {});
+      });
     } catch {
       state = clone(defaultState);
     }
@@ -548,6 +671,10 @@
       $$('[data-key]').forEach(input => {
         input.addEventListener('change', () => {
           state.fields[input.dataset.key] = input.value;
+          if (input.closest('#taxAssistFields')) {
+            $('#taxStatus').textContent = '待校验';
+            $('#taxStatus').className = 'tag warning';
+          }
           saveState(false);
           renderSummary();
           renderConditionalTax();
@@ -595,13 +722,22 @@
       $('#personNameEn').value = person.nameEn || '';
       $('#personNameZh').value = person.nameZh || '';
       $('#personNationality').value = person.nationality || '中国大陆';
+      $('#personIdType').value = person.idType || '护照';
       $('#personIdNo').value = person.idNo || '';
       $('#personPhone').value = person.phone || '';
       $('#personAddress').value = person.address || '';
       $('#personOwnership').value = person.ownership || '';
       $('#personTaxNo').value = person.taxNo || '';
+      $('#personUsPerson').value = person.usPerson || '否';
+      $('#personAuthorizationScope').value = person.authorizationScope || '资金、证券、结算及其他指令';
+      $('#personAuthorizationStart').value = person.authorizationStart || '';
+      $('#personAuthorizationEnd').value = person.authorizationEnd || '';
       $('#ownershipField').style.display = ['director', 'shareholder', 'controller'].includes(role) ? 'block' : 'none';
       $('#taxNoField').style.display = role === 'controller' ? 'block' : 'none';
+      $('#usPersonField').style.display = role === 'shareholder' ? 'block' : 'none';
+      ['authorizationScopeField', 'authorizationStartField', 'authorizationEndField'].forEach(id => {
+        $(`#${id}`).style.display = ['trader', 'signatory'].includes(role) ? 'block' : 'none';
+      });
       $('#personModal').classList.add('open');
     }
 
@@ -658,61 +794,205 @@
         </div>`;
     }
 
+    function taxRequiresManualReview() {
+      const chapter3 = state.fields.chapter3 || $('#chapter3')?.value;
+      const chapter4 = state.fields.chapter4 || $('#chapter4')?.value;
+      const crs = state.fields.crsType || $('#crsType')?.value;
+      return crs === '金融机构'
+        || chapter3 !== 'Corporation'
+        || ['Reporting Model 1 FFI', 'Nonreporting IGA FFI', 'Sponsored FFI'].includes(chapter4)
+        || state.fields.treatyClaim === '申请';
+    }
+
+    function taxValidationErrors() {
+      const fields = state.fields;
+      const errors = [];
+      ['crsType', 'crsSubtype', 'taxCountry', 'chapter3', 'chapter4'].forEach(key => {
+        if (!fields[key]) errors.push(key);
+      });
+      if (!fields.taxId && !fields.noTinReason) errors.push('tin_or_no_tin_reason');
+      if (String(fields.noTinReason || '').startsWith('B：') && !fields.noTinExplanation) errors.push('no_tin_explanation');
+      if (fields.crsType === '被动非财务实体' && fields.crsControllingPersons !== '从实控人列表选择') errors.push('crs_controlling_persons');
+      if (fields.treatyClaim === '申请' && (!fields.treatyDetails || !fields.treatyExplanation)) errors.push('treaty_details');
+      if (fields.chapter4 === 'Passive NFFE' && fields.substantialUsOwners === '不适用（Active NFFE）') errors.push('substantial_us_owners');
+      if (fields.chapter4 === 'Active NFFE' && fields.fatcaCertification !== '已确认 Part XXV Active NFFE 认证') errors.push('active_nffe_certification');
+      if (fields.chapter4 === 'Passive NFFE' && fields.fatcaCertification !== '已确认 Part XXVI Passive NFFE 认证') errors.push('passive_nffe_certification');
+      if (fields.substantialUsOwners === '有，单独录入姓名、地址和 TIN'
+        && (!fields.substantialUsOwnerName || !fields.substantialUsOwnerAddress || !fields.substantialUsOwnerTin)) {
+        errors.push('substantial_us_owner_details');
+      }
+      state.taxResidences.forEach((row, index) => {
+        if (!row.country || (!row.tin && !row.noTinReason)) errors.push(`tax_residence_${index}`);
+        if (row.noTinReason === 'B' && !row.explanation) errors.push(`tax_residence_${index}_explanation`);
+      });
+      return errors;
+    }
+
     function renderConditionalTax() {
       const status = state.fields.chapter4 || $('#chapter4')?.value;
       const crs = state.fields.crsType || $('#crsType')?.value;
+      const hasTin = Boolean(state.fields.taxId);
+      const treatyClaimed = state.fields.treatyClaim === '申请';
+      const manual = taxRequiresManualReview();
       let html = '';
-      if (status === 'Passive NFFE') html += '<div class="tag warning">需申报主要美国股东</div>';
-      if (status === 'Nonreporting IGA FFI') html += '<div class="tag primary">需填写 IGA 类别及 Part XII</div>';
-      if (status === 'Active NFFE') html += '<div class="tag success">生成 Part XXV 认证</div>';
-      if (status === 'Reporting Model 1 FFI') html += '<div class="tag success">GIIN 校验通过</div>';
-      if (crs === '被动非财务实体') html += '<div class="tag warning" style="margin-left:8px">CRS 将带入全部实控人</div>';
-      $('#fatcaConditional').innerHTML = html || '<span class="subtle">无附加问题</span>';
+      if (status === 'Passive NFFE') html += '<span class="tag warning">需确认 Part XXVI 及主要美国所有人</span>';
+      if (status === 'Active NFFE') html += '<span class="tag success">需勾选 Part XXV 认证</span>';
+      if (crs === '被动非财务实体') html += '<span class="tag warning">需选择 CRS 控权人</span>';
+      if (manual) html += '<span class="tag danger">复杂实体：转人工处理</span>';
+      $('#fatcaConditional').innerHTML = html || '<span class="subtle">当前选择没有额外条件章节</span>';
+
+      const rows = [
+        ['CRS 实体大类及子类型', '需填写', '决定 Part 2 勾选及后续问题'],
+        ['税务居民地及 TIN', '需填写', '支持多条；每条必须有 TIN 或无 TIN 原因'],
+        ['无 TIN 原因及说明', hasTin ? '不适用' : '条件填写', hasTin ? '当前税务居民记录已有 TIN' : '原因 B 还必须填写说明'],
+        ['CRS 控权人', crs === '被动非财务实体' ? '条件填写' : '不适用', crs === '被动非财务实体' ? '从实控人列表选择，但不等同于 W-8 主要美国所有人' : '主动 NFE 示例无需填写'],
+        ['Chapter 3 / Chapter 4 身份', '需填写', '决定 W-8BEN-E 条件章节'],
+        ['GIIN / 分支资料', status === 'Active NFFE' || status === 'Passive NFFE' ? '不适用' : '条件填写', '由 FATCA 身份决定'],
+        ['税收协定优惠资料', treatyClaimed ? '条件填写' : '不适用', treatyClaimed ? '填写国家、条款、税率、收入类型及说明' : '当前选择不申请'],
+        ['主要美国所有人', status === 'Passive NFFE' ? '条件填写' : '不适用', status === 'Passive NFFE' ? '单独收集姓名、地址和 TIN' : '当前 FATCA 身份不要求'],
+        ['身份对应认证确认', '需填写', status === 'Active NFFE' ? '确认 Part XXV' : '按最终 FATCA 身份显示对应认证'],
+        ['自动处理范围', manual ? '转人工' : '可自动生成', manual ? '不得自动改选相近税务身份' : '通过条件校验后生成']
+      ];
+      $('#taxApplicabilityList').innerHTML = `<table><thead><tr><th>缺少字段组</th><th>系统判断</th><th>工作人员处理</th></tr></thead><tbody>${rows.map(([name, result, action]) => {
+        const className = result === '需填写' || result === '可自动生成' ? 'success' : result === '转人工' ? 'danger' : result === '条件填写' ? 'warning' : '';
+        return `<tr><td>${name}</td><td><span class="tag ${className}">${result}</span></td><td>${action}</td></tr>`;
+      }).join('')}</tbody></table>`;
+      $('#manualTaxRouteNote').hidden = !manual;
+    }
+
+    function renderAdditionalTaxResidences() {
+      const target = $('#additionalTaxResidenceRows');
+      if (!state.taxResidences.length) {
+        target.innerHTML = '<div class="subtle">当前仅有上方一条税务居民记录。</div>';
+        return;
+      }
+      target.innerHTML = `<table>
+        <thead><tr><th>国家或地区</th><th>TIN</th><th>无 TIN 原因</th><th>原因 B 说明</th><th>操作</th></tr></thead>
+        <tbody>${state.taxResidences.map((row, index) => `<tr>
+          <td><input data-tax-residence="${index}" data-tax-field="country" value="${escapeHtml(row.country)}" placeholder="国家或地区"></td>
+          <td><input data-tax-residence="${index}" data-tax-field="tin" value="${escapeHtml(row.tin)}" placeholder="TIN"></td>
+          <td><select data-tax-residence="${index}" data-tax-field="noTinReason"><option value="" ${!row.noTinReason ? 'selected' : ''}>已有 TIN / 不适用</option><option ${row.noTinReason === 'A' ? 'selected' : ''}>A</option><option ${row.noTinReason === 'B' ? 'selected' : ''}>B</option><option ${row.noTinReason === 'C' ? 'selected' : ''}>C</option></select></td>
+          <td><input data-tax-residence="${index}" data-tax-field="explanation" value="${escapeHtml(row.explanation)}" placeholder="原因 B 时填写"></td>
+          <td><button class="btn text small" data-delete-tax-residence="${index}" type="button">删除</button></td>
+        </tr>`).join('')}</tbody>
+      </table>`;
+    }
+
+    const documentDefinitions = [
+      { key: 'application', name: '企业开户申请表', source: '公司、财务、账户及授权资料' },
+      { key: 'crs', name: '企业 CRS', source: '公司、税务居民及实控人资料' },
+      { key: 'w8', name: 'W-8BEN-E', source: '公司、TIN 及 FATCA 资料' }
+    ];
+
+    function renderTaxAssist() {
+      $('#taxAssistEnabled').checked = Boolean(state.taxAssistEnabled);
+      $('#taxAssistFields').hidden = !state.taxAssistEnabled;
+      $('#taxAssistDisabledNote').hidden = Boolean(state.taxAssistEnabled);
+      if (!state.taxAssistEnabled) {
+        $('#taxStatus').textContent = '已跳过';
+        $('#taxStatus').className = 'tag';
+      } else if ($('#taxStatus').textContent === '已跳过') {
+        $('#taxStatus').textContent = '待校验';
+        $('#taxStatus').className = 'tag warning';
+      }
+    }
+
+    function documentStatus(doc) {
+      if (doc.method === 'manual') {
+        return doc.status === 'uploaded'
+          ? { text: '已上传签署文件', className: 'success' }
+          : { text: '待上传', className: 'warning' };
+      }
+      if (doc.status === 'signed') return { text: '已电子签署', className: 'success' };
+      if (doc.status === 'generated') return { text: '已生成，待签署', className: 'primary' };
+      return { text: '待生成', className: '' };
+    }
+
+    function documentPrepared(doc) {
+      return doc.method === 'manual' ? doc.status === 'uploaded' : ['generated', 'signed'].includes(doc.status);
+    }
+
+    function documentFinal(doc) {
+      return doc.method === 'manual' ? doc.status === 'uploaded' : doc.status === 'signed';
     }
 
     function renderDocuments() {
-      const docs = [
-        { key: 'application', name: '企业开户申请表', source: '公司、财务、账户资料' },
-        { key: 'crs', name: '企业 CRS', source: '公司、税务、实控人资料' },
-        { key: 'w8', name: 'W-8BEN-E', source: '公司及 FATCA 资料' }
-      ];
-      $('#documentCards').innerHTML = docs.map(doc => {
-        const status = state.documents[doc.key];
-        const statusLabel = status === 'generated' ? '已生成' : '可生成';
-        return `<div class="document-card">
-          <h3>${doc.name}</h3><p class="subtle">${doc.source}</p>
-          <div class="document-meta"><span class="tag ${status === 'generated' ? 'success' : 'primary'}">${statusLabel}</span><button class="btn small ${status === 'generated' ? '' : 'primary'}" data-generate="${doc.key}">${status === 'generated' ? '重新生成' : '生成'}</button></div>
+      $('#documentCards').innerHTML = documentDefinitions.map(definition => {
+        const doc = state.documents[definition.key];
+        const status = documentStatus(doc);
+        const isAuto = doc.method === 'auto';
+        return `<div class="document-card selected">
+          <div class="inline" style="justify-content:space-between">
+            <div><h3>${definition.name}</h3><p class="subtle">${definition.source}</p></div>
+            <span class="tag ${status.className}">${status.text}</span>
+          </div>
+          <div class="method-options">
+            <label class="method-option ${isAuto ? 'active' : ''}">
+              <input type="radio" name="method-${definition.key}" value="auto" data-document-method="${definition.key}" ${isAuto ? 'checked' : ''}>
+              <span><strong>工作人员代录，系统生成并电子签署</strong><small>系统带入开户资料生成文件，再发送给客户在线确认和签署</small></span>
+            </label>
+            <label class="method-option ${!isAuto ? 'active' : ''}">
+              <input type="radio" name="method-${definition.key}" value="manual" data-document-method="${definition.key}" ${!isAuto ? 'checked' : ''}>
+              <span><strong>客户自行填写签署，工作人员上传</strong><small>适用于客户已经打印或自行填写完成并签名的文件</small></span>
+            </label>
+          </div>
+          ${isAuto ? `
+            <div class="method-action">
+              <span class="subtle">生成后进入客户电子签署任务</span>
+              <button class="btn small ${doc.status === 'ready' ? 'primary' : ''}" data-generate="${definition.key}">${doc.status === 'ready' ? '自动生成' : '重新生成'}</button>
+            </div>` : `
+            <div class="method-action">
+              <span class="subtle">${doc.fileName ? escapeHtml(doc.fileName) : '支持上传 PDF、DOCX 或扫描件'}</span>
+              <div class="inline">
+                <button class="btn text small" data-download-template="${definition.key}">下载空白表</button>
+                <button class="btn small ${doc.status === 'uploaded' ? '' : 'primary'}" data-upload-document="${definition.key}">${doc.status === 'uploaded' ? '重新上传' : '上传已签署文件'}</button>
+                <input class="hidden-file" type="file" id="file-${definition.key}" data-document-file="${definition.key}" accept=".pdf,.doc,.docx,image/*">
+              </div>
+            </div>`}
         </div>`;
       }).join('');
       renderSigningCards();
     }
 
     function renderSigningCards() {
-      const docs = [
-        ['application', '企业开户申请表'],
-        ['crs', '企业 CRS'],
-        ['w8', 'W-8BEN-E']
-      ];
-      $('#signingCards').innerHTML = docs.map(([key, name]) => {
-        let text = '待生成', className = '';
-        if (state.documents[key] === 'generated') { text = '待发送'; className = 'primary'; }
-        if (state.packageStatus === 'sent') { text = '待客户签署'; className = 'warning'; }
-        if (state.packageStatus === 'signed') { text = '已签署回传'; className = 'success'; }
-        return `<div class="document-card"><h3>${name}</h3><p class="subtle">PDF 文件</p><div class="document-meta"><span class="tag ${className}">${text}</span><button class="btn text small">预览</button></div></div>`;
+      $('#signingCards').innerHTML = documentDefinitions.map(({ key, name }) => {
+        const doc = state.documents[key];
+        let text, className;
+        if (doc.method === 'manual') {
+          text = doc.status === 'uploaded' ? '客户签署件已上传' : '等待工作人员上传';
+          className = doc.status === 'uploaded' ? 'success' : 'warning';
+        } else if (doc.status === 'signed') {
+          text = '客户已电子签署';
+          className = 'success';
+        } else if (state.packageStatus === 'sent' && doc.status === 'generated') {
+          text = '等待客户电子签署';
+          className = 'warning';
+        } else if (doc.status === 'generated') {
+          text = '待发送签署任务';
+          className = 'primary';
+        } else {
+          text = '待生成';
+          className = '';
+        }
+        return `<div class="document-card"><h3>${name}</h3><p class="subtle">${doc.method === 'auto' ? '系统生成 / 电子签署' : '客户填写签署 / 工作人员上传'}</p><div class="document-meta"><span class="tag ${className}">${text}</span><button class="btn text small">预览</button></div></div>`;
       }).join('');
-      const signLabel = state.packageStatus === 'signed' ? '已完成签署' : state.packageStatus === 'sent' ? '等待客户签署' : '未发送';
+      const allFinal = Object.values(state.documents).every(documentFinal);
+      const signLabel = allFinal ? '全部文件已完成' : state.packageStatus === 'sent' ? '等待客户电子签署' : '待完成文件';
       $('#signStatus').textContent = signLabel;
-      $('#signStatus').className = `tag ${state.packageStatus === 'signed' ? 'success' : 'warning'}`;
+      $('#signStatus').className = `tag ${allFinal ? 'success' : 'warning'}`;
     }
 
     function sectionChecks() {
       const fields = state.fields;
+      const autoTaxSelected = ['crs', 'w8'].some(key => state.documents[key].method === 'auto');
+      const taxDataValid = !autoTaxSelected || (state.taxAssistEnabled && !taxRequiresManualReview() && taxValidationErrors().length === 0);
+      const documentsPrepared = Object.values(state.documents).every(documentPrepared);
       return [
         ['主体资料', ['companyNameEn','country','incorporationDate','registrationNo','registeredAddress','contactName','contactPhone','contactEmail'].every(key => fields[key])],
         ['财务与结构', ['annualProfit','netAssets','annualInvestment'].every(key => fields[key]) && state.people.director.length > 0 && state.people.shareholder.length > 0 && state.people.controller.length > 0],
         ['合规与账户', state.banks.length > 0 && Boolean(state.linkedCustomer) && state.people.trader.length > 0],
-        ['税务与文件', ['crsType','taxCountry','taxId','chapter3','chapter4'].every(key => fields[key]) && Object.values(state.documents).every(value => value === 'generated')],
-        ['签署与审核', state.packageStatus === 'signed' && state.reviewStatus === 'approved']
+        ['税务与文件', taxDataValid && documentsPrepared],
+        ['签署与审核', Object.values(state.documents).every(documentFinal) && state.reviewStatus === 'approved']
       ];
     }
 
@@ -728,7 +1008,7 @@
       $('#summaryDirectors').textContent = `${state.people.director.length} 人`;
       $('#summaryShareholders').textContent = `${state.people.shareholder.length} 人`;
       $('#summaryControllers').textContent = `${state.people.controller.length} 人`;
-      $('#summaryDocuments').textContent = `${Object.values(state.documents).filter(v => v === 'generated').length}/3`;
+      $('#summaryDocuments').textContent = `${Object.values(state.documents).filter(documentPrepared).length}/3`;
       $('#oslName').value = state.fields.companyNameEn || '';
     }
 
@@ -741,7 +1021,7 @@
       });
       $('#previousStep').style.visibility = state.currentStep === 0 ? 'hidden' : 'visible';
       $('#nextStep').textContent = state.currentStep === 4 ? '完成并返回列表' : '下一步';
-      $('#footerHint').textContent = ['填写公司主体资料','填写财务资料及公司结构','完成合规、账户和授权人资料','校验并生成三份表格','发送签署并完成审核'][state.currentStep];
+      $('#footerHint').textContent = ['填写公司主体资料','填写财务资料及公司结构','完成合规、账户和授权人资料','选择代录生成或上传客户签署文件','完成剩余签署并提交审核'][state.currentStep];
       saveState(false);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -751,6 +1031,8 @@
       renderBanks();
       renderCustomer();
       renderConditionalTax();
+      renderAdditionalTaxResidences();
+      renderTaxAssist();
       renderDocuments();
       renderSummary();
       $('#oslStatus').textContent = state.oslStatus;
@@ -804,6 +1086,13 @@
         renderSummary();
         toast('银行账户已删除');
       }
+      const deleteTaxResidence = event.target.closest('[data-delete-tax-residence]');
+      if (deleteTaxResidence) {
+        state.taxResidences.splice(Number(deleteTaxResidence.dataset.deleteTaxResidence), 1);
+        saveState(false);
+        renderAdditionalTaxResidences();
+        renderConditionalTax();
+      }
       const bindCustomer = event.target.closest('[data-bind-customer]');
       if (bindCustomer) {
         state.linkedCustomer = clone(customers.find(item => item.vcId === bindCustomer.dataset.bindCustomer));
@@ -814,14 +1103,74 @@
       }
       const generate = event.target.closest('[data-generate]');
       if (generate) {
-        state.documents[generate.dataset.generate] = 'generated';
+        const key = generate.dataset.generate;
+        const doc = state.documents[key];
+        if (['crs', 'w8'].includes(key) && !state.taxAssistEnabled) {
+          return toast('请先开启“补全 CRS 和 W-8BEN-E”，或改为上传客户已签署文件');
+        }
+        if (['crs', 'w8'].includes(key) && taxRequiresManualReview()) {
+          return toast('当前税务身份属于复杂实体，请转人工确认并上传客户完成的文件');
+        }
+        if (['crs', 'w8'].includes(key) && taxValidationErrors().length) {
+          return toast('仍有被判定为需填写的税务字段未完成');
+        }
+        doc.status = 'generated';
+        doc.fileName = '';
         saveState(false);
         renderDocuments();
         renderSummary();
-        toast('文件已生成');
+        toast('文件已自动生成，后续将发送客户电子签署');
+      }
+      const upload = event.target.closest('[data-upload-document]');
+      if (upload) {
+        $(`#file-${upload.dataset.uploadDocument}`).click();
+      }
+      const download = event.target.closest('[data-download-template]');
+      if (download) {
+        const name = documentDefinitions.find(item => item.key === download.dataset.downloadTemplate)?.name || '文件';
+        toast(`已模拟下载${name}空白模板`);
       }
       const close = event.target.closest('[data-close-modal]');
       if (close) close.closest('.modal-backdrop').classList.remove('open');
+    });
+
+    document.addEventListener('change', event => {
+      const taxResidenceInput = event.target.closest('[data-tax-residence]');
+      if (taxResidenceInput) {
+        const row = state.taxResidences[Number(taxResidenceInput.dataset.taxResidence)];
+        row[taxResidenceInput.dataset.taxField] = taxResidenceInput.value;
+        $('#taxStatus').textContent = '待校验';
+        $('#taxStatus').className = 'tag warning';
+        saveState(false);
+        renderConditionalTax();
+      }
+      const method = event.target.closest('[data-document-method]');
+      if (method) {
+        const key = method.dataset.documentMethod;
+        const doc = state.documents[key];
+        doc.method = method.value;
+        doc.status = 'ready';
+        doc.fileName = '';
+        if (method.value === 'auto' && ['crs', 'w8'].includes(key)) {
+          state.taxAssistEnabled = true;
+        }
+        saveState(false);
+        renderTaxAssist();
+        renderDocuments();
+        renderSummary();
+        toast(method.value === 'auto' ? '已选择工作人员代录及电子签署' : '已选择上传客户填写签署文件');
+      }
+      const file = event.target.closest('[data-document-file]');
+      if (file && file.files?.[0]) {
+        const doc = state.documents[file.dataset.documentFile];
+        doc.method = 'manual';
+        doc.status = 'uploaded';
+        doc.fileName = file.files[0].name;
+        saveState(false);
+        renderDocuments();
+        renderSummary();
+        toast('客户已签署文件上传成功');
+      }
     });
 
     $('#savePerson').addEventListener('click', () => {
@@ -831,11 +1180,16 @@
         nameEn: $('#personNameEn').value.trim(),
         nameZh: $('#personNameZh').value.trim(),
         nationality: $('#personNationality').value,
+        idType: $('#personIdType').value,
         idNo: $('#personIdNo').value.trim(),
         phone: $('#personPhone').value.trim(),
         address: $('#personAddress').value.trim(),
         ownership: $('#personOwnership').value,
-        taxNo: $('#personTaxNo').value.trim()
+        taxNo: $('#personTaxNo').value.trim(),
+        usPerson: $('#personUsPerson').value,
+        authorizationScope: $('#personAuthorizationScope').value,
+        authorizationStart: $('#personAuthorizationStart').value,
+        authorizationEnd: $('#personAuthorizationEnd').value
       };
       if (!person.nameEn || !person.idNo || !person.address) return toast('请填写姓名、证件号码和住宅地址');
       if (index === '') state.people[role].push(person);
@@ -876,14 +1230,55 @@
     $('#searchQuery').addEventListener('keydown', event => {
       if (event.key === 'Enter') searchCustomer();
     });
+    $('#addTaxResidence').addEventListener('click', () => {
+      state.taxResidences.push({ country: '', tin: '', noTinReason: '', explanation: '' });
+      saveState(false);
+      renderAdditionalTaxResidences();
+      renderConditionalTax();
+    });
     $('#validateForms').addEventListener('click', () => {
+      if (!state.taxAssistEnabled) return toast('当前未启用工作人员补全税务资料');
+      if (taxRequiresManualReview()) {
+        $('#taxStatus').textContent = '需转人工';
+        $('#taxStatus').className = 'tag danger';
+        return toast('当前实体或税务身份暂不支持自动生成，请转税务合规人员处理');
+      }
+      if (taxValidationErrors().length) {
+        $('#taxStatus').textContent = '待补字段';
+        $('#taxStatus').className = 'tag warning';
+        return toast('请完成系统标记为“需填写”或“条件填写”的字段');
+      }
       $('#taxStatus').textContent = '校验通过';
       $('#taxStatus').className = 'tag success';
       toast('税务字段校验通过');
     });
+    $('#taxAssistEnabled').addEventListener('change', event => {
+      state.taxAssistEnabled = event.target.checked;
+      if (!state.taxAssistEnabled) {
+        ['crs', 'w8'].forEach(key => {
+          state.documents[key] = { method: 'manual', status: 'ready', fileName: '' };
+        });
+        toast('已跳过系统补全，CRS 和 W-8BEN-E 改为客户填写签署后上传');
+      } else {
+        toast('已开启工作人员补全 CRS 和 W-8BEN-E');
+      }
+      saveState(false);
+      renderTaxAssist();
+      renderDocuments();
+      renderSummary();
+    });
     $('#sendPackage').addEventListener('click', () => {
       if (!state.linkedCustomer) return toast('请先关联客户账户');
-      if (!Object.values(state.documents).every(value => value === 'generated')) return toast('请先生成全部文件');
+      const incomplete = Object.values(state.documents).some(doc => !documentPrepared(doc));
+      if (incomplete) return toast('请先生成自动文件，并上传客户自行填写签署的文件');
+      const autoDocuments = Object.values(state.documents).filter(doc => doc.method === 'auto');
+      if (!autoDocuments.length) {
+        state.packageStatus = 'signed';
+        saveState(false);
+        renderSigningCards();
+        renderSummary();
+        return toast('三份客户签署文件均已上传，无需发送电子签署');
+      }
       state.packageStatus = 'sent';
       $('#caseStatus').textContent = '待客户签署';
       $('#caseStatus').className = 'tag warning';
@@ -893,6 +1288,9 @@
     });
     $('#simulateConfirm').addEventListener('click', () => {
       if (state.packageStatus !== 'sent') return toast('请先发送签署任务');
+      Object.values(state.documents).forEach(doc => {
+        if (doc.method === 'auto' && doc.status === 'generated') doc.status = 'signed';
+      });
       state.packageStatus = 'signed';
       $('#caseStatus').textContent = '待管理员审核';
       $('#caseStatus').className = 'tag primary';
@@ -904,7 +1302,7 @@
     $('#submitReview').addEventListener('click', () => {
       const decision = $('#reviewDecision').value;
       if (!decision) return toast('请选择审核结果');
-      if (decision === 'approved' && state.packageStatus !== 'signed') return toast('客户尚未完成签署');
+      if (decision === 'approved' && !Object.values(state.documents).every(documentFinal)) return toast('仍有文件未完成电子签署或未上传客户签署件');
       state.reviewStatus = decision;
       if (decision === 'approved') {
         state.oslStatus = $('#oslEnabled').checked ? '已同步' : '未启用';
