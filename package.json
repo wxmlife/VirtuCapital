@@ -10,6 +10,9 @@
     "build:user": "docusaurus build",
     "build:admin": "npm --prefix admin-guide run build",
     "build:all": "npm run build:user && npm run build:admin",
+    "build:github-pages": "rm -rf build admin-guide/build && DEPLOY_TARGET=github-pages npm run build:user && DEPLOY_TARGET=github-pages npm run build:admin && mkdir -p build/admin && cp -R admin-guide/build/* build/admin/ && touch build/.nojekyll",
+    "deploy:github-pages": "npm run build:github-pages && gh-pages -d build",
+    "publish": "bash scripts/publish-guides.sh",
     "serve": "docusaurus serve"
   },
   "dependencies": {
@@ -23,5 +26,8 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
