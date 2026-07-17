@@ -2,7 +2,7 @@
 id: deposit-international
 title: 入金说明
 slug: /app-guide/guides/deposit-international
-description: Virtu Capital APP 国际电汇入金完整操作教程
+description: Virtu Capital APP 当前入金功能状态与可用替代方式
 sidebar_position: 1
 ---
 
@@ -17,4 +17,4 @@ sidebar_position: 1
 - [转入股票](./position-transfer)：把本人其他券商账户中的股票转入 Virtu Capital。
 - [平台内股票转让](./stock-transfer)：由另一位 Virtu Capital 客户按平台规则向您的账户转让股票。
 
-国际电汇入金的原教程内容已保留在项目草稿中，功能重新开放并完成核验后再恢复展示。
+旧版入金图片仍作为隐藏素材保留，不在当前指南中展示。功能重新开放并完成页面、账户和流程核验后，再恢复具体操作教程。

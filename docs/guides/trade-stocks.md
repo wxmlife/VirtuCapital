@@ -44,18 +44,14 @@ sidebar_position: 3
 | 快买 | 在股票详情页快速填写买入价格和数量 | 订单金额、手续费、市场状态 |
 | 快卖 | 在股票详情页快速填写卖出价格和数量 | 当前持仓、手续费、市场状态 |
 
-<table>
-  <tbody>
-    <tr>
-      <td><img src={require('../assets/trade/06-buy.png').default} alt="交易买入" /><br/><strong>交易买入</strong></td>
-      <td><img src={require('../assets/trade/07-sell.png').default} alt="交易卖出" /><br/><strong>交易卖出</strong></td>
-    </tr>
-    <tr>
-      <td><img src={require('../assets/trade/08-quick-buy.png').default} alt="快买" /><br/><strong>快买</strong></td>
-      <td><img src={require('../assets/trade/09-quick-sell.png').default} alt="快卖" /><br/><strong>快卖</strong></td>
-    </tr>
-  </tbody>
-</table>
+四张图片使用不同演示数据，只用于比较入口和页面结构：
+
+<div className="screenshot-grid screenshot-grid--four">
+  <figure><img src={require('../assets/trade/06-buy.png').default} alt="交易买入" /><figcaption>交易买入</figcaption></figure>
+  <figure><img src={require('../assets/trade/07-sell.png').default} alt="交易卖出" /><figcaption>交易卖出</figcaption></figure>
+  <figure><img src={require('../assets/trade/08-quick-buy.png').default} alt="快买" /><figcaption>快买</figcaption></figure>
+  <figure><img src={require('../assets/trade/09-quick-sell.png').default} alt="快卖" /><figcaption>快卖</figcaption></figure>
+</div>
 
 ## 4. 检查金额和费用
 
@@ -72,6 +68,8 @@ sidebar_position: 3
 点击“买入下单”或“卖出下单”。看到下单成功提示后，点击“确认”。
 
 ![股票买入下单成功](../assets/trade/04-success.png)
+
+“下单成功”只表示订单已提交，不代表已经成交。休市期间或市场尚未达到限价时，订单可能继续等待。
 
 ## 6. 查看订单状态
 

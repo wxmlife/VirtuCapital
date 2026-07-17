@@ -7,6 +7,6 @@ build/
 tmp/
 output/
 archive/
-assets/
+/assets/
 specs/
 hatch-pet-khepri/

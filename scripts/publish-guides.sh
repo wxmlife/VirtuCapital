@@ -22,6 +22,8 @@ npm run build:github-pages
 
 echo "2/4 收集用户指南和管理员指南的正式源文件……"
 SOURCE_PATHS=(
+  ".gitignore"
+  "scripts/publish-guides.sh"
   "docs"
   "static"
   "src"

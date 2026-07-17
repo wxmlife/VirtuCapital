@@ -38,6 +38,27 @@ body { background: #fff; color: #20212a; }
 .pagination-nav__link { border: 1px solid #dadee5; border-radius: 12px; box-shadow: none; }
 .footer { border-top: 1px solid #ececf2; }
 
+.screenshot-grid {
+  display: grid;
+  gap: 16px;
+  margin: 24px 0 34px;
+}
+.screenshot-grid--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.screenshot-grid figure { margin: 0; min-width: 0; text-align: center; }
+.theme-doc-markdown .screenshot-grid img {
+  width: 100%;
+  max-height: none;
+  margin: 0;
+  border-radius: 18px;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, .07), 0 0 0 1px rgba(15, 23, 42, .05);
+}
+.screenshot-grid figcaption {
+  color: #626a78;
+  font-size: .86rem;
+  font-weight: 650;
+  margin-top: 8px;
+}
+
 /* RockFlow-inspired guide index: functional cards instead of one long article. */
 .docs-doc-id-app-guide .theme-doc-markdown table { border-collapse: separate; border-spacing: 14px; margin: 12px -14px 28px; width: calc(100% + 28px); overflow: visible; }
 .docs-doc-id-app-guide .theme-doc-markdown td { background: #fff; border: 1px solid #dadee5; border-radius: 14px; box-shadow: 0 2px 8px rgba(15, 23, 42, .045); padding: 20px 22px; vertical-align: top; width: 50%; transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease; }
@@ -59,4 +80,10 @@ body { background: #fff; color: #20212a; }
   .theme-doc-markdown img { width: min(92%, 340px); border-radius: 24px; }
   .docs-doc-id-app-guide .theme-doc-markdown table { border-spacing: 8px; margin-left: -8px; width: calc(100% + 16px); }
   .docs-doc-id-app-guide .theme-doc-markdown td { display: block; width: auto; margin-bottom: 8px; }
+  .screenshot-grid--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 520px) {
+  .screenshot-grid { gap: 12px; }
+  .theme-doc-markdown .screenshot-grid img { border-radius: 16px; }
 }

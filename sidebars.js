@@ -21,6 +21,7 @@ export default {
           collapsed: true,
           items: [
             'guides/assets',
+            'guides/cash-flow',
             'guides/deposit-international',
             'guides/withdraw-international',
             'guides/position-transfer',
@@ -44,7 +45,7 @@ export default {
           type: 'category',
           label: '账户支持',
           collapsed: true,
-          items: ['guides/profile', 'account-and-security', 'guides/settings', 'guides/feedback']
+          items: ['guides/profile', 'guides/messages', 'account-and-security', 'guides/settings', 'guides/feedback']
         }
       ]
     },

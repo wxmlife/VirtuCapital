@@ -17,6 +17,7 @@ hide_table_of_contents: true
 | [账户与安全](/app-guide/account-and-security)<br/><small>个人资料、登录密码和交易密码</small> | [国际电汇出金](/app-guide/guides/withdraw-international)<br/><small>选择银行账户、确认费用并提交申请</small> |
 | [使用“我的”页面](/app-guide/guides/profile)<br/><small>账户资料、结单、反馈和设置入口</small> | [转入与转出股票](/app-guide/guides/position-transfer)<br/><small>准备资料、四步申请、进度与撤销</small> |
 | [设置语言与偏好](/app-guide/guides/settings)<br/><small>语言、价格颜色、缓存等设置</small> | [平台内股票转让](/app-guide/guides/stock-transfer)<br/><small>MIT、OTC、BSN、冻结与撤销</small> |
+| [查看消息中心](/app-guide/guides/messages)<br/><small>交易、资产、安全和系统通知</small> | [查看资金流水](/app-guide/guides/cash-flow)<br/><small>买卖、出金和划转等资金变化</small> |
 |  | [查看与获取结单](/app-guide/guides/statements)<br/><small>筛选日/月结单、保存本地或发送邮件</small> |
 
 | 股票交易与行情 | 研究与订单 |
