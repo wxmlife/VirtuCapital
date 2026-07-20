@@ -20,9 +20,11 @@ echo "1/4 检查 Markdown、图片引用和网站构建……"
 git diff --check
 npm run build:github-pages
 
-echo "2/4 收集用户指南和管理员指南的正式源文件……"
+echo "2/4 收集用户指南的正式源文件……"
 SOURCE_PATHS=(
   ".gitignore"
+  "README.md"
+  "package.json"
   "scripts/publish-guides.sh"
   "docs"
   "static"
@@ -30,12 +32,6 @@ SOURCE_PATHS=(
   "i18n"
   "sidebars.js"
   "docusaurus.config.js"
-  "admin-guide/docs"
-  "admin-guide/static"
-  "admin-guide/src"
-  "admin-guide/i18n"
-  "admin-guide/sidebars.js"
-  "admin-guide/docusaurus.config.js"
 )
 
 EXISTING_PATHS=()
@@ -55,9 +51,8 @@ else
   git push origin main
 fi
 
-echo "3/4 发布用户指南和管理员指南到 GitHub Pages……"
+echo "3/4 发布用户指南到 GitHub Pages……"
 npx gh-pages -d build -m "deploy: publish Virtu Capital guides"
 
 echo "4/4 发布完成。"
 echo "用户指南：https://wxmlife.github.io/VirtuCapital/app-guide/"
-echo "管理员指南：https://wxmlife.github.io/VirtuCapital/admin/"

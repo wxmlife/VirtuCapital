@@ -26,7 +26,7 @@ export default {
       docs: {
         routeBasePath: '/',
         sidebarPath: './sidebars.js',
-        exclude: ['**/*.md.example'],
+        exclude: ['**/*.md.example', '**/superpowers/**'],
         breadcrumbs: true,
         // 当前素材仓库尚无 Git 提交记录；正式接入版本库后可改为 true。
         showLastUpdateTime: false,

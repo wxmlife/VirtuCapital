@@ -30,7 +30,7 @@ body { background: #fff; color: #20212a; }
 .theme-doc-markdown h1 { font-size: 2.5rem; letter-spacing: -.035em; margin-bottom: 1.25rem; }
 .theme-doc-markdown h2 { border-top: 1px solid #efeff4; font-size: 1.65rem; letter-spacing: -.02em; margin-top: 3.4rem; padding-top: 2.2rem; }
 .theme-doc-markdown h3 { font-size: 1.2rem; }
-.theme-doc-markdown img { display: block; width: min(100%, 360px); max-height: 760px; object-fit: contain; margin: 28px auto 36px; border-radius: 28px; box-shadow: 0 10px 28px rgba(15, 23, 42, .09), 0 0 0 1px rgba(15, 23, 42, .06); }
+.theme-doc-markdown img { display: block; width: min(100%, 360px); max-height: 760px; object-fit: contain; margin: 28px auto 36px 0; border-radius: 28px; box-shadow: 0 10px 28px rgba(15, 23, 42, .09), 0 0 0 1px rgba(15, 23, 42, .06); }
 .theme-doc-markdown table { display: table; width: 100%; border-radius: 14px; overflow: hidden; }
 .theme-doc-markdown code { border-radius: 5px; }
 .alert { border: 1px solid #e5e7eb; border-radius: 14px; box-shadow: none; }
@@ -43,7 +43,11 @@ body { background: #fff; color: #20212a; }
   gap: 16px;
   margin: 24px 0 34px;
 }
+.screenshot-grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.screenshot-grid--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .screenshot-grid--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.screenshot-grid--five { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.screenshot-grid--landscape { grid-template-columns: minmax(0, 1fr); }
 .screenshot-grid figure { margin: 0; min-width: 0; text-align: center; }
 .theme-doc-markdown .screenshot-grid img {
   width: 100%;
@@ -80,10 +84,15 @@ body { background: #fff; color: #20212a; }
   .theme-doc-markdown img { width: min(92%, 340px); border-radius: 24px; }
   .docs-doc-id-app-guide .theme-doc-markdown table { border-spacing: 8px; margin-left: -8px; width: calc(100% + 16px); }
   .docs-doc-id-app-guide .theme-doc-markdown td { display: block; width: auto; margin-bottom: 8px; }
+  .screenshot-grid--three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .screenshot-grid--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .screenshot-grid--five { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 520px) {
   .screenshot-grid { gap: 12px; }
+  .screenshot-grid--three { grid-template-columns: 1fr; }
+  .screenshot-grid--five { grid-template-columns: 1fr; }
+  .docs-doc-id-account-opening .screenshot-grid--two { grid-template-columns: 1fr; }
   .theme-doc-markdown .screenshot-grid img { border-radius: 16px; }
 }

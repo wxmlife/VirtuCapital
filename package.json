@@ -5,12 +5,13 @@
   "scripts": {
     "start": "docusaurus start",
     "start:user": "docusaurus start",
+    "preview:user": "DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus-preview docusaurus clear && DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus-preview docusaurus serve --build --host 0.0.0.0",
     "start:admin": "npm --prefix admin-guide start",
-    "build": "docusaurus build",
-    "build:user": "docusaurus build",
+    "build": "DOCUSAURUS_GENERATED_FILES_DIR_NAME=${DOCUSAURUS_GENERATED_FILES_DIR_NAME:-.docusaurus-build} docusaurus build",
+    "build:user": "DOCUSAURUS_GENERATED_FILES_DIR_NAME=${DOCUSAURUS_GENERATED_FILES_DIR_NAME:-.docusaurus-build} docusaurus build",
     "build:admin": "npm --prefix admin-guide run build",
     "build:all": "npm run build:user && npm run build:admin",
-    "build:github-pages": "rm -rf build admin-guide/build && DEPLOY_TARGET=github-pages npm run build:user && DEPLOY_TARGET=github-pages npm run build:admin && mkdir -p build/admin && cp -R admin-guide/build/* build/admin/ && touch build/.nojekyll",
+    "build:github-pages": "rm -rf build .docusaurus-github-pages && DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus-github-pages DEPLOY_TARGET=github-pages npm run build:user && touch build/.nojekyll",
     "deploy:github-pages": "npm run build:github-pages && gh-pages -d build",
     "publish": "bash scripts/publish-guides.sh",
     "serve": "docusaurus serve"

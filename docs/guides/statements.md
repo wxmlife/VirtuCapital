@@ -2,7 +2,7 @@
 id: statements
 title: 查看与获取结单
 slug: /app-guide/guides/statements
-sidebar_position: 5
+sidebar_position: 7
 ---
 
 # 查看与获取结单

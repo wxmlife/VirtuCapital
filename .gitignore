@@ -1,5 +1,8 @@
 node_modules/
 .docusaurus/
+.docusaurus-build/
+.docusaurus-preview/
+.docusaurus-github-pages/
 build/
 .DS_Store
 *.log
@@ -10,3 +13,9 @@ archive/
 /assets/
 specs/
 hatch-pet-khepri/
+docs/superpowers/
+design/
+outputs/
+tutorial-screenshots/
+scripts/fill_individual_w8ben_sample.py
+docs/assets/corporate-account-opening/02-contact-staff.jpg

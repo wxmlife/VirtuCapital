@@ -1,12 +1,12 @@
 ---
 id: withdraw-international
-title: 如何通过国际电汇出金
+title: 如何出金
 slug: /app-guide/guides/withdraw-international
 description: Virtu Capital APP 国际电汇出金完整操作教程
 sidebar_position: 2
 ---
 
-# 如何通过国际电汇出金
+# 如何出金
 
 国际电汇出金支持将 USD 提取至本人同名银行账户，通常需要 1–3 个工作日。
 

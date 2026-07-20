@@ -36,7 +36,15 @@ npm run start:user
 npm run start:admin
 ```
 
-用户站默认使用 `http://localhost:3000`，管理员站使用 `http://localhost:3001`。修改对应 Markdown 后开发服务器会自动刷新。
+`start:user` 是快速编辑模式，只加载简体中文；修改 Markdown 后会自动刷新。管理员站使用 `http://localhost:3001`。
+
+需要在同一个地址预览并切换简体中文、繁体中文和英文时，使用：
+
+```bash
+npm run preview:user -- --port 3000
+```
+
+完整用户站会打开在 `http://localhost:3000`。这个模式会先清理旧路径缓存，再构建全部语言，因此启动稍慢，但可以避免 GitHub Pages 路径残留，并正常验证语言切换和所有正式路由。
 
 ## 生产构建
 

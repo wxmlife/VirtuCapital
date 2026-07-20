@@ -44,8 +44,6 @@ sidebar_position: 3
 | 快买 | 在股票详情页快速填写买入价格和数量 | 订单金额、手续费、市场状态 |
 | 快卖 | 在股票详情页快速填写卖出价格和数量 | 当前持仓、手续费、市场状态 |
 
-四张图片使用不同演示数据，只用于比较入口和页面结构：
-
 <div className="screenshot-grid screenshot-grid--four">
   <figure><img src={require('../assets/trade/06-buy.png').default} alt="交易买入" /><figcaption>交易买入</figcaption></figure>
   <figure><img src={require('../assets/trade/07-sell.png').default} alt="交易卖出" /><figcaption>交易卖出</figcaption></figure>
@@ -53,11 +51,22 @@ sidebar_position: 3
   <figure><img src={require('../assets/trade/09-quick-sell.png').default} alt="快卖" /><figcaption>快卖</figcaption></figure>
 </div>
 
-## 4. 检查金额和费用
+## 4. 输入价格和数量（股数）
+以限价单为例，选择买入或卖出后，输入股票价格与数量（股数）
+:::warning 输入股票价格与数量
+- 股票价格默认为当前市价，可以调整价格高低挂单
+- 股票交易仅支持一手股票的整数倍\
+请确定自己输入的股票价格和数量
+:::
 
-提交前检查订单金额、手续费、预计总支出和可用余额。
+## 5. 查看预估金额和手续费
 
-![检查订单金额和费用](../assets/trade/03-order-filled.png)
+提交前检查订单金额、手续费、预计总支出收入和可用余额。
+
+<div className="screenshot-grid screenshot-grid--two">
+  <figure><img src={require('../assets/trade/03-order-filled.png').default} alt="买入股票检查订单金额和费用" /><figcaption>买入股票检查订单金额和费用</figcaption></figure>
+  <figure><img src={require('../assets/trade/10-sell.png').default} alt="卖出股票检查订单金额和费用" /><figcaption>卖出股票检查订单金额和费用</figcaption></figure>
+</div>
 
 :::warning 限价单不保证成交
 买入限价单只会按指定价格或更低价格成交；卖出限价单只会按指定价格或更高价格成交。如果市场没有达到限价，订单可能保持“已提交”或到期未成交。
@@ -69,7 +78,9 @@ sidebar_position: 3
 
 ![股票买入下单成功](../assets/trade/04-success.png)
 
-“下单成功”只表示订单已提交，不代表已经成交。休市期间或市场尚未达到限价时，订单可能继续等待。
+:::warning 下单成功只表示订单已提交，不代表已经成交。
+休市期间或市场尚未达到限价时，订单可能继续等待。
+:::
 
 ## 6. 查看订单状态
 

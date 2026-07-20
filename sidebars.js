@@ -13,19 +13,19 @@ export default {
           type: 'category',
           label: '账户开始',
           collapsed: true,
-          items: ['guides/login', 'account-opening']
+          items: ['guides/login', 'account-opening', 'corporate-account-opening']
         },
         {
           type: 'category',
           label: '资产管理',
           collapsed: true,
           items: [
-            'guides/assets',
-            'guides/cash-flow',
             'guides/deposit-international',
             'guides/withdraw-international',
             'guides/position-transfer',
             'guides/stock-transfer',
+            'guides/assets',
+            'guides/cash-flow',
             'guides/statements'
           ]
         },
