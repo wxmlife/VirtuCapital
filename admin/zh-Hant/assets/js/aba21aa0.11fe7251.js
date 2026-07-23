@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkvirtu_capital_admin_guide=self.webpackChunkvirtu_capital_admin_guide||[]).push([[742],{7093(u){u.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"default"}')}}]);
