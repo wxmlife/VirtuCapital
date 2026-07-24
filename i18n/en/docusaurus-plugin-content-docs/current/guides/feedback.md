@@ -1,26 +1,41 @@
 ---
 id: feedback
-title: Submit feedback
+title: Submitting Feedback
 slug: /app-guide/guides/feedback
 sidebar_position: 11
 ---
 
-# Submit feedback
+# Submit Feedback
 
-### 1. Enter the feedback page
+### 1. Open Feedback
 
-Enter "My → Feedback".
+Open **Profile → Feedback**.
 
-![Feedback page](../assets/12_feedback.png)
+![Feedback page](../assets/en/feedback/01-feedback.jpeg)
 
-### 2. Select feedback type
+### 2. Choose a feedback type
 
-Select Business Feedback or Product Feedback.
+- **Business feedback**: problems with a business operation, such as a stock transfer, position transfer, withdrawal, or application status.
+- **Product feedback**: app-page or feature problems and suggestions.
 
-### 3. Fill in the problem description
+### 3. Describe the issue
 
-Write down the problem, time of occurrence, and page entry in one sentence. Upload screenshots on demand, up to 9 screenshots, with total size not exceeding 10 MB.
+Include the time, entry point, actual result, expected result, and application number if available. You may attach up to nine images with a combined size of no more than 10 MB.
 
-### 4. Submit feedback
+```text
+Time:
+Entry point:
+Actual result:
+Expected result:
+Related application number (if any):
+```
 
-Click "Submit".
+Hide passwords, verification codes, complete identity-document numbers, and unrelated account details before uploading.
+
+![Completed feedback example](../assets/en/feedback/02-feedback-filled.jpeg)
+
+### 4. Submit
+
+Tap **Submit** and wait for the success message.
+
+![Feedback submitted successfully](../assets/en/feedback/03-feedback-success.jpeg)

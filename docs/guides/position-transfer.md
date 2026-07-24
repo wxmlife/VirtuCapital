@@ -15,7 +15,7 @@ sidebar_position: 3
 ## 提交申请前准备
 
 请先向双方券商确认**您的账户信息**、**券商联系方式**和**结单材料**。
-![转入股票第0步：准备材料](../assets/position-transfer/03-preparation.png)
+![转入股票第0步：准备材料](../assets/zh-Hans/position-transfer/03-preparation.png)
 
 | 项号 | 转入股票申请所需信息 | 转出股票申请所需信息 |
 | --- | --- | --- |
@@ -68,7 +68,7 @@ sidebar_position: 3
 
 选择股票所在市场，填写转出券商名称及 CCASS/DTC 编号，再填写转出券商的联系电话和电子邮箱，以及本人在该券商的账户类型、账户姓名和账户号码。确认资料与原券商账户及结单一致后，点击“下一步”。
 
-![转入股票第一步：填写基本信息](../assets/position-transfer/04-transfer-in-step1.png)
+![转入股票第一步：填写基本信息](../assets/zh-Hans/position-transfer/04-transfer-in-step1.png)
 
 :::tip 示例值
 以下示例只说明填写格式：
@@ -88,7 +88,7 @@ sidebar_position: 3
 根据所选择的市场，搜索股票代码或名称，输入整数股数量后点击“添加”。\
 每只股票都应出现在“已添加股票”列表中；可添加多只股票，也可在进入下一步前删除错误项目。
 
-![转入股票第二步：添加股票和数量](../assets/position-transfer/05-transfer-in-step2.png)
+![转入股票第二步：添加股票和数量](../assets/zh-Hans/position-transfer/05-transfer-in-step2.png)
 
 :::info 股票数量限制
 - 当前流程仅支持整数股，碎股不能通过此流程转仓。
@@ -99,19 +99,19 @@ sidebar_position: 3
 
 下载页面生成的转仓申请表。申请表名称可能因所选市场而不同，以页面实际生成的文件为准。可选择 APP 内电子签名，或签署后拍照上传；签名应与账户持有人一致，不要修改或涂改申请表内容。
 
-![转入股票第三步：签署转仓申请表](../assets/position-transfer/06-transfer-in-step3-sign.png)
+![转入股票第三步：签署转仓申请表](../assets/zh-Hans/position-transfer/06-transfer-in-step3-sign.png)
 
 上传原券商近期结单。当前页面提示支持 PDF、JPG、PNG、WEBP，单个文件不超过 8 MB；结单需为近 30 天，并包含股票代码、数量和成本信息。
 
-![转入股票第三步：上传原券商结单](../assets/position-transfer/07-transfer-in-step3-upload.png)
+![转入股票第三步：上传原券商结单](../assets/zh-Hans/position-transfer/07-transfer-in-step3-upload.png)
 
 ### 第 4 步：确认并提交
 
 逐项核对客户姓名、VC UID、市场、双方券商、联系人、结算编号、账户号码、股票代码和数量，确认申请表及结单文件可以打开。阅读并同意《转仓服务条款》后，再点击“提交审核”。
 <div className="screenshot-grid screenshot-grid--three">
-  <figure><img src={require('../assets/position-transfer/08-transfer-in-step4.png').default} alt="转入股票第四步：确认资料并提交审核" /><figcaption>确认资料并提交审核</figcaption></figure>
-  <figure><img src={require('../assets/position-transfer/16.jpg').default} alt="转仓申请已提交，等待在原券商提交转出申请" /><figcaption>在原券商提交申请后返回确认</figcaption></figure>
-  <figure><img src={require('../assets/position-transfer/17.jpg').default} alt="转入股票申请进入 VC 初审资料阶段" /><figcaption>确认完成，进入 VC 初审资料</figcaption></figure>
+  <figure><img src={require('../assets/zh-Hans/position-transfer/08-transfer-in-step4.png').default} alt="转入股票第四步：确认资料并提交审核" /><figcaption>确认资料并提交审核</figcaption></figure>
+  <figure><img src={require('../assets/zh-Hans/position-transfer/16.jpg').default} alt="转仓申请已提交，等待在原券商提交转出申请" /><figcaption>在原券商提交申请后返回确认</figcaption></figure>
+  <figure><img src={require('../assets/zh-Hans/position-transfer/17.jpg').default} alt="转入股票申请进入 VC 初审资料阶段" /><figcaption>确认完成，进入 VC 初审资料</figcaption></figure>
 </div>
 
 提交审核后，系统会生成申请编号，状态显示为“处理中”。请先前往原券商平台，为相同股票和数量提交对应的转出申请；完成后返回 VC，点击“我已在其他券商平台提交转出股票申请”。不要在尚未向原券商提交申请时提前确认。
@@ -125,7 +125,7 @@ sidebar_position: 3
 选择转出股票所在市场，填写接收股票的券商名称、CCASS/DTC 编号、联系人姓名、电话、邮箱及本人在该券商的账户类型、账户姓名和账户号码。\
 两边账户通常需要为同一持有人。
 
-![转出股票第一步：填写接收券商和账户信息](../assets/position-transfer/18.jpg)
+![转出股票第一步：填写接收券商和账户信息](../assets/zh-Hans/position-transfer/18.jpg)
 
 ### 第 2 步：输入股票和数量
 
@@ -133,7 +133,7 @@ sidebar_position: 3
 
 确认页面显示的股票总市值、预计手续费、当前可用余额和定价时间后，点击“下一步”。当前手续费仅为预估值；创建草稿不会冻结持仓和手续费，最终提交审核时系统会重新计算并冻结。
 
-![转出股票第二步：选择持仓和填写数量](../assets/position-transfer/19.jpg)
+![转出股票第二步：选择持仓和填写数量](../assets/zh-Hans/position-transfer/19.jpg)
 
 ### 第 3 步：生成并签署申请表，上传结单
 
@@ -142,8 +142,8 @@ sidebar_position: 3
 随后上传页面要求的原券商近期结单。请确认上传的是结单而不是申请表；结单应为近 30 天，并包含股票代码、数量和成本信息。文件格式和大小限制以 APP 当前提示为准。
 
 <div className="screenshot-grid screenshot-grid--two">
-  <figure><img src={require('../assets/position-transfer/20.jpg').default} alt="转出股票第三步：下载并签署转仓申请表" /><figcaption>下载并签署转仓申请表</figcaption></figure>
-  <figure><img src={require('../assets/position-transfer/21.jpg').default} alt="转出股票第三步：完成签署并上传原券商结单材料" /><figcaption>完成签署并上传原券商结单材料</figcaption></figure>
+  <figure><img src={require('../assets/zh-Hans/position-transfer/20.jpg').default} alt="转出股票第三步：下载并签署转仓申请表" /><figcaption>下载并签署转仓申请表</figcaption></figure>
+  <figure><img src={require('../assets/zh-Hans/position-transfer/21.jpg').default} alt="转出股票第三步：完成签署并上传原券商结单材料" /><figcaption>完成签署并上传原券商结单材料</figcaption></figure>
 </div>
 
 ### 第 4 步：确认并提交
@@ -151,8 +151,8 @@ sidebar_position: 3
 核对市场、接收券商、账户姓名、账户号码、CCASS/DTC、转出股票、数量和上传材料。确认资料真实且一致后，阅读并同意《转仓服务条款》，再点击“提交审核”。提交时系统会重新计算相关费用并冻结相应持仓；冻结期间不能卖出或重复转出。
 
 <div className="screenshot-grid screenshot-grid--two">
-  <figure><img src={require('../assets/position-transfer/22.jpg').default} alt="转出股票第四步：核对转仓资料并提交审核" /><figcaption>核对转仓资料并提交审核</figcaption></figure>
-  <figure><img src={require('../assets/position-transfer/23.jpg').default} alt="转出股票申请已提交并进入审核" /><figcaption>提交成功并查看转出进度</figcaption></figure>
+  <figure><img src={require('../assets/zh-Hans/position-transfer/22.jpg').default} alt="转出股票第四步：核对转仓资料并提交审核" /><figcaption>核对转仓资料并提交审核</figcaption></figure>
+  <figure><img src={require('../assets/zh-Hans/position-transfer/23.jpg').default} alt="转出股票申请已提交并进入审核" /><figcaption>提交成功并查看转出进度</figcaption></figure>
 </div>
 
 提交成功后保存申请编号，并在转仓记录中查看进度。页面显示“待审核”仅代表申请已经提交；完成 VC 初审、复审、券商对账、转出券商释放及清算划转后，状态才会变为“已转出”。页面提示转仓通常需要 5–10 个工作日。
@@ -161,13 +161,13 @@ sidebar_position: 3
 
 从转仓页右上角进入记录，查看申请编号、方向、提交时间和处理状态。
 
-![转仓记录和当前状态](../assets/position-transfer/14-transfer-records.png)
+![转仓记录和当前状态](../assets/zh-Hans/position-transfer/14-transfer-records.png)
 
 点击“查看进度”可以查看申请时间、当前状态和处理阶段。转出流程可能依次显示“填写转仓信息、提交审核申请、VC 初审资料、VC 复审资料、待券商对账、待转出券商释放、待清算划转、已转出”。
 
 申请尚未提交审核时，进度页会显示以下草稿状态：
 
-![尚未提交审核的转仓草稿进度](../assets/position-transfer/15-draft-progress.png)
+![尚未提交审核的转仓草稿进度](../assets/zh-Hans/position-transfer/15-draft-progress.png)
 
 - 状态为“当前订单尚未提交审核”时，点击“继续填写”完成剩余材料和最终确认。
 - **转入股票**：处理中的申请如显示“撤销转仓”按钮，可以按当前状态发起撤销；已进入交收后可能无法撤销。

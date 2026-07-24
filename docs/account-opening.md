@@ -23,8 +23,8 @@ sidebar_position: 1
 在资产页面看到“开启您的投资账户”提示后，点击“立即开户”。进入“开户协议”页面后，打开并阅读开户协议，勾选“我已阅读并同意上述协议”，再点击“同意并继续”。
 
 <div className="screenshot-grid screenshot-grid--two">
-  <figure><img src={require('./assets/account-opening/01-start-opening.jpeg').default} alt="开启投资账户提示及立即开户按钮" /><figcaption>点击“立即开户”进入开户流程</figcaption></figure>
-  <figure><img src={require('./assets/account-opening/02-agreement.jpeg').default} alt="开户协议阅读及同意页面" /><figcaption>阅读并同意开户协议</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/01-start-opening.jpeg').default} alt="开启投资账户提示及立即开户按钮" /><figcaption>点击“立即开户”进入开户流程</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/02-agreement.jpeg').default} alt="开户协议阅读及同意页面" /><figcaption>阅读并同意开户协议</figcaption></figure>
 </div>
 
 ## 2. 完成身份验证和证件上传
@@ -33,7 +33,7 @@ sidebar_position: 1
 
 同意开户协议后会进入由 Sumsub 提供支持的身份验证总览。确认身份文件、个人基础信息、职业及财务信息、资产投资信息、合规信息和活体认证六项流程后，点击“继续”进入证件选择。
 
-![查看身份验证步骤并开始 KYC](./assets/account-opening/03-kyc-overview.jpeg)
+![查看身份验证步骤并开始 KYC](./assets/zh-Hans/account-opening/03-kyc-overview.jpeg)
 
 :::info 第三方验证页面
 身份验证会在第三方服务页面内完成。请根据系统提示授权相机并提交资料，不要通过聊天工具或非官方链接发送证件照片。
@@ -47,9 +47,9 @@ sidebar_position: 1
 4. 检查照片方向和清晰度。文字、头像及证件边缘均可辨认时，点击“文件可读”；否则选择“重拍照片”。
 
 <div className="screenshot-grid screenshot-grid--three">
-  <figure><img src={require('./assets/account-opening/04-document-type.jpeg').default} alt="选择证件签发国家地区和证件类型" /><figcaption>选择签发地和证件类型</figcaption></figure>
-  <figure><img src={require('./assets/account-opening/05-document-camera.jpeg').default} alt="使用相机拍摄身份证件正面" /><figcaption>拍摄身份证件正面</figcaption></figure>
-  <figure><img src={require('./assets/account-opening/06-document-review.jpeg').default} alt="确认身份证件照片清晰可读" /><figcaption>检查照片是否清晰可读</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/04-document-type.jpeg').default} alt="选择证件签发国家地区和证件类型" /><figcaption>选择签发地和证件类型</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/05-document-camera.jpeg').default} alt="使用相机拍摄身份证件正面" /><figcaption>拍摄身份证件正面</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/06-document-review.jpeg').default} alt="确认身份证件照片清晰可读" /><figcaption>检查照片是否清晰可读</figcaption></figure>
 </div>
 
 :::warning 证件照片要求
@@ -64,8 +64,8 @@ sidebar_position: 1
 - 页面根据本人选择要求补充的税务及通讯地址资料。
 
 <div className="screenshot-grid screenshot-grid--two">
-  <figure><img src={require('./assets/account-opening/07-personal-info-empty.jpeg').default} alt="个人身份信息空白表单" /><figcaption>核对并填写个人身份信息</figcaption></figure>
-  <figure><img src={require('./assets/account-opening/08-personal-info-filled.jpeg').default} alt="个人身份信息已填写示例页面" /><figcaption>个人信息填写示例</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/07-personal-info-empty.jpeg').default} alt="个人身份信息空白表单" /><figcaption>核对并填写个人身份信息</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/08-personal-info-filled.jpeg').default} alt="个人身份信息已填写示例页面" /><figcaption>个人信息填写示例</figcaption></figure>
 </div>
 
 :::warning 姓名和地址
@@ -81,16 +81,16 @@ sidebar_position: 1
 先选择当前职业性质。\
 选择“在职”时，页面通常会要求填写公司完整名称、所在国家或地区、公司地址、行业、职位、工作年限、纳税申报国家或地区、税务编号、手机号和邮箱。
 
-![在职时填写雇主职业及税务资料](./assets/account-opening/09-employment-employed.jpeg)
+![在职时填写雇主职业及税务资料](./assets/zh-Hans/account-opening/09-employment-employed.jpeg)
 
 不同职业状态会显示不同字段。请选择与本人情况相符的选项，并填写页面实际出现的必填内容：
 
 <div className="screenshot-grid screenshot-grid--five">
-  <figure><img src={require('./assets/account-opening/10-employment-self-employed.jpeg').default} alt="职业性质为自雇时的职业及财务信息表单" /><figcaption>自雇：经营或任职资料</figcaption></figure>
-  <figure><img src={require('./assets/account-opening/11-employment-unemployed.jpeg').default} alt="职业性质为待业时的职业及财务信息表单" /><figcaption>待业：工作经验资料</figcaption></figure>
-  <figure><img src={require('./assets/account-opening/12-employment-student.jpeg').default} alt="职业性质为学生时的职业及财务信息表单" /><figcaption>学生：学校及学习年限</figcaption></figure>
-  <figure><img src={require('./assets/account-opening/13-employment-caregiver.jpeg').default} alt="职业性质为居家照顾者时的职业及财务信息表单" /><figcaption>居家照顾者：税务及联系资料</figcaption></figure>
-  <figure><img src={require('./assets/account-opening/14-employment-retired.jpeg').default} alt="职业性质为退休时的职业及财务信息表单" /><figcaption>退休：税务及联系资料</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/10-employment-self-employed.jpeg').default} alt="职业性质为自雇时的职业及财务信息表单" /><figcaption>自雇：经营或任职资料</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/11-employment-unemployed.jpeg').default} alt="职业性质为待业时的职业及财务信息表单" /><figcaption>待业：工作经验资料</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/12-employment-student.jpeg').default} alt="职业性质为学生时的职业及财务信息表单" /><figcaption>学生：学校及学习年限</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/13-employment-caregiver.jpeg').default} alt="职业性质为居家照顾者时的职业及财务信息表单" /><figcaption>居家照顾者：税务及联系资料</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/14-employment-retired.jpeg').default} alt="职业性质为退休时的职业及财务信息表单" /><figcaption>退休：税务及联系资料</figcaption></figure>
 </div>
 
 :::info 填写说明
@@ -117,8 +117,8 @@ sidebar_position: 1
 部分选择会显示附加问题。例如选择有意进行衍生品交易时，页面可能继续要求确认相关知识或经验。
 
 <div className="screenshot-grid screenshot-grid--two">
-  <figure><img src={require('./assets/account-opening/15-investment-info-empty.jpeg').default} alt="资产投资信息空白表单" /><figcaption>填写资产、经验及风险承受能力</figcaption></figure>
-  <figure><img src={require('./assets/account-opening/16-investment-info-filled.jpeg').default} alt="资产投资信息已填写演示页面" /><figcaption>资产投资信息演示状态</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/15-investment-info-empty.jpeg').default} alt="资产投资信息空白表单" /><figcaption>填写资产、经验及风险承受能力</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/16-investment-info-filled.jpeg').default} alt="资产投资信息已填写演示页面" /><figcaption>资产投资信息演示状态</figcaption></figure>
 </div>
 
 :::caution 信息用途
@@ -129,7 +129,7 @@ sidebar_position: 1
 
 逐项阅读并回答合规问题，包括账户最终实益拥有人、美国相关身份、本人业务性质是否具有较高洗钱风险、政治公众人物或相关关系、W-8BEN 表格生成、推广信息接收渠道及客户声明等内容。
 
-![逐项确认合规声明并继续](./assets/account-opening/18-compliance-info.jpeg)
+![逐项确认合规声明并继续](./assets/zh-Hans/account-opening/18-compliance-info.jpeg)
 
 选择答案后再次检查，确认与本人身份和账户用途一致，再阅读客户确认与声明并点击“继续”。不确定某项声明的含义时，应先联系客户支持或专业顾问，不要猜测作答。
 
@@ -138,9 +138,9 @@ sidebar_position: 1
 信息填写完成后，根据屏幕提示将脸部置于识别框内，并完成所需动作。提交后页面会进入证件和资料核验状态；核验完成时会显示“已完成”。
 
 <div className="screenshot-grid screenshot-grid--three">
-  <figure><img src={require('./assets/account-opening/19-liveness.jpeg').default} alt="将脸部置于识别框内完成活体认证" /><figcaption>完成活体认证</figcaption></figure>
-  <figure><img src={require('./assets/account-opening/20-kyc-reviewing.jpeg').default} alt="证件及 KYC 身份资料正在核验" /><figcaption>等待证件及 KYC 信息核验</figcaption></figure>
-  <figure><img src={require('./assets/account-opening/21-kyc-complete.jpeg').default} alt="KYC 身份验证流程已完成" /><figcaption>KYC 验证流程已完成</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/19-liveness.jpeg').default} alt="将脸部置于识别框内完成活体认证" /><figcaption>完成活体认证</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/20-kyc-reviewing.jpeg').default} alt="证件及 KYC 身份资料正在核验" /><figcaption>等待证件及 KYC 信息核验</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/21-kyc-complete.jpeg').default} alt="KYC 身份验证流程已完成" /><figcaption>KYC 验证流程已完成</figcaption></figure>
 </div>
 
 :::warning KYC 完成不等于开户成功
@@ -154,8 +154,8 @@ sidebar_position: 1
 返回资产页面后，如开户状态显示“待签署文件”，点击“去签署”。先预览生成的个人开户申请表，核对姓名、证件资料、账户信息、职业和财务申报等内容；确认无误后点击“去签署”。
 
 <div className="screenshot-grid screenshot-grid--two">
-  <figure><img src={require('./assets/account-opening/22-signing-entry.jpeg').default} alt="资产页显示待签署文件及去签署入口" /><figcaption>从资产页进入待签署文件</figcaption></figure>
-  <figure><img src={require('./assets/account-opening/23-document-preview.jpeg').default} alt="预览个人开户申请表并核对资料" /><figcaption>预览并核对开户文件</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/22-signing-entry.jpeg').default} alt="资产页显示待签署文件及去签署入口" /><figcaption>从资产页进入待签署文件</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/23-document-preview.jpeg').default} alt="预览个人开户申请表并核对资料" /><figcaption>预览并核对开户文件</figcaption></figure>
 </div>
 
 :::info 签署前核对资料
@@ -168,7 +168,7 @@ sidebar_position: 1
 完成一次签名后，系统会将签署结果应用到本次列出的三份必签文件。
 
 <div className="screenshot-grid screenshot-grid--landscape">
-  <figure><img src={require('./assets/account-opening/24-document-signature.jpeg').default} alt="在横屏签名框内完成开户文件签名" /><figcaption>横屏完成签名并点击提交</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/24-document-signature.jpeg').default} alt="在横屏签名框内完成开户文件签名" /><figcaption>横屏完成签名并点击提交</figcaption></figure>
 </div>
 
 ### 6.3 确认签署结果并等待审核
@@ -176,8 +176,8 @@ sidebar_position: 1
 返回文件列表，确认个人开户申请表、CRS 和 W-8BEN 等页面要求的文件均显示“已签署”。全部完成后，资产页面会显示“待人工审核”。
 
 <div className="screenshot-grid screenshot-grid--two">
-  <figure><img src={require('./assets/account-opening/25-documents-signed.jpeg').default} alt="开户所需三份文件均显示已签署" /><figcaption>确认三份必签文件均已签署</figcaption></figure>
-  <figure><img src={require('./assets/account-opening/26-manual-review.jpeg').default} alt="开户文件签署完成后等待人工审核" /><figcaption>完成签署后等待人工审核</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/25-documents-signed.jpeg').default} alt="开户所需三份文件均显示已签署" /><figcaption>确认三份必签文件均已签署</figcaption></figure>
+  <figure><img src={require('./assets/zh-Hans/account-opening/26-manual-review.jpeg').default} alt="开户文件签署完成后等待人工审核" /><figcaption>完成签署后等待人工审核</figcaption></figure>
 </div>
 
 审核进度和最终结果以 APP 当前状态或站内通知为准。审核人员要求补充或更正资料时，请从官方页面重新进入对应步骤处理，不要重复创建开户申请。

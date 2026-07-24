@@ -35,9 +35,9 @@
     "message": "賬戶與安全",
     "description": "The label of footer link with label=账户与安全 linking to /account-and-security"
   },
-  "link.item.label.开户与身份认证": {
-    "message": "開戶與身份認證",
-    "description": "The label of footer link with label=开户与身份认证 linking to /account-opening"
+  "link.item.label.开户": {
+    "message": "開戶",
+    "description": "The label of footer link with label=开户 linking to /app-guide/account-opening"
   },
   "copyright": {
     "message": "Copyright © 2026 Virtu Capital. All rights reserved.",

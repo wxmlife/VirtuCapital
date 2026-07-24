@@ -5,12 +5,14 @@ slug: /app-guide/account-and-security
 sidebar_position: 2
 ---
 
-#Account and Security
+# Account and Security
 
-For account information, login password, transaction password and security suggestions, please view [Account and Security](/app-guide/account-and-security), [Language and Preferences](/app-guide/guides/settings) and [FAQ](/faq).
+Use the Profile page to review your VC UID, verification status, account information, statements, feedback, and settings.
 
-![Account profile page](./assets/11_account_info.png)
+![Profile and account entries](./assets/en/profile/01-profile.jpeg)
 
-:::warning Fund security
-The transaction password should remain different from the login password. Before any deposit, withdrawal or position transfer operation, please double-check the receiving account, brokerage information and securities quantity.
+See [Language and Preferences](/app-guide/guides/settings) and [FAQ](/faq) for related instructions.
+
+:::warning Account security
+Use different sign-in and trading passwords. Before a withdrawal, stock transfer, or position transfer, recheck the beneficiary account, broker information, recipient UID, stock code, and quantity. Never provide a verification code or either password to another person.
 :::

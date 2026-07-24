@@ -17,7 +17,7 @@ sidebar_position: 2
 
 在企业开户页面选择客服电话或客服邮箱联系工作人员，并按照工作人员的指示提供对应的企业信息和开户资料。
 
-![在选择开户类型页面选择企业开户](./assets/corporate-account-opening/01-select-account-type.jpg)
+![在选择开户类型页面选择企业开户](./assets/zh-Hans/corporate-account-opening/01-select-account-type.jpg)
 
 :::info 联系方式以 APP 页面为准
 企业开户页面显示的客服邮箱、客服电话及服务时间可能更新。联系时请以 APP 当前页面显示的信息为准。

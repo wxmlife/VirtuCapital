@@ -1,24 +1,40 @@
 ---
 id: market
-title: Check market conditions
+title: Viewing Market Quotes
 slug: /app-guide/guides/market
 sidebar_position: 4
 ---
 
-# Check market conditions
+# View Market Quotes
 
-### 1. Enter the market page
+Market is part of the stock-trading workflow. Use it to understand broad market activity, discover securities, and open stock details. Do not place an order based only on one index or ranking.
 
-Enter the bottom "market".
+### 1. Open Market
 
-The market page will display the market status and update time; you can still check the market conditions and prepare orders during the market break.
+Tap **Market** in the bottom navigation. The page displays market status and its last update time; quotes remain available when the market is closed.
 
-![Market quotes page](../assets/02_market.png)
+![Market overview](../assets/en/market/01-market.png)
 
-### 2. Select the market
+### 2. Choose a market
 
-Select "Hong Kong Stocks" or "US Stocks" and slide the index card horizontally to view other indices.
+Select **HK** or **US** and swipe horizontally across the index cards.
+
+| Market | Index examples | Primary use |
+| --- | --- | --- |
+| HK | Hang Seng Index, Hang Seng TECH Index, Hang Seng China Enterprises Index | Observe Hong Kong’s broad market, technology sector, and major China-related companies |
+| US | S&P 500, Nasdaq Composite, Dow Jones Industrial Average | Observe the US broad market, technology and growth stocks, and mature large companies |
 
 ### 3. Search or browse stocks
 
-Find a stock or fund in the search box, or enter stock details from the "Top Stocks" or "Leading Gainers" lists.
+Search for a stock or fund, or open a security from **Hot stocks** or **Top gainers**.
+
+## Use the page for an initial review
+
+1. Compare the daily change and recent trend of major indices.
+2. Review popularity, gainers, and volume without treating attention as suitability.
+3. If one sector is relatively strong, continue with earnings, cash flow, debt, and valuation research.
+4. Open a stock’s details and check price, charts, volume, order book, and company information before adding it to Watchlist.
+
+:::warning Examples are not recommendations
+Indices, prices, rankings, and historical performance are shown only to explain the interface. They do not guarantee future results.
+:::

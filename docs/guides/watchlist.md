@@ -11,13 +11,13 @@ sidebar_position: 3
 
 进入底部“自选”。
 
-![自选股页面](../assets/watchlist/01-watchlist.png)
+![自选股页面](../assets/zh-Hans/watchlist/01-watchlist.png)
 
 ### 2. 添加自选股
 
 点击“+ 添加自选”或顶部搜索框，输入股票代码或名称。搜索页的“热门关注”可用于发现近期关注度较高的股票；它只反映页面推荐，不代表适合所有用户。
 
-![搜索股票和热门关注](../assets/watchlist/02-search-popular.png)
+![搜索股票和热门关注](../assets/zh-Hans/watchlist/02-search-popular.png)
 
 搜索结果右侧的黄色勾选表示股票已经加入自选；再次点击可以移除。也可以进入股票详情后点击右上角图标操作。
 

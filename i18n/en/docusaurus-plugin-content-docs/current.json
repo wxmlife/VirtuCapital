@@ -12,11 +12,11 @@
     "description": "The label for category '账户开始' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.资产管理": {
-    "message": "asset Management",
+    "message": "Asset management",
     "description": "The label for category '资产管理' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.股票交易": {
-    "message": "stock trading",
+    "message": "Stock trading",
     "description": "The label for category '股票交易' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.市场探索": {
@@ -24,11 +24,11 @@
     "description": "The label for category '市场探索' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.投资知识": {
-    "message": "investment knowledge",
+    "message": "Investment knowledge",
     "description": "The label for category '投资知识' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.账户与支持": {
-    "message": "Account and Support",
-    "description": "The label for category '账户与支持' in sidebar 'guideSidebar'"
+  "sidebar.guideSidebar.category.账户支持": {
+    "message": "Account support",
+    "description": "The label for category '账户支持' in sidebar 'guideSidebar'"
   }
 }

@@ -28,7 +28,7 @@ BSN 是支持本次转让的业务证明材料。业务要求本次申请提供 
 
 进入“资产 → 股票转让”。
 
-![平台内股票转让页面](../assets/stock-transfer/01-form.png)
+![平台内股票转让页面](../assets/zh-Hans/stock-transfer/01-form.png)
 
 ### 2. 选择接收方
 
@@ -41,13 +41,13 @@ BSN 是支持本次转让的业务证明材料。业务要求本次申请提供 
 - MIT：填写双方约定股价，核对系统计算的对价。示例：腾讯控股（00700）100 股、约定股价 9.00 HKD，页面对价应为 900.00 HKD。
 - OTC：页面对价应为 0；双方自行完成场外资金结算，并保留相关证明。
 
-![确认接收方、股票和交易方式](../assets/stock-transfer/04-filled-details.png)
+![确认接收方、股票和交易方式](../assets/zh-Hans/stock-transfer/04-filled-details.png)
 
 ### 4. 上传 BSN 并确认
 
 上传 BSN 证明，检查接收方、股票代码、数量、交易类型、约定股价和对价。展开阅读风险提示及免责声明并勾选确认，然后选择“保存”草稿或“提交股票转让申请”。
 
-![上传证明材料并阅读风险提示](../assets/stock-transfer/02-proof-and-risk.png)
+![上传证明材料并阅读风险提示](../assets/zh-Hans/stock-transfer/02-proof-and-risk.png)
 
 ### 5. 保存交易信息并等待处理
 
@@ -55,7 +55,7 @@ BSN 是支持本次转让的业务证明材料。业务要求本次申请提供 
 
 从页面右上角进入“股票转让记录”，可以按转出/转入、审核状态和交易方式筛选，并查看交易对手、数量、约定价格、对价和当前状态。
 
-![股票转让记录和处理状态](../assets/stock-transfer/03-records.png)
+![股票转让记录和处理状态](../assets/zh-Hans/stock-transfer/03-records.png)
 
 ## 提交后的冻结与撤销
 

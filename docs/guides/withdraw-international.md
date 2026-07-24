@@ -18,13 +18,13 @@ sidebar_position: 2
 
 打开 APP，进入底部的“资产”。点击“出金”后，确认出金账户，再选择“国际电汇”。
 
-![选择国际电汇出金](../assets/withdraw/01-method.png)
+![选择国际电汇出金](../assets/zh-Hans/withdraw/01-method.png)
 
 ## 2. 填写收款银行资料
 
 依次填写收款银行、银行地址、SWIFT 代码、账户名称和账户号码。
 
-![填写国际电汇收款银行资料](../assets/withdraw/02-bank-form.png)
+![填写国际电汇收款银行资料](../assets/zh-Hans/withdraw/02-bank-form.png)
 
 ## 3. 填写出金金额
 
@@ -32,19 +32,19 @@ sidebar_position: 2
 
 国际电汇最低出金金额为 100 USD，页面显示的手续费率为 0.1%。
 
-![填写出金金额并查看费用](../assets/withdraw/03-amount.png)
+![填写出金金额并查看费用](../assets/zh-Hans/withdraw/03-amount.png)
 
 ## 4. 确认并提交
 
 点击“提交出金申请”，再次确认填写的信息正确，然后点击“确认提交”。
 
-![确认提交出金申请](../assets/withdraw/04-confirm.png)
+![确认提交出金申请](../assets/zh-Hans/withdraw/04-confirm.png)
 
 ## 5. 保存申请编号
 
 提交成功页会展示预计到账时间、申请编号和提交时间。建议保留申请编号以便查询。
 
-![出金申请提交成功](../assets/withdraw/05-success.png)
+![出金申请提交成功](../assets/zh-Hans/withdraw/05-success.png)
 
 ## 6. 查看出金状态
 
@@ -57,4 +57,4 @@ sidebar_position: 2
 | 审核状态 | 待审核、已通过、已拒绝 |
 | 打款状态 | 待打款、已打款、打款失败 |
 
-![查看出金记录](../assets/withdraw/06-records.png)
+![查看出金记录](../assets/zh-Hans/withdraw/06-records.png)

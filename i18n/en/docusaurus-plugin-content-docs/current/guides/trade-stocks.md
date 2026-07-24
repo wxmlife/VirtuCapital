@@ -1,69 +1,83 @@
 ---
 id: trade-stocks
-title: How to buy and sell stocks
+title: Buying and Selling Stocks
 slug: /app-guide/guides/trade-stocks
-description: Search stocks, fill orders and check status on the Virtu Capital APP
+description: Find a stock, complete an order, and review its status in the Virtu Capital app
 sidebar_position: 3
 ---
 
-# How to buy and sell stocks
+# Buy and Sell Stocks
 
-## Before starting
+## Before you start
 
-- Confirm that the account has been opened and has sufficient balance in the corresponding currency.
-- Hong Kong stocks are usually traded based on the number of shares per lot, and the "per lot" quantity will be displayed on the order page.
-- A limit order only limits the transaction price and does not guarantee a transaction.
+- Complete account opening and make sure sufficient funds are available in the correct currency.
+- HK stocks generally trade in board lots; check the lot size shown on the order page.
+- A limit order controls the acceptable price but does not guarantee execution.
 
-## 1. Find the stock
+## 1. Find a stock
 
-Enter "Market" or "Search" to search for stock codes or names, or enter from the popular stock list. Click on the stock to enter the market details page.
+Open **Market** or **Watchlist**, search by code or name, then tap the stock to open its details.
 
-![Tencent Holdings quote details](../assets/trade/01-stock-detail.png)
+![Stock details](../assets/en/stock-detail/01-stock-detail.png)
 
-## 2. Enter the transaction page
+## 2. Open the trading page
 
-Click "Trade" at the bottom. If you just need to place an order quickly, you can also choose "Quick Buy" or "Quick Sell".
+Tap **Trading**. Where available, **Quick Buy** and **Quick Sell** provide a shorter entry from stock details.
 
-## 3. Select Buy or Sell
+## 3. Choose Buy or Sell
 
-Select "Buy" or "Sell" on the order page and confirm:
+Check the side and complete these fields:
 
-| Field | Description |
+| Field | What to check |
 | --- | --- |
-| Order type | The current page is a limit order |
-| Validity period | Valid on the same day, valid for a long time, or valid on a specified date |
-| Price | The highest price you are willing to pay when buying; the lowest price you are willing to accept when selling |
-| Quantity | Enter the number of shares and pay attention to the requirements for the number of shares per lot |
+| Order type | The current page uses a limit order |
+| Validity | Day, Good Til Canceled, or a selected expiry date |
+| Price | Maximum acceptable buy price or minimum acceptable sell price |
+| Quantity | Number of shares, subject to the board-lot requirement |
 
-![Enter stock order](../assets/trade/02-order-entry.png)
+![Order-entry page](../assets/en/trade/01-order-entry.png)
 
-## 4. Check amounts and fees
+If you select a fixed expiry date, use the calendar and confirm the date before returning to the order.
 
-Check your order amount, fees, estimated total spend, and available balance before submitting.
+![Select an order expiry date](../assets/en/trade/05-validity-date.png)
 
-![Check order amount and fees](../assets/trade/03-order-filled.png)
+## 4. Enter price and quantity
 
-:::warning Limit orders do not guarantee execution.
-Buy limit orders will only be executed at the specified price or lower; sell limit orders will only be executed at the specified price or higher. If the market does not reach the limit price, the order may remain "Submitted" or expire unfilled.
+The current market price may be prefilled. Adjust it only after checking the side, market status, and lot size. Stock quantity must be a valid whole-share and board-lot amount for the selected market.
+
+## 5. Review amount and fees
+
+Before submission, check the order amount, fees, estimated total debit or credit, available funds, and available position.
+
+:::warning A limit order may remain unfilled
+A buy limit order executes only at the limit or lower; a sell limit order executes only at the limit or higher. If the market does not reach the limit, the order can remain submitted or expire.
 :::
 
-## 5. Submit order
+## 6. Submit
 
-Click "Place Buy Order" or "Place Sell Order". After seeing the successful order prompt, click "Confirm".
+Tap the buy or sell submission button, then wait for the success message.
 
-![Stock buy order submitted successfully](../assets/trade/04-success.png)
+![Buy order submitted](../assets/en/trade/02-buy-success.png)
 
-## 6. Check order status
+For a sell order, verify the side and available shares in the order page before submission.
 
-Go to "Assets" and click "Orders". You can filter by status, buy/sell direction, and order type, or search by order number, ticker symbol, and stock name.
+![Sell order entry](../assets/en/trade/03-sell-entry.png)
 
-The order list will display the order price, number of shares, amount, completed quantity and current status.
+![Sell order submitted](../assets/en/trade/04-sell-success.png)
 
-![View stock order status](../assets/trade/05-orders.png)
+:::warning Submitted does not mean filled
+During market closure or while the market is away from your limit, the order can continue waiting.
+:::
 
-### Common status
+## 7. Review status
 
-- Submitted: The order has been entered into the system but has not yet been fully completed.
-- Completed: All the shares in the order have been completed.
-- Partially executed: Only part of the shares are executed, and the remaining shares may still be waiting for execution.
-- Canceled: The order has been cancelled, and the transaction will not continue.
+Open **Assets → Orders**. Search by order ID, code, or name, or filter by status, side, and order type.
+
+![Order list and status](../assets/en/orders/01-orders.png)
+
+### Common statuses
+
+- **Submitted**: received by the system but not fully executed.
+- **Filled**: the complete quantity has executed.
+- **Partially filled**: only part of the quantity has executed.
+- **Canceled**: the remaining order will not continue executing.

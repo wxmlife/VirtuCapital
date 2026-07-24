@@ -7,7 +7,7 @@ sidebar_position: 1
 
 # 进入“我的”页面
 
-![“我的”页面](../assets/profile/01-profile.png)
+![“我的”页面](../assets/zh-Hans/profile/01-profile.png)
 
 页面可查看昵称、VC UID 和认证状态，并进入：
 

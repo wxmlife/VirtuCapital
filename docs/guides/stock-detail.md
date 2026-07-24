@@ -15,7 +15,7 @@ sidebar_position: 5
 
 以下以小米集团-W（1810）页面为例。页面示例中的价格和涨跌幅不是实时行情或投资建议。
 
-![小米集团股票详情页面](../assets/stock-detail/01-xiaomi.png)
+![小米集团股票详情页面](../assets/zh-Hans/stock-detail/01-xiaomi.png)
 
 ### 2. 查看基础行情
 

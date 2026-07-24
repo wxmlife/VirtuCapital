@@ -18,7 +18,7 @@ sidebar_position: 2
 
 在登录页底部点击 **“立即注册”**。
 
-![手机号登录页面](../assets/login/02-phone-login.png)
+![手机号登录页面](../assets/zh-Hans/login/02-phone-login.png)
 
 ### 2. 验证手机号
 
@@ -30,7 +30,7 @@ sidebar_position: 2
 当前仅支持香港地区手机号注册。
 :::
 
-![手机号注册页面](../assets/login/03-register.png)
+![手机号注册页面](../assets/zh-Hans/login/03-register.png)
 
 
 
@@ -42,7 +42,7 @@ sidebar_position: 2
 这里完成的是 APP 账户注册，不等同于证券账户开户。
 :::
 
-![设置账户资料和密码](../assets/login/05-account-details.png)
+![设置账户资料和密码](../assets/zh-Hans/login/05-account-details.png)
 
 完成注册后返回登录页，再使用刚才注册的手机号或邮箱登录。
 
@@ -58,7 +58,7 @@ sidebar_position: 2
 
 点击“开始使用”进入登录页。
 
-![Virtu Capital 欢迎页](../assets/login/01-welcome.png)
+![Virtu Capital 欢迎页](../assets/zh-Hans/login/01-welcome.png)
 
 ### 2. 输入手机号和验证码
 
@@ -70,7 +70,7 @@ sidebar_position: 2
 当前手机号入口仅支持香港地区手机号。
 :::
 
-![手机号登录页面](../assets/login/02-phone-login.png)
+![手机号登录页面](../assets/zh-Hans/login/02-phone-login.png)
 
 :::tip 其他登录方式
 完成注册后，也可以点击“**邮箱密码登录**”，\

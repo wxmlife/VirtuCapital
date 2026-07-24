@@ -1,28 +1,45 @@
 ---
 id: stock-detail
-title: View stock details
+title: Viewing Stock Details
 slug: /app-guide/guides/stock-detail
 sidebar_position: 5
 ---
 
-# View stock details
+# View Stock Details
 
-The stock details page includes the latest price, increase and decrease, opening/highest/lowest, trading volume, trading value, valuation data, charts, transactions and orders.
+The stock-details page combines the latest price, daily range, volume, valuation data, charts, trades, and order book.
 
 ### 1. Open stock details
 
-Click on a stock from the Select or Market page.
+Tap a stock from Watchlist or Market. The example values below are not live quotes or investment advice.
 
-![Stock details page](../assets/14_stock_detail.png)
+![Stock details](../assets/en/stock-detail/01-stock-detail.png)
 
-### 2. Check the market and charts
+### 2. Review the basic quote
 
-Switch between "Quotes/Rotations" and switch between "time-sharing, daily K, weekly K, monthly K" and other cycles.
+Confirm the name, code, market, and trading status before using:
 
-### 3. Enter transaction
+- **Latest price and change**: the current page result, not a complete measure of company value.
+- **Open, previous close, high, and low**: the current trading range.
+- **Volume and turnover**: measures of trading activity.
+- **P/E and P/B**: valuation references that should not be compared mechanically across industries.
 
-After viewing the buy and sell order, click "Trade", "Quick Buy" or "Quick Sell".
+### 3. Use intraday and candlestick charts
 
-### 4. Management options
+Switch between **Quote** and other available tabs, then choose intraday, daily, weekly, or monthly periods. Read volume together with price; a volume change by itself is not a buy or sell signal.
 
-Click the icon in the upper right corner to add or remove your own selections.
+### 4. Read completed trades
+
+Time, price, and quantity beside the chart represent completed trades, not open orders. Repeated prints at one price only show that several trades occurred near that level.
+
+### 5. Review the order book and fund data
+
+The order book shows quoted prices and quantities. The best bid and ask can change or be canceled and do not guarantee the next execution price. Treat any fund-flow data as a classification of completed activity, not a forecast.
+
+### 6. Open trading
+
+Tap **Trade**, **Quick Buy**, or **Quick Sell**.
+
+### 7. Manage Watchlist
+
+Use the icon in the upper-right corner to add or remove the stock from Watchlist.

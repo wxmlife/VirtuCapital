@@ -1,26 +1,36 @@
 ---
 id: settings
-title: Set language and preferences
+title: Language and Preferences
 slug: /app-guide/guides/settings
 sidebar_position: 12
 ---
 
-# Set language and preferences
+# Set Language and Preferences
 
-### 1. Enter the settings page
+### 1. Open Settings
 
-Go to "My → Settings".
+Open **Profile → Settings**.
 
-![Settings page](../assets/13_settings.png)
+![Settings page](../assets/en/settings/01-settings.jpeg)
 
-### 2. Switch language
+### 2. Change the language
 
-Switch to Simplified Chinese, Traditional Chinese or English in "Language Settings", and the switch will take effect immediately.
+Open **Language Settings**, then choose Simplified Chinese, Traditional Chinese, or English. The interface updates immediately.
 
-### 3. Set display preferences
+![Language Settings](../assets/en/settings/02-language.jpeg)
 
-Select the price color preference in "Rise and Fall Color"; you can also check the version information and click "Clear Cache" when abnormal.
+### 3. Change display preferences
 
-### 4. Log out
+Open **Price color** to choose red-up/green-down or green-up/red-down.
 
-Click "Log out" to leave the current account.
+![Price color options](../assets/en/settings/03-price-color.jpeg)
+
+You can also view version information or clear the cache when troubleshooting. Clearing the cache does not delete your account.
+
+![Clear-cache confirmation](../assets/en/settings/04-clear-cache.jpeg)
+
+![Version information](../assets/en/settings/05-version.jpeg)
+
+### 4. Sign out
+
+Tap **Log out** to leave the current account.

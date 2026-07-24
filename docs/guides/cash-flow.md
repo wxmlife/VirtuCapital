@@ -11,7 +11,7 @@ sidebar_position: 6
 
 ## 1. 进入流水页
 
-![资金流水页面](../assets/cash-flow/01-cash-flow.png)
+![资金流水页面](../assets/zh-Hans/cash-flow/01-cash-flow.png)
 
 ## 2. 查看收入和支出
 

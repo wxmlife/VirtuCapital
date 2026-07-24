@@ -13,7 +13,7 @@ sidebar_position: 7
 
 进入“我的 → 我的结单”。页面顶部会显示结单账户 UID。
 
-![我的结单列表](../assets/statements/01-statements.png)
+![我的结单列表](../assets/zh-Hans/statements/01-statements.png)
 
 ## 2. 筛选结单
 
@@ -33,7 +33,7 @@ sidebar_position: 7
 
 两种方式只是选择如何接收现有结单，不会重新生成一份新的结单。
 
-![结单预览与接收方式](../assets/statements/02-statement-detail.png)
+![结单预览与接收方式](../assets/zh-Hans/statements/02-statement-detail.png)
 
 :::warning 文件安全
 结单含账户和资产信息。下载后妥善保管，不要发送给不相关人员；用于转仓时，只提交到确认无误的券商或平台页面。

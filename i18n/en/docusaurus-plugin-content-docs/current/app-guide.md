@@ -1,34 +1,37 @@
 ---
 id: app-guide
-title: APP Beginner’s Guide
+title: App Beginner’s Guide
 slug: /app-guide
 sidebar_position: 1
 hide_table_of_contents: true
 ---
 
-# APP Beginner’s Guide
+# App Beginner’s Guide
 
-Find instructions in order of tasks. When using it for the first time, it is recommended to start with "Login and Account Opening"; users who have opened an account can directly enter the assets, trading or market modules.
+Find instructions by task. New users should register and sign in first, then complete account opening. Approved users can go directly to assets, quotes, or trading.
 
-| Account Start | Asset Management |
+| Getting started | Asset services |
 | --- | --- |
-| [Login and Registration](/app-guide/guides/login)<br/><small>Log in with mobile phone number verification code or email password</small> | [View account assets](/app-guide/guides/assets)<br/><small>Balance, positions, profit and loss and quick entry</small> |
-| [Account Opening and Identity Verification](/app-guide/account-opening)<br/><small>Agreement, documents, questionnaire and review status</small> | [International Wire Deposit](/app-guide/guides/deposit-international)<br/><small>Fill in the amount, obtain the collection account and submit the voucher</small> |
-| [Account and Security](/app-guide/account-and-security)<br/><small>Personal information, login password and transaction password</small> | [International Wire Withdrawal](/app-guide/guides/withdraw-international)<br/><small>Select a bank account, confirm the fee and submit the application</small> |
-| [Language and Preferences](/app-guide/guides/settings)<br/><small>Language, price color, cache and other settings</small> | [Stock Transfer and Position Transfer](/app-guide/guides/position-transfer)<br/><small>Transfer in, transfer out and intra-platform stock transfer</small> |
+| [Registration and Sign-In](/app-guide/guides/login)<br/><small>Register first, then use a phone code or email and password</small> | [View Account Assets](/app-guide/guides/assets)<br/><small>Balances, positions, profit or loss, and service entries</small> |
+| [Personal Account Opening](/app-guide/account-opening)<br/><small>Agreements, identity documents, questionnaire, signatures, and review</small> | [Deposit Availability](/app-guide/guides/deposit-international)<br/><small>Deposits are unavailable; use a position transfer or stock transfer</small> |
+| [Corporate Account Opening](/app-guide/corporate-account-opening)<br/><small>Contact the account-opening team through the current app page</small> | [International Wire Withdrawal](/app-guide/guides/withdraw-international)<br/><small>Bank details, amount, fees, submission, and status</small> |
+| [Account and Security](/app-guide/account-and-security)<br/><small>Profile, sign-in password, and trading password</small> | [Transfer Positions In and Out](/app-guide/guides/position-transfer)<br/><small>Preparation, four-step applications, progress, and cancellation</small> |
+| [Using the Profile Page](/app-guide/guides/profile)<br/><small>Account info, statements, feedback, settings, and messages</small> | [Transfer Stock to Another User](/app-guide/guides/stock-transfer)<br/><small>MIT, OTC, BSN, freezing, and cancellation</small> |
+| [Language and Preferences](/app-guide/guides/settings)<br/><small>Language, price colors, cache, and version information</small> | [View Cash Flow](/app-guide/guides/cash-flow)<br/><small>Balance changes from trades and account services</small> |
+| [View the Message Center](/app-guide/guides/messages)<br/><small>Trading, asset, security, and system notices</small> | [View and Receive Statements](/app-guide/guides/statements)<br/><small>Filter, save, or email daily and monthly statements</small> |
 
-| Stock Trading | Market Exploration |
+| Trading and quotes | Research and orders |
 | --- | --- |
-| [Manage Watchlist](/app-guide/guides/watchlist)<br/><small>Add, remove and filter your selections</small> | [View Market Quotes](/app-guide/guides/market)<br/><small>Indexes, popular stocks and gainer lists</small> |
-| [View Stock Details](/app-guide/guides/stock-detail)<br/><small>Quotes, candlesticks, transactions and orders</small> | [Search Stocks](/app-guide/guides/market)<br/><small>Search securities by name or code</small> |
-| [Buy and Sell Stocks](/app-guide/guides/trade-stocks)<br/><small>Price, quantity, fees and order status</small> | [Stock Selection Basics](/app-guide/education/stock-selection-basics)<br/><small>Build checklists from business, finance, valuation and risk</small> |
-| [View and Cancel Orders](/app-guide/guides/orders)<br/><small>Filter orders, view details and cancel orders</small> | [Market Indicators](/app-guide/education/stock-selection-basics#market-indicators)<br/><small>Price, volume, market capitalization and valuation indicators</small> |
+| [Manage Watchlist](/app-guide/guides/watchlist)<br/><small>Search, add, remove, and filter stocks</small> | [View Market Quotes](/app-guide/guides/market)<br/><small>HK and US indices, popular stocks, and initial review</small> |
+| [View Stock Details](/app-guide/guides/stock-detail)<br/><small>Quotes, charts, trades, order book, and fund data</small> | [Stock Selection Basics](/app-guide/education/stock-selection-basics)<br/><small>Build a checklist around business, finances, valuation, and risk</small> |
+| [Buy and Sell Stocks](/app-guide/guides/trade-stocks)<br/><small>Side, price, quantity, validity, fees, and status</small> | [Market Indicators](/app-guide/education/stock-selection-basics#market-indicators)<br/><small>Price, volume, market capitalization, and valuation</small> |
+| [Search and Filter Orders](/app-guide/guides/orders)<br/><small>Wait for loading, filter, review, and cancel</small> | [Search Stocks](/app-guide/guides/market)<br/><small>Find a security by name or code</small> |
 
-| Funding and Order Records | Help and Feedback |
+| Records | Support |
 | --- | --- |
-| [Check Deposit Status](/app-guide/guides/deposit-international#6-check-deposit-status)<br/><small>Confirm application, review and payment status</small> | [Submit Feedback](/app-guide/guides/feedback)<br/><small>Fill in the problem description and attach relevant screenshots</small> |
-| [Check Withdrawal Status](/app-guide/guides/withdraw-international)<br/><small>Confirm application progress, fees and processing results</small> | [FAQ](./faq)<br/><small>Common instructions for accounts, funds, transactions and transfers</small> |
+| [View and Receive Statements](/app-guide/guides/statements)<br/><small>Daily and monthly account records</small> | [Submit Feedback](/app-guide/guides/feedback)<br/><small>Business feedback, product feedback, and screenshots</small> |
+| [Check Withdrawal Status](/app-guide/guides/withdraw-international)<br/><small>Review progress, fees, and payment result</small> | [FAQ](/faq)<br/><small>Accounts, assets, trading, withdrawal, and transfers</small> |
 
-:::tip Can’t find the entrance?
-Different account statuses, regions and APP versions may display different entrances. Please confirm that account opening has been completed first, and refer to the current page of the APP.
+:::tip Can’t find an entry?
+Entries vary by account status, region, and app version. Confirm that account opening is complete and use the current app page as the source of truth.
 :::

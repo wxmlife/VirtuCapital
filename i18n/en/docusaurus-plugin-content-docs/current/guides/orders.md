@@ -1,26 +1,30 @@
 ---
 id: orders
-title: Query and filter orders
+title: Searching and Filtering Orders
 slug: /app-guide/guides/orders
 sidebar_position: 10
 ---
 
-# Query and filter orders
+# Search and Filter Orders
 
-### 1. Enter the order page
+### 1. Open Orders
 
-Enter "Asset → Order".
+Open **Assets → Orders** and wait for the list to finish loading.
 
-![Order inquiry page](../assets/08_orders.png)
+![Orders page](../assets/en/orders/01-orders.png)
 
-### 2. Search or filter orders
+:::tip Wait for loading to finish
+On a slow connection, avoid repeatedly tapping filters before the list has loaded.
+:::
 
-Enter an order number, stock symbol or stock name to search, or filter by status, buy or sell direction and order type.
+### 2. Search or filter
 
-### 3. View order details
+Search by order ID, stock code, or stock name. You can also filter by status, side, and order type.
 
-Click on the order to view the price, quantity, amount and transaction quantity.
+### 3. Review order details
 
-### 4. Cancel order
+Tap an order to review its price, quantity, amount, filled quantity, and current status.
 
-For orders that can still be cancelled, click Cancel in the order details and confirm.
+### 4. Cancel an order
+
+If cancellation is still permitted, tap **Cancel order** in the order details and confirm. For a partially filled order, only the unfilled portion can be canceled. Use the final status shown in the app.

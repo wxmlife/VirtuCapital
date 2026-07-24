@@ -27,8 +27,8 @@
     "message": "投資知識",
     "description": "The label for category '投资知识' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.账户与支持": {
-    "message": "賬戶與支持",
-    "description": "The label for category '账户与支持' in sidebar 'guideSidebar'"
+  "sidebar.guideSidebar.category.账户支持": {
+    "message": "賬戶支持",
+    "description": "The label for category '账户支持' in sidebar 'guideSidebar'"
   }
 }

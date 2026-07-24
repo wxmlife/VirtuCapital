@@ -13,7 +13,7 @@ sidebar_position: 13
 
 在“我的”页面点击右上角信封；出现红点表示存在未读消息。
 
-![消息中心页面](../assets/messages/01-message-center.png)
+![消息中心页面](../assets/zh-Hans/messages/01-message-center.png)
 
 ## 2. 筛选消息
 

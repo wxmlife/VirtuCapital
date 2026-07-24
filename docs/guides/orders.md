@@ -11,7 +11,7 @@ sidebar_position: 10
 
 进入“资产 → 订单”。
 
-![已加载完成的订单查询页面](../assets/trade/05-orders.png)
+![已加载完成的订单查询页面](../assets/zh-Hans/trade/05-orders.png)
 
 :::tip 等待订单加载
 进入页面后先等待加载完成，再搜索或筛选。网络较慢时不要连续点击筛选按钮，以免误以为当前没有订单。

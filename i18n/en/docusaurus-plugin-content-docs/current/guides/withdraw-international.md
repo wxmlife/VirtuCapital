@@ -1,60 +1,44 @@
 ---
 id: withdraw-international
-title: How to withdraw money via international wire transfer
+title: Withdrawing by International Wire
 slug: /app-guide/guides/withdraw-international
-description: Virtu Capital APP International Wire Transfer Withdrawal Complete Operation Tutorial
+description: Complete international-wire withdrawal workflow in the Virtu Capital app
 sidebar_position: 2
 ---
 
-# How to withdraw money via international wire transfer
+# Withdraw by International Wire
 
-International wire transfer withdrawal supports withdrawing USD to the bank account with the same name, which usually takes 1–3 working days.
+International wire withdrawal supports sending USD to a bank account in the same account-holder name and generally takes 1–3 business days.
 
-:::warning before starting
-The name of the receiving account must be consistent with the name of the Virtu Capital account. International wire transfers may incur intermediary bank fees.
+:::warning Before you start
+The beneficiary name must match the Virtu Capital account-opening name. An intermediary bank may deduct additional fees.
 :::
 
-## 1. Select international wire transfer
+## 1. Select International Wire
 
-Open the APP and enter "Assets" at the bottom. After clicking "Withdrawal", confirm the withdrawal account, and then select "International Wire Transfer".
+Open **Assets → Withdraw**, confirm the withdrawal account, and choose **International Wire**.
 
-![Select international wire withdrawal](../assets/withdraw/01-method.png)
+## 2. Enter beneficiary bank details
 
-## 2. Fill in the receiving bank information
+Enter the beneficiary bank, bank address, SWIFT code, account name, and account number exactly as registered with the bank.
 
-Fill in the beneficiary bank, bank address, SWIFT code, account name and account number in order.
+## 3. Enter the amount
 
-![Enter international wire beneficiary bank details](../assets/withdraw/02-bank-form.png)
-
-## 3. Fill in the withdrawal amount
-
-Enter the withdrawal amount, or click "All" to fill in the maximum withdrawal amount. The page will automatically calculate the handling fee and the total amount actually deducted from the account.
-
-The minimum withdrawal amount for international wire transfer is 100 USD, and the handling rate shown on the page is 0.1%.
-
-![Enter withdrawal amount and view fees](../assets/withdraw/03-amount.png)
+Enter the withdrawal amount or use **All** for the maximum currently available amount. Review the fee and total debit shown on the page. The page currently states a minimum of 100 USD and a 0.1% fee; use the current app values if they differ.
 
 ## 4. Confirm and submit
 
-Click "Submit Withdrawal Application", confirm again that the information filled in is correct, and then click "Confirm Submission".
+Tap **Submit withdrawal application**, review every field, then confirm the submission.
 
-![Confirm withdrawal application](../assets/withdraw/04-confirm.png)
+## 5. Save the application number
 
-## 5. Save application number
+The success page shows the estimated arrival time, application number, and submission time. Retain the application number for inquiries.
 
-The submission success page will display the estimated arrival time, application number and submission time. It is recommended to keep the application number for easy reference.
+## 6. Check status
 
-![Withdrawal application submitted successfully](../assets/withdraw/05-success.png)
+Open **Withdrawal records** from the success page or from the withdrawal page. Filter by withdrawal method, review status, or payment status.
 
-## 6. Check withdrawal status
-
-Click "Withdrawal Record" from the success page, or enter the record page from the upper right corner of the withdrawal page. Records support filtering by withdrawal method, review status and payment status.
-
-Common statuses include:
-
-| Status Type | Common Status |
+| Status type | Common statuses |
 | --- | --- |
-| Review status | Pending review, passed, rejected |
-| Payment status | Pending payment, payment completed, payment failed |
-
-![View withdrawal records](../assets/withdraw/06-records.png)
+| Review | Pending, Approved, Rejected |
+| Payment | Pending payment, Paid, Payment failed |

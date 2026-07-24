@@ -1,26 +1,30 @@
 ---
 id: watchlist
-title: Manage discretionary stocks
+title: Managing Watchlist
 slug: /app-guide/guides/watchlist
 sidebar_position: 3
 ---
 
-# Manage discretionary stocks
+# Manage Watchlist
 
-### 1. Enter the custom page
+### 1. Open Watchlist
 
-Go to "Select" at the bottom.
+Tap **Watchlist** in the bottom navigation.
 
-![Watchlist page](../assets/01_watchlist.png)
+![Watchlist page](../assets/en/watchlist/01-watchlist.png)
 
-### 2. Add optional stocks
+### 2. Add a stock
 
-Use the search box to enter a stock symbol or name. Click on the stock to enter the details, and then click the "+" in the upper right corner to add your own selection.
+Tap **Add to watchlist** or the search box and enter a code or name. **Hot watchlist** reflects current attention on the page and is not a recommendation.
 
-### 3. Open the market details
+![Search and Hot watchlist](../assets/en/watchlist/02-search.png)
 
-Click on a stock row to directly open the market details and transaction entrance.
+A yellow checkmark means that the stock is already included. Tap it again to remove the stock, or use the icon in stock details.
 
-### 4. Manage watchlists
+### 3. Open stock details
 
-Use "Hong Kong Stocks/US Stocks" to screen the market. Click "Settings" to adjust the sorting, or enter edit mode to delete the target.
+Each row shows its market, code, latest price, percentage change, intraday trend, and update time. Tap the stock row—not the checkmark—to open its quote and trading entries.
+
+### 4. Organize the list
+
+Use **HK/US** to filter markets. Open **Settings** to adjust sorting or enter edit mode to remove securities.

@@ -11,7 +11,7 @@ sidebar_position: 12
 
 進入“我的 → 設置”。
 
-![設置頁面](../assets/13_settings.png)
+![設置頁面](../assets/zh-Hans/13_settings.png)
 
 ### 2. 切換語言
 

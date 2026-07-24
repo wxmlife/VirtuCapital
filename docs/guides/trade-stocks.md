@@ -18,7 +18,7 @@ sidebar_position: 3
 
 进入“市场”或“自选”，搜索股票代码或名称，也可以从热门股票列表进入。点击股票后进入行情详情页。
 
-![腾讯控股行情详情](../assets/trade/01-stock-detail.png)
+![腾讯控股行情详情](../assets/zh-Hans/trade/01-stock-detail.png)
 
 ## 2. 进入交易页
 
@@ -45,10 +45,10 @@ sidebar_position: 3
 | 快卖 | 在股票详情页快速填写卖出价格和数量 | 当前持仓、手续费、市场状态 |
 
 <div className="screenshot-grid screenshot-grid--four">
-  <figure><img src={require('../assets/trade/06-buy.png').default} alt="交易买入" /><figcaption>交易买入</figcaption></figure>
-  <figure><img src={require('../assets/trade/07-sell.png').default} alt="交易卖出" /><figcaption>交易卖出</figcaption></figure>
-  <figure><img src={require('../assets/trade/08-quick-buy.png').default} alt="快买" /><figcaption>快买</figcaption></figure>
-  <figure><img src={require('../assets/trade/09-quick-sell.png').default} alt="快卖" /><figcaption>快卖</figcaption></figure>
+  <figure><img src={require('../assets/zh-Hans/trade/06-buy.png').default} alt="交易买入" /><figcaption>交易买入</figcaption></figure>
+  <figure><img src={require('../assets/zh-Hans/trade/07-sell.png').default} alt="交易卖出" /><figcaption>交易卖出</figcaption></figure>
+  <figure><img src={require('../assets/zh-Hans/trade/08-quick-buy.png').default} alt="快买" /><figcaption>快买</figcaption></figure>
+  <figure><img src={require('../assets/zh-Hans/trade/09-quick-sell.png').default} alt="快卖" /><figcaption>快卖</figcaption></figure>
 </div>
 
 ## 4. 输入价格和数量（股数）
@@ -64,8 +64,8 @@ sidebar_position: 3
 提交前检查订单金额、手续费、预计总支出收入和可用余额。
 
 <div className="screenshot-grid screenshot-grid--two">
-  <figure><img src={require('../assets/trade/03-order-filled.png').default} alt="买入股票检查订单金额和费用" /><figcaption>买入股票检查订单金额和费用</figcaption></figure>
-  <figure><img src={require('../assets/trade/10-sell.png').default} alt="卖出股票检查订单金额和费用" /><figcaption>卖出股票检查订单金额和费用</figcaption></figure>
+  <figure><img src={require('../assets/zh-Hans/trade/03-order-filled.png').default} alt="买入股票检查订单金额和费用" /><figcaption>买入股票检查订单金额和费用</figcaption></figure>
+  <figure><img src={require('../assets/zh-Hans/trade/10-sell.png').default} alt="卖出股票检查订单金额和费用" /><figcaption>卖出股票检查订单金额和费用</figcaption></figure>
 </div>
 
 :::warning 限价单不保证成交
@@ -76,7 +76,7 @@ sidebar_position: 3
 
 点击“买入下单”或“卖出下单”。看到下单成功提示后，点击“确认”。
 
-![股票买入下单成功](../assets/trade/04-success.png)
+![股票买入下单成功](../assets/zh-Hans/trade/04-success.png)
 
 :::warning 下单成功只表示订单已提交，不代表已经成交。
 休市期间或市场尚未达到限价时，订单可能继续等待。
@@ -88,7 +88,7 @@ sidebar_position: 3
 
 订单列表会显示订单价格、股数、金额、已成交数量和当前状态。
 
-![查看股票订单状态](../assets/trade/05-orders.png)
+![查看股票订单状态](../assets/zh-Hans/trade/05-orders.png)
 
 ### 常见状态
 

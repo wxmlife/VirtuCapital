@@ -13,6 +13,8 @@
     "build:all": "npm run build:user && npm run build:admin",
     "build:github-pages": "rm -rf build .docusaurus-github-pages && DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus-github-pages DEPLOY_TARGET=github-pages npm run build:user && touch build/.nojekyll",
     "deploy:github-pages": "npm run build:github-pages && gh-pages -d build",
+    "check:doc-assets": "node scripts/check-doc-assets.mjs",
+    "check:built-site": "node scripts/check-built-site.mjs",
     "publish": "bash scripts/publish-guides.sh",
     "serve": "docusaurus serve"
   },

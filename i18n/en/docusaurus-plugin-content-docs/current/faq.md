@@ -2,97 +2,92 @@
 id: faq
 title: FAQ
 slug: /faq
-description: Virtu Capital deposits, transactions, withdrawals, transfers and account FAQs
+description: Common Virtu Capital questions about assets, trading, withdrawals, transfers, and accounts
 sidebar_position: 3
 ---
 
 # FAQ
 
-## Deposit
+## Deposits
 
-### How long does it take to make a deposit?
+### Can I make a deposit in the current app?
 
-Expect 1–3 business days for international wire transfers and 1–2 business days for Hong Kong local transfers. Actual time also depends on the sending bank, working day and completeness of the information.
+No. The current version does not provide a new deposit workflow. Do not remit funds using an old screenshot, bank account, or obsolete instruction.
 
-### Can I deposit money using someone else’s bank account?
+### How can I add eligible securities assets while deposits are unavailable?
 
-Not recommended. The international wire transfer page requires the use of a bank account with the same name as the account holder. Otherwise, the deposit may fail or additional information may be required.
+Transfer stocks from your own account at another broker, or receive a platform stock transfer from another eligible Virtu Capital client under the current rules.
 
-### Do I still need to operate on the APP after remittance?
+### Why does Cash Flow still have a Deposit filter?
 
-need. After completing the bank transfer, you should return to the APP to upload the remittance receipt or a screenshot of the successful transfer and submit it for review. If you only complete the bank transfer without submitting the voucher, the platform may not be able to identify the payment in time.
+The filter can remain for historical records or other account states. It does not mean a new deposit entry is available. Follow the current Assets page and platform notices.
 
-### Where can I check the deposit progress?
+## Stock trading
 
-Enter "Assets → Deposit" and click on the deposit record in the upper right corner. You can filter by deposit method, review status and credit status.
+### Why was a submitted order not filled immediately?
 
-## Stock Trading
+Submitted means the system received the order; it does not mean execution is complete. A limit order executes only when the market reaches an acceptable price, and an order placed while the market is closed must wait.
 
-### Why is the transaction not completed immediately after the order is successfully placed?
+### What do buy and sell limits mean?
 
-"Order placed successfully" means that the order has been submitted, but does not mean that the transaction has been completed. Limit orders can only be executed when the market reaches the specified price. Orders submitted during the market break also need to wait for the market to open.
+- A buy limit executes at the specified price or lower.
+- A sell limit executes at the specified price or higher.
 
-### What do the buy limit and sell limit mean?
+### Why is available balance lower than cash balance?
 
-- Buy limit: Buy at the specified price or lower.
-- Sell limit: Sell at a specified price or higher.
+Open or partially filled orders can reserve purchasing power. Check **Assets → Orders**.
 
-### Why is the available balance less than the cash balance?
+### Where can I check execution?
 
-Unfilled or partially filled orders may occupy corresponding purchasing power. Please go to "Assets → Orders" to check whether there are orders waiting to be executed.
+Open **Assets → Orders** and review the status and filled quantity. You can filter by status, side, and order type.
 
-### Where can I check whether the order has been completed?
+## Withdrawals
 
-Enter "Assets → Orders" to view the order status and the number of "transacted" shares. You can also filter by status, buy and sell direction, and order type.
+### Why is the withdrawable amount lower than account cash?
 
-## Withdraw funds
+Funds can remain in settlement, an order freeze, or review. Use the available and maximum withdrawal amounts shown on the current page.
 
-### Why is the amount that can be withdrawn less than the cash in the account?
+### What are the current international-wire limits?
 
-Some funds may still be in the transaction settlement, order freeze or review process. The APP will display the current available amount and the maximum withdrawal amount next to the withdrawal amount, and this value should prevail.
+The page currently shows a 100 USD minimum and a 0.1% fee. An intermediary bank may deduct additional charges. Use the current app values if they change.
 
-### What are the restrictions on international wire transfer withdrawals?
+### Must I use my own bank account?
 
-The current page shows that the minimum withdrawal amount is 100 USD and the handling fee is 0.1%. The intermediary bank may also charge additional fees.
+Yes. The beneficiary name must match the account-opening name; a third-party account can be rejected or returned.
 
-### Do I have to use my bank account to withdraw money?
+### Where can I check withdrawal status?
 
-yes. The withdrawal page requires the name of the receiving account to be consistent with the account opening name. Accounts with different names may be returned.
+Open **Assets → Withdraw → Withdrawal records** and review both the approval and payment statuses.
 
-### Where can I check the withdrawal status?
+## Position transfers and stock transfers
 
-Enter "Assets → Withdrawal" and click on the withdrawal record in the upper right corner. The page displays the review status and payment status respectively.
+### What is the difference?
 
-## Stock rollover and transfer
+- A position transfer moves holdings between Virtu Capital and another broker.
+- A stock transfer moves shares between two Virtu Capital clients.
 
-### What is the difference between "position transfer" and "stock transfer"?
+### What should I prepare for a position transfer?
 
-- Transfer: Transfer positions between Virtu Capital and other brokers, including transferring stocks in and out.
-- Stock transfer: Transfer of shares to another investor within the Virtu Capital platform.
+Prepare both brokers’ names, the HK-stock CCASS or US-stock DTC code, broker contacts, account number, and a recent position statement. Follow the current fields in the app.
 
-### What do I need to prepare before transferring a position?
+### Why must I also contact the original broker for transfer in?
 
-Usually, the names of both parties’ brokers, Hong Kong stock CCASS number or US stock DTC number, broker contact information, account number and position statement are required. The specific fields are subject to the transfer page.
+The original broker must process the matching transfer out. A Virtu Capital transfer-in request alone normally cannot complete the transfer.
 
-### Why do I need to contact the original brokerage firm when transferring stocks?
+### Can I trade the shares during a transfer?
 
-Transfer-in requires the original brokerage to perform transfer-out at the same time. If you only submit a transfer application to Virtu Capital without initiating a transfer to the original broker, the transfer usually cannot be completed.
+Avoid trading shares included in a submitted transfer until it completes or is canceled, so a quantity change does not invalidate the application.
 
-### Can I trade related stocks during the rollover period?
+## Account and security
 
-In order to avoid the invalidation of the application caused by changes in the position quantity, you should avoid trading the stocks that are being transferred after submission until the transfer is completed or the application is cancelled.
+### What is the difference between the two passwords?
 
-## Accounts and Security
+The sign-in password enters the account; the trading password confirms trades and related operations. Use different passwords and do not reuse them on other services.
 
-### What is the difference between login password and transaction password?
+### What if a verification code does not arrive?
 
-The login password is used to enter the account; the transaction password is used to confirm transactions and fund-related operations. Both should have different passwords and avoid sharing them with other websites.
+Check the country or region code and phone number, review SMS filtering, and wait for the countdown before requesting another code. Contact customer support after repeated failures.
 
-### What should I do if I cannot receive the verification code?
+### How do I submit a question or screenshot?
 
-Confirm that the country/region code and mobile phone number are correct, check for text message interception, and wait for the countdown to end before sending again. If you still haven't received it after several attempts, please contact customer support.
-
-### How to submit a question or screenshot?
-
-Enter "My → Feedback", select the feedback type, fill in the problem description, and upload screenshots as needed before submitting.
-
+Open **Profile → Feedback**, choose the correct type, describe the problem, and attach screenshots after hiding unrelated sensitive information.

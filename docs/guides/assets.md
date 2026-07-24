@@ -8,7 +8,7 @@ sidebar_position: 5
 # 查看账户资产
 
 ### 1. 进入资产页
-![账户资产页面](../assets/03_assets.png)
+![账户资产页面](../assets/zh-Hans/03_assets.png)
 
 \
 **查看资产概览**
@@ -31,7 +31,7 @@ sidebar_position: 5
 
 在“账户余额”查看各币种的 **可用余额** 和 **冻结余额**。\
 冻结余额通常与未完成订单或正在处理的业务有关，暂时不能重复使用。\
-![账户资产页面](../assets/asset/01.png)
+![账户资产页面](../assets/zh-Hans/asset/01.png)
 \
 在“持仓列表”查看当前持仓的
 - **股票代码**
@@ -42,7 +42,7 @@ sidebar_position: 5
 点击持仓的股票可以继续查看股票详情。
 
 
-![账户资产页面](../assets/asset/02.png)
+![账户资产页面](../assets/zh-Hans/asset/02.png)
 
 ### 3. 使用业务功能入口
 

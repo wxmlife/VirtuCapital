@@ -1,26 +1,48 @@
 ---
 id: assets
-title: View account assets
+title: Viewing Account Assets
 slug: /app-guide/guides/assets
-sidebar_position: 6
+sidebar_position: 5
 ---
 
-# View account assets
+# View Account Assets
 
-### 1. Enter the assets page
+### 1. Open Assets
 
-Go to the bottom "Assets".
+Open **Assets** from the bottom navigation.
 
-![Account assets page](../assets/03_assets.png)
+![Account Assets page](../assets/en/assets/01-assets.jpeg)
 
-### 2. View asset overview
+:::tip
+Use the currency menu at the top to change the reporting currency.
+:::
 
-View total assets, unrealized gains and losses, and profitability. Click the eye icon to hide or show the amount.
+| Field | Meaning |
+| --- | --- |
+| Total assets | Combined account assets converted into the selected reporting currency |
+| Stock total value | Current market value of the positions shown on the page |
+| Current available funds | Funds currently available for trading or service applications |
+| Unrealized profit or loss | Floating result of open positions compared with their cost |
+| Today’s profit or loss | Intraday change calculated using the app’s current method |
 
-### 3. View balance and positions
+### 2. Review balances and positions
 
-Check the available and frozen amounts of each currency in "Account Balance"; check the number, cost, current price, market value and profit and loss of stocks in "Positions".
+Under **Account Balance**, compare available and frozen balances by currency. A frozen balance is usually linked to an open order or a service being processed and cannot be reused until it is released.
 
-### 4. Use the quick entry
+The position list shows each stock code, available and frozen quantities, cost, current price, market value, and position profit or loss. Tap a position to open its stock details.
 
-Enter deposits, withdrawals, bills, orders and transfers from the quick entry on the asset page.
+### 3. Use account services
+
+The Assets page provides the current entries for:
+
+- **Withdraw**: create or review withdrawal requests.
+- **Cash Flow**: review balance changes from trades and account services.
+- **Orders**: check stock orders and execution status.
+- **Stock Transfer**: transfer stock between eligible Virtu Capital clients.
+- **Position Transfer**: transfer stock between Virtu Capital and another broker.
+
+Statements are available from **Profile → My Statements**.
+
+:::warning Deposit availability
+The current app does not support creating a new deposit request. If no Deposit entry appears on Assets, do not remit funds using an old screenshot or obsolete instructions.
+:::

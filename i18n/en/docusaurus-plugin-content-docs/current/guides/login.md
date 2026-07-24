@@ -1,60 +1,64 @@
 ---
 id: login
-title: Login and registration
+title: Registration and Sign-In
 slug: /app-guide/guides/login
 sidebar_position: 2
 ---
 
-# Login and registration
+# Registration and Sign-In
 
-## Log in
+New users should register from the sign-in page first. After registration, sign in with a phone verification code or with the registered email and password.
 
-### 1. Open APP
+## Register
 
-Click "Get Started" to enter the login process.
+### 1. Open registration
 
-![Virtu Capital welcome page](../assets/login/01-welcome.png)
+Open the app and tap **Get started**.
 
-### 2. Enter mobile phone number
+![Welcome page](../assets/en/login/06-welcome.jpeg)
 
-Select a country code and enter a mobile phone number.
+At the bottom of the sign-in page, tap **Register now**.
 
-:::warning note
-Currently, only mobile phone number registration in Hong Kong is supported.
+![Sign-in page](../assets/en/login/04-sign-in.jpeg)
+
+### 2. Verify your phone number
+
+Choose the country or region code, enter the phone number, request a verification code, and tap **Next** after checking all three values.
+
+![Phone registration](../assets/en/login/01-register-phone.png)
+
+:::warning Supported phone numbers
+The current registration flow supports Hong Kong phone numbers only.
 :::
 
-### 3. Get verification code
+### 3. Create the account profile
 
-Click "Get Verification Code" and enter the SMS verification code.
+Enter a nickname, email, sign-in password, and six-digit trading password. Read and accept the User Agreement and Privacy Policy before continuing.
 
-### 4. Login
+![Create-account form](../assets/en/login/02-create-account.jpeg)
 
-Click "Login".
+Check every field and submit the completed form.
 
-![Phone login page](../assets/login/02-phone-login.png)
+![Completed create-account example](../assets/en/login/03-create-account-filled.jpeg)
 
-:::tip Other login methods
-After registering with your mobile phone number, you can also click "Other login methods" to log in using your email and password.
+:::warning Registration is not securities-account opening
+This step creates the app account. You must still complete the separate account-opening process before securities services become available.
 :::
 
-## register
+Never disclose verification codes or the trading password. If a code does not arrive, check the region code and phone number before requesting another one.
 
-### 1. Enter the registration page
+## Sign in
 
-Click "Register Now" on the login page and fill in your mobile phone number, verification code and account information according to the page.
+### 1. Open the sign-in page
 
-![Phone registration page](../assets/login/03-register.png)
+Tap **Get started** on the welcome page.
 
-### 2. Fill in the verification code
+### 2. Enter the phone number and code
 
-After entering the test number and obtaining the verification code, confirm that the area code, mobile phone number and verification code are correct, and then click "Next".
+Select the region code, enter the registered phone number, request the SMS code, then tap **Sign in**.
 
-![Enter registration verification code](../assets/login/04-register-filled.png)
+![Completed phone sign-in example](../assets/en/login/05-sign-in-filled.jpeg)
 
-### 3. Continue to open an account
-
-After the registration is completed, continue to enter the "Account Opening" module to complete the identity authentication.
-
-:::warning verification code
-The verification code has a time limit. Do not provide the verification code to anyone; if you fail to receive it multiple times, confirm the area code and mobile phone number before sending again.
+:::tip Other sign-in methods
+After registration, choose **Email & password sign in** to use the email address and sign-in password created above.
 :::

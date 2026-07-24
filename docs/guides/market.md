@@ -16,7 +16,7 @@ sidebar_position: 4
 市场页会显示市场状态和更新时间；\
 休市时仍可查看行情和准备订单。
 
-![市场首页显示港股指数、市场状态和热门股票](../assets/market/01-market-overview.jpg)
+![市场首页显示港股指数、市场状态和热门股票](../assets/zh-Hans/market/01-market-overview.jpg)
 
 ### 2. 选择市场
 
