@@ -7,9 +7,9 @@ hide_table_of_contents: true
 
 # Virtu Capital 管理员使用指南
 
-本手册仅供获得授权的系统管理员、超级管理员、运营和风控人员使用。每篇指南只解决一类后台任务，并配有对应页面截图。
+本手册仅供获得授权的系统管理员、超级管理员、运营和风控人员使用。每篇指南聚焦一类后台任务；已确认的 V102 页面配有截图，尚待补图的位置保留了明确文字说明，不影响按步骤操作。
 
-| 入门与仪表盘 | 用户与客户管理 |
+| 入门与仪表盘 | 客户管理 |
 | --- | --- |
 | [成为管理员](./getting-started/admin-role)<br/><small>角色开通与权限边界</small> | [投资者管理](./users/investors)<br/><small>搜索、详情、角色与账户操作</small> |
 | [登录与基础设置](./getting-started/login)<br/><small>登录、语言、主题与安全退出</small> | [个人与企业客户](./users/customers)<br/><small>KYC、KYB、开户资料与企业开户</small> |

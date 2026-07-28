@@ -1,31 +1,31 @@
 ---
 id: index
-title: Administrator's Guide
+title: Administrator Guide
 slug: /
 hide_table_of_contents: true
 ---
 
-# Virtu Capital Administrator User Guide
+# Virtu Capital Administrator Guide
 
-This manual is only for use by authorized system administrators, super administrators, operations and risk control personnel. Each guide only solves one type of background task and is accompanied by screenshots of the corresponding page.
+This manual is intended only for authorized system administrators, super administrators, operations personnel, and risk-control personnel. Each guide focuses on one type of back-office task. Confirmed V102 pages include screenshots, while locations still awaiting screenshots retain clear written descriptions and can be followed without them.
 
-| Getting Started & Dashboard | User & Customer Management |
+| Getting Started & Dashboard | Customer Management |
 | --- | --- |
-| [Become an administrator](./getting-started/admin-role)<br/><small>Role activation and permission boundaries</small> | [investor management](./users/investors)<br/><small>Search, details, roles and account operations</small> |
-| [Login and basic settings](./getting-started/login)<br/><small>Login, language, theme and safe exit</small> | [Individual and corporate customers](./users/customers)<br/><small>KYC, KYB, account opening information and corporate account opening</small> |
-| [Dashboard overview](./getting-started/dashboard)<br/><small>Platform assets, funds and system status</small> | [Role permission comparison](./reference/permissions)<br/><small>Administrator and super administrator permission scope</small> |
+| [Becoming an Administrator](./getting-started/admin-role)<br/><small>Role provisioning and permission boundaries</small> | [Investor Management](./users/investors)<br/><small>Search, details, roles, and account operations</small> |
+| [Login & Basic Settings](./getting-started/login)<br/><small>Login, language, theme, and secure logout</small> | [Individual & Enterprise Customers](./users/customers)<br/><small>KYC, KYB, onboarding information, and enterprise onboarding</small> |
+| [Dashboard Overview](./getting-started/dashboard)<br/><small>Platform assets, funds, and system status</small> | [Role & Permission Matrix](./reference/permissions)<br/><small>Administrator and super-administrator permission scopes</small> |
 
-| Business Management | Audit and Risk Control |
+| Business Management | Review & Risk Control |
 | --- | --- |
-| [stock management](./stocks/stock-management)<br/><small>Stock establishment, position holding and investor allocation</small> | [Record review](./reviews/records)<br/><small>Deposit, withdrawal, order and transfer review</small> |
-| [market data](./market/market-data)<br/><small>Exchange rate mode, manual exchange rate and market synchronization</small> | [Audit log](./reviews/audit-log)<br/><small>Traceable records by operator, resource and result</small> |
-| [System settings](./settings/system-settings)<br/><small>Fees, bank, wallet and display configuration</small> | [FAQ](./reference/faq)<br/><small>Audit, abnormal position and permission issues</small> |
+| [Stock Management](./stocks/stock-management)<br/><small>Stock setup, positions, and investor allocation</small> | [Record Review](./reviews/records)<br/><small>Deposit, withdrawal, order, and stock-transfer review</small> |
+| [Market Data](./market/market-data)<br/><small>Exchange-rate modes, manual rates, and market-data synchronization</small> | [Audit Log](./reviews/audit-log)<br/><small>Trace records by operator, resource, and result</small> |
+| [System Settings](./settings/system-settings)<br/><small>Fees, banks, wallets, and display configuration</small> | [FAQ](./reference/faq)<br/><small>Reviews, position anomalies, and permission issues</small> |
 
-| Messaging and Operations | Usage Boundaries |
+| Messaging & Operations | Usage Boundaries |
 | --- | --- |
-| [Message template](./communications/message-templates)<br/><small>Multi-language templates, variables, and previews</small> | Administrator manuals should not be deployed publicly, nor should they be accessible from the user help center. |
-| [User feedback](./communications/feedback)<br/><small>Filtering, viewing attachments, and internal follow-up</small> | Enterprise authentication, VPN, or other access controls should be used when publishing. |
+| [Message Templates](./communications/message-templates)<br/><small>Multilingual templates, variables, and previews</small> | The administrator guide must not be deployed publicly or linked from the user Help Center. |
+| [User Feedback](./communications/feedback)<br/><small>Filtering, viewing attachments, and internal follow-up</small> | Use enterprise identity authentication, a VPN, or other access controls when publishing. |
 
-:::warning internal information
-The backend page may contain customer identity, assets and operation records. Page screenshots, account numbers, audit information or configuration values ​​are not allowed to be sent to unauthorized persons.
+:::warning Internal material
+Back-office pages may contain customer identities, assets, and activity records. Do not send page screenshots, account information, review materials, or configuration values to unauthorized personnel.
 :::

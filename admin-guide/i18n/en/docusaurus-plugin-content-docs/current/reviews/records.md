@@ -1,182 +1,73 @@
 ---
-title: Record review
+title: Record Review
 sidebar_position: 1
 ---
 
-## 6. Record review
+## 6. Record Review
 
-**Operation path**: Left navigation bar → "Record"
+**Navigation**: Left sidebar → “Records”
 
-The record page is used to uniformly view and review various business records submitted by investors in the same list, including orders, deposits, withdrawals, currency exchange, stock transfers and position transfers**.
+The Records page presents orders, deposits, withdrawals, currency exchanges, share transfers, stock transfers, and other business activities in one place. A notification indicator on the menu means that records are awaiting action.
 
-![](../assets/36-record-unified-list.png)
+![Pending-review record list](../assets/V102/records-pending-list.jpg)
 
-> 🔔 **Red dot reminder**: When there is a "pending review" record, the menu will display a red dot reminder.
+### 6.1 Search Records
 
-![](../assets/12-record-pendingReview.jpg)
-![](../assets/13-record-statueChange.jpg)
-
-
-### 6.1 Search function
-
-Support multi-dimensional combination filtering:
-
-#### Record type
-
-| Type | Description |
+| Filter | Description |
 |------|------|
-| **All** | Show all types of records |
-| **Order** | Stock Buy/Sell Order |
-| **Deposit** | Investor deposit record |
-| **Withdrawal** | Investor withdrawal record |
-| **Exchange** | Currency exchange record |
-| **Rollover** | Transfer record |
-| **Background operations** | Records of operations performed by the administrator in the background |
+| **Record type** | All, order, deposit, withdrawal, currency exchange, share transfer, stock transfer, back-office operation, and other types |
+| **Investor** | Search by name, email, mobile number, or investor ID |
+| **Review status** | No review required, pending review, pending super-administrator review, approved, rejected, or canceled |
+| **Stock** | Search by code, Ticker, Stock Key, or name |
 
-#### Investor Screening
+Click “Apply Filters” to run the query, “Reset” to clear the filters, and “Refresh” to retrieve the latest status. The list shows the investor, stock, action type, pending task, quantity, amount, time, review status, business status, and a details entry point, with pagination.
 
-| Conditions | Description |
-|------|------|
-| **Name** | Investor name |
-| **Email** | Registered Email |
-| **Mobile phone number** | Register mobile number |
-| **Investor ID** | Unique ID assigned by the system |
-#### Review status filter
+### 6.2 General Review Principles
 
-| Conditions | Description |
-|------|------|
-| **No review required** | Records that do not require administrator review such as orders |
-| **To be reviewed** | Records that require administrator review such as deposits and withdrawals |
-| **To be reviewed by the super administrator** | Operations that require review by the super administrator such as withdrawals |
-| **Passed** | Review passed |
-| **Rejected** | Review rejected |
-| **Cancelled** | The investor canceled the original operation |
+1. Open the details and verify the applicant, amount or quantity, attachments, and related account.
+2. Check whether frozen funds or positions are sufficient and whether fees are correct.
+3. Compare the lifecycle, related transactions, and activity log to confirm that statuses agree.
+4. Reconfirm critical data before approval. When rejecting a request, provide a clear reason.
+5. High-risk operations such as withdrawals and stock transfers still require a second review by a super administrator after administrator approval.
 
-#### Stock Screening
+### 6.3 Inbound Stock-Transfer Review
 
-| Conditions | Description |
-|------|------|
-| **Stock Code** | Such as 00700 |
-| **Ticker** | Stock trading code |
-| **Stock Key** | System internal identification |
-| **Name** | Stock Name |
-| **Order number** | Specific order number |
+The details page shows the transfer number, action type, business and review status, investor, destination broker, source broker, source account, settlement-participant code, inbound stocks and quantities, attachments, lifecycle, activity log, and review controls.
 
-#### Other filter conditions [tentative]
+![Inbound stock-transfer details](../assets/V102/records-inbound-transfer-detail.jpg)
 
-| Conditions | Description |
-|------|------|
-| **Date** | Filter by date range (connected to date filter component) |
-| **Audit status** | No review required / Pending review / Pending review by super administrator / Review passed / Review rejected |
-| **Business Status** | Submitted / Withdrawn / Admin passed / Super Admin passed / Rejected / Deposited / Payment made |
+Verify that the source broker’s transfer-out confirmation, source account, destination broker, stock codes, quantities, and application files agree. Do not approve an incomplete request. Enter a clear review note before approving or rejecting it, then confirm that the lifecycle advances to the next state.
 
-> 💡 **Operation**: After setting the conditions, click "Apply Filter" to perform the search, and click "Reset" to clear the conditions.
+### 6.4 Outbound Stock-Transfer Review
 
-![](../assets/14-record-filterByTime.jpg)
+Important details include the receiving broker, receiving account, contact person, stocks and quantities being transferred, frozen positions, fees, market value, application attachments, lifecycle, related fund records, and activity log.
 
-### 6.2 Table structure
+![Outbound stock-transfer details](../assets/V102/records-outbound-transfer-detail.jpg)
 
-| Field | Description |
-|------|------|
-| **Investor** | The investor who submitted this record |
-| **Stocks** | Stocks involved (if applicable) |
-| **Operation Type** | Deposit / Withdraw / Transfer In / Transfer Out / Transfer / Data Change / User Deletion |
-| **Quantity** | Transaction quantity (if applicable) |
-| **Amount** | Amount involved |
-| **Time** | Record submission time |
-| **Review Status** | Current review progress |
-| **Business Status** | Business processing progress |
-| **View details** | View complete information and perform review operations |
+Confirm that the receiving information is complete, the frozen quantity is sufficient, the fee is correct, and the application form, signature, and broker statement agree with the request. After administrator approval, wait for super-administrator review according to the workflow. The final status must agree with the position release, related fund record, and lifecycle.
 
-### 6.3 Details and review of various types of records
+### 6.5 Share-Transfer Review
 
-#### Deposit record review
+Share-transfer details show the sender and recipient, stock, quantity, agreed price, agreed amount, currency, BSN, frozen position, related transactions, and activity log.
 
-**Deposit detailed fields**:
+![Share-transfer details](../assets/V102/records-stock-transfer-detail.jpg)
 
-| Field | Sample Value | Description |
-|------|--------|------|
-| **Deposit order number** | 6a159...... | The unique order number generated by the system |
-| **User** | mi | Investor account |
-| **Deposit method** | Local (Hong Kong) remittance / international remittance | Fund transfer method |
-| **Deposit currency** | HKD | Deposit currency |
-| **Amount** | HK$100,000.00 | Recharge amount |
-| **Handling Fee** | HK$0.00 | Deducted handling fee |
-| **Total** | HK$100,000.00 | Actual amount received |
-| **Deposit time** | May 26, 2026 9:07 pm | User submission time |
-| **Audit status** | Passed | Audit progress |
-| **Fund status** | Already credited | Fund arrival status |
-| **Review time** | May 26, 2026 3:03 pm | Administrator review time |
-| **Account Time** | May 26, 2026 3:03 pm | Actual time of funds being credited |
+Verify both parties’ identities, the quantity, price, and amount calculation. Confirm that the sender’s position has been frozen correctly and that no duplicate or conflicting transaction exists before approving or rejecting the request.
 
-**Deposit Voucher**:
-- View transfer screenshots/vouchers uploaded by investors
+### 6.6 Other Records
 
-**Audit operation**:
+- **Cash deposits**: Verify the deposit method, currency, amount, fee, payer account, and evidence. After approval, verify the related credit entry and balance change.
+- **Cash withdrawals**: Verify the receiving account, available balance, frozen amount, fee, and attachments. After administrator review, wait for final review according to the workflow.
+- **Orders, buys/sells, and currency exchanges**: Verify available funds or positions, price, fees, and market status.
+- **Information changes**: Compare information before and after the change; sensitive information requires additional verification.
+- **Back-office operations**: Verify the operator, target resource, change summary, and execution result.
 
-| Operation | Description |
-|------|------|
-| **Audit Passed** | Confirm that the deposit is valid and the funds are credited |
-| **Reason for rejection** | If rejected, please fill in the reason for rejection |
-| **Rejection of application** | Confirm rejection of the deposit application |
+A typical review lifecycle is: Submitted → Pending Review → Administrator Approved → Pending Super Administrator Review → Completed. Any review stage may become Rejected when information is invalid; a user-initiated cancellation is shown as Canceled.
 
-**Associated accounting flow**:
-The account associated with the recorded transaction: Huanghe (tentative, will it be changed to a separate bank account for the VC in the future?)
+### 6.7 Post-Review Verification
 
-| Field | Description |
-|------|------|
-| **Serial ID** | Serial number generated by the system |
-| **Status** | Success / Failure / Processing |
-| **Currency** | Running currency |
-| **Amount** | Turnover amount |
-| **Balance before entry** | Account balance before entry |
-| **Balance after deposit** | Account balance after deposit |
-
-![](../assets/15-record-deposit-detail.jpg)
-![](../assets/16-record-deposit-detail-voucher.jpg)
-
-
-#### Withdrawal record review
-
-The review process is similar to that of deposit, focusing on:
-- Whether the balance in the withdrawal account is sufficient
-- Is the withdrawal account information correct?
-- Is the handling fee calculation accurate?
-- **And, after the administrator passes the review, a second review by the super administrator is required**
-
-#### Buy/Sell/Transfer/Transfer/Transfer/Order
-
-- Check whether investors’ positions/funds are sufficient, and whether handling fees and prices are reasonable
-- Confirm if the market is open for trading
-- **Furthermore, transfer requires administrator review and super administrator secondary review**
-
-#### Data change review
-
-- Check the information before and after the change
-- Confirm that the applicant for change is himself/herself
-- Sensitive information (such as bank cards) requires additional verification
-
-#### User deletion review
-
-- Confirm that the user has no outstanding assets
-- Confirm that the reason for deletion is reasonable
-- **This operation is irreversible**, please be careful
-
-### 6.4 Review status transfer
-
-```
-已提交
-  ├── 已撤销（用户主动取消）
-  ├── 待审核 → 管理员已通过 → 超级管理员已通过 → 已入账/已打款
-  │              ├── 已拒绝（管理员拒绝）
-  │              └── 待超级管理员审核
-  │                         ├── 超级管理员已通过
-  │                         └── 已拒绝（超级管理员拒绝）
-  └── 无需审核（系统自动处理）
-```
-
----
----
-title: Record review
-sidebar_position: 1
----
+1. Refresh the record and confirm that the review status has updated.
+2. Verify that the business status and fund or position status agree with the review result.
+3. Check that related transactions, the lifecycle, and the activity log are not stuck in an intermediate state.
+4. For high-risk business operations, wait for final review; do not click the review button again.
+5. If statuses disagree, stop subsequent operations and use the record ID to investigate in the audit log.
