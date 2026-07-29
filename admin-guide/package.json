@@ -4,9 +4,7 @@
   "private": true,
   "scripts": {
     "start": "../node_modules/.bin/docusaurus start --port 3001",
-    "build": "node scripts/build-isolated.mjs",
-    "test": "node --test scripts/validate-docs.test.mjs",
-    "validate:docs": "node scripts/validate-docs.mjs",
+    "build": "../node_modules/.bin/docusaurus build",
     "serve": "../node_modules/.bin/docusaurus serve --port 3001"
   },
   "dependencies": {

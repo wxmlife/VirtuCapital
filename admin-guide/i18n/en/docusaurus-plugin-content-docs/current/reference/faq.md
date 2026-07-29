@@ -1,58 +1,63 @@
 ---
-title: Frequently Asked Questions
+title: FAQ
 sidebar_position: 1
 ---
 
-## 11. Frequently Asked Questions
+## 11. FAQ
 
-### Q1: Why Did My Review Action Not Take Effect Immediately?
+### Q1: Why does my review operation not take effect immediately?
 
-**A**: Exchange rates, system settings, and some high-risk business operations require review. After an ordinary administrator completes the first review or submits a change, the record may enter “Pending Super Administrator Review.” The current effective value does not change until final approval. Search by status in “Records,” then check the details and activity log.
+**A**: System settings and key business operations (such as exchange rate modifications, fee adjustments) need to be **submitted for review** and approved by the super administrator before they can take effect. Please check the review progress on the "Records" page.
 
-### Q2: How Should I Handle an “Over-Allocated Stock”?
+### Q2: How to deal with "over-allocated stocks"?
 
-**A**: “Over-allocated” means that the allocated quantity exceeds the total quantity configured in the back office. Stop allocating further, then verify the stock code, total quantity, each investor’s quantity, and recent audit records. Apply a correction only after the cause and an approved remediation plan are confirmed. Do not offset the anomaly by creating a duplicate stock.
+**A**: "Over-allocated stocks" means that the positions allocated to investors exceed the total number of positions, which is an abnormal situation. Processing steps:
+1. Enter "Stock Management" to view over-allocation details
+2. Verify the position data of each investor
+3. Contact relevant investors to coordinate adjustments
+4. Correct the allocation data to ensure that the total number of warehouses ≥ the number of allocated warehouses
 
-### Q3: What If an Investor Forgets Their Password?
+### Q3: What should investors do if they forget their password?
 
-**A**: Administrators cannot view a user’s password and must not set or collect a password on the user’s behalf. Direct the user to the account-recovery process currently available in the client. If recovery is unsuccessful, follow the organization’s authorized identity-verification and support process.
+**A**: Administrators cannot directly view or modify investor passwords. Please guide investors:
+1. Click "Forgot Password" on the login page
+2. Reset password via registered email or mobile phone number
+3. If you are unable to reset by yourself, you can verify your identity in "Investor Management" and then assist in the process.
 
-### Q4: What Should I Do If the System Shows Abnormal Data?
+### Q4: What should I do if abnormal data appears in the system?
 
-**A**:
-1. Stop resubmitting, reviewing, or saving.
-2. Record the time, environment, page route, and business-record ID.
-3. Review the audit log for recent related changes.
-4. If prices or assets are involved, check market-data synchronization and the active exchange-rate mode.
-5. Submit redacted information through the internal support process.
+**A**：
+1. First check the "Audit Log" to confirm whether there are any abnormal operations.
+2. Check the synchronization status of "Market Data" and confirm that the market data is normal
+3. If you cannot solve it yourself, contact the technical team and provide:
+- Problem description
+- screenshot
+-Related record ID
+- Operation records in audit logs
 
-### Q5: How Do I Change My Own Administrator Information?
+### Q5: How to modify my administrator information?
 
-**A**: The current back office directly provides language and theme controls and secure logout. If the page has no profile or password-change entry point, do not infer one from an old manual; request the change through the organization’s account-management process.
+**A**: Click the administrator name in the upper right corner of the page to enter the personal center:
+- Modify display name
+- Change login password
+- Configure two-factor authentication (2FA)
 
-### Q6: Why Do Some Records Show “Pending Super Administrator Review”?
+### Q6: Why do some records show "to be reviewed by super administrator"?
 
-**A**: This status means that the administrator stage is complete, but the workflow still requires review by a person with final-approval permission. It commonly applies to system settings, manual exchange rates, and fund or position operations that the page marks as requiring final review. Follow the pending task and lifecycle shown in the record details.
+**A**: The following operations require final review by the super administrator:
+- Large-amount fund operations (exceeding the set threshold)
+- Modification of system settings
+- Role changes
+- User deletion
+- Human-edited exchange rates
 
-### Q7: How Do I View All Activity for a Specific Investor?
+After the ordinary administrator passes the initial review, it will automatically be transferred to the super administrator for the final review.
 
-**A**:
-1. In “Investors,” locate the user precisely by name, mobile number, email, or VC User ID.
-2. Open the details page and review the account, asset, and business-record sections provided by the page.
-3. For a complete back-office activity trail, open “Audit Log” and search using the target user ID and a time range.
+### Q7: How to view all operation records of an investor?
 
-### Q8: Where Can I Resume an Enterprise-Onboarding Draft?
+**A**：
+1. Enter "Investor Management"
+2. Find the investor and click "View Details"
+3. Check the "Transaction Records", "Fund Flow", "Operation Log" and other tabs on the details page
 
-**A**: Open “Customer Management → Enterprise Users,” find the enterprise record whose information status is Draft, and select “Continue Onboarding” from the action menu. Check the current stage and uploaded files before continuing. Do not create a duplicate draft for the same enterprise.
-
-### Q9: What If Variables Still Appear in the Message-Template Preview?
-
-**A**: Check that the field names in Payload JSON exactly match “Available Variables,” that every required variable has a test value, and that the JSON is valid. Do not save production copy until the preview passes. Previewing does not send a real message.
-
-### Q10: What Should I Do If Market-Data Synchronization Fails?
-
-**A**: First click “Refresh” to confirm the latest status, then review the corresponding market’s last synchronization time, trigger source, and error status. Do not repeatedly trigger multiple synchronization tasks at the same time. Markets such as China A-shares that show “Unavailable” do not require a forced operation.
-
-### Q11: What Should I Do If a `ChunkLoadError` or Red Error Overlay Appears After Navigation?
-
-**A**: Stop the current operation and refresh the page. After confirming that nothing was submitted twice, log in again. If the error remains, record the routes before and after the error, time, environment, and complete error text, and report them through the internal technical-support process. Do not continue reviewing, saving, or submitting forms until the error disappears.
+---

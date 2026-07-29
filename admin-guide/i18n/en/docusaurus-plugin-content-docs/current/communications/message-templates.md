@@ -1,67 +1,60 @@
 ---
-title: Message Template Management
+title: Message template management
 sidebar_position: 1
 ---
 
-## 9. Message Template Management
+## 9. Message template management
 
-**Navigation**: Left sidebar → “Message Templates”
+**Operation path**: Left navigation bar → "Message Template"
 
-The system includes business templates for the App message center. Template types are defined by the system. The back office is used to select templates, maintain multilingual titles and bodies, verify variables, preview drafts, and save copy.
+The system has built-in App message center templates for a variety of business scenarios, and administrators can maintain titles and bodies in different languages. The template type is defined by the system code, and the background is mainly responsible for copywriting editing, variable checking and draft preview.
+![](../assets/24-messageTemplate-list.jpg)
 
-<!-- screenshot-slot: message-templates-list; status: placeholder -->
-> 📷 **Screenshot pending: message-template list and editing area.**
+### 9.1 Template list
 
-### 9.1 Template List
+| Template name | Trigger scene |
+|---------|---------|
+| **Currency exchange completion notification** | Currency exchange successful |
+| **Exchange execution failure notification** | Currency exchange failure |
+| **Exchange Rejection Notice** | Currency exchange application rejected |
+| **Deposit notification** | Deposit approved and credited |
+| **Deposit Rejection Notice** | Deposit application rejected |
+| **Rollover cancellation notification (receiver)** | Stock rollover canceled (receiver) |
+| **Rollover cancellation notification (initiator)** | Stock rollover canceled (initiator) |
+| **Rollover completion notification (receiver)** | Stock rollover completion (receiver) |
+| **Notice of completion of transfer (initiator)** | Completed transfer of stock (initiator) |
+| **Notice of final rejection of transfer** | The final review of the transfer application was rejected |
+| **Notification of transfer pending confirmation (receiver)** | Waiting for the receiver to confirm the transfer |
+| **Notice of passing the preliminary review of the transfer (initiator)** | Passing the preliminary review of the transfer application |
+| **Notice of rejection of initial review for transfer** | The initial review of transfer application was rejected |
+| **Notice of transfer pending final review** | Transfer application pending final review |
+| **Transfer rejection confirmation (receiver)** | Receiver confirmation of rejection |
+| **Notice of rejection of transfer (initiator)** | Notify the initiator of rejection |
+| **Transfer Submission Notice** | The transfer application has been submitted |
+| **Withdrawal approval notification** | Withdrawal application approved |
+| **Withdrawal rejection notification** | Withdrawal application rejected |
+| **E-mail change reminder** | User changes email address |
+| **Login password change reminder** | User changes login password |
+| **Transaction password change reminder** | User changes transaction password |
+| **System Announcement** | Platform Release Announcement |
+| **Order Cancellation Notification** | Trading order canceled |
+| **Order transaction notification** | Transaction order transaction |
+| **Order Rejection Notification** | Trading order rejected |
+| **Stock transfer notification** | Stock transfer submission, preliminary review, final review, completion, cancellation, rejection and other nodes |
+| **Stock Transfer Notification** | Data upload, cost to be replenished, completion, rejection and other nodes of the stock transfer process |
 
-The template list on the left shows the template name, business category, and version. Select a template by business event, then check the template name, category, version, and update time in the title area on the right so you do not edit a similarly named template with a different trigger target.
+### 9.2 Template editing
 
-Common categories include:
+**Operating steps**:
+1. Click the template name to enter the editing page
+2. Select the language tab (Traditional Chinese / Simplified Chinese / English)
+3. Modify the title and text of messages on the site
+4. Check the "Available Variables" list to confirm that the required variables have been reserved
+5. Enter the test data in Payload JSON and click "Preview Draft"
+6. Click "Save" to save the template
 
-| Category | Typical Events |
-| --- | --- |
-| **Currency exchange** | Submission, completion, execution failure, or rejection |
-| **Deposit / Withdrawal** | Credit, approval, rejection, or request for supplementary information |
-| **Stock transfer / Share transfer** | Submission, first review, final review, pending recipient confirmation, completion, cancellation, or refusal |
-| **Orders** | Execution, cancellation, or rejection |
-| **Account security** | Email, login-password, or trading-password change reminders |
-| **System** | System announcements and other platform events |
+> 💡 **Variable description**: The `{变量名}` part in the template will be automatically replaced with the actual value when sending.
 
-“Refresh” reloads the system-defined template list. After using it, select the target template again and confirm that you have not switched to another version.
+![](../assets/25-messageTemplate- preview.jpg)
 
-### 9.2 Edit a Template
-
-1. Select the target template on the left.
-2. Review “Available Variables” and distinguish required variables from optional ones.
-3. Select the Traditional Chinese, Simplified Chinese, or English tab.
-4. Edit the “In-App Message Title” and “In-App Message Body.”
-5. Compare the other languages and verify that meanings, amounts, currencies, and statuses are consistent.
-6. Preview using a test Payload.
-7. After a final review, click “Save.”
-
-### 9.3 Variable Rules
-
-- Use each variable’s complete name and brace format exactly as shown on the page, for example `{{exchangeId}}`.
-- Variables marked “Required” must be retained, or actual messages may omit critical information.
-- Do not rename or translate variables, and do not add variables that the back office does not provide.
-- The same variable must have the same meaning in the title and body.
-- Use only fictional test values in the example Payload; never paste real user, order, or account information.
-
-### 9.4 Preview a Draft
-
-In Payload JSON, provide test values for the variables listed on the page, then click “Preview Draft.” A preview checks only how the current draft renders; it does not mean that a message has been sent.
-
-Check that:
-
-1. The JSON is valid and field names match the variables exactly.
-2. No unresolved `{{variable}}` remains in the preview.
-3. Amounts, currencies, quantities, user forms of address, and status copy read naturally.
-4. None of the three languages is truncated, mistranslated, or mixed with another language.
-5. The title and body describe the same business outcome.
-
-<!-- screenshot-slot: message-template-preview; status: placeholder -->
-> 📷 **Screenshot pending: Payload JSON and message-preview result.**
-
-### 9.5 Save Boundaries
-
-“Save” changes template copy and may affect future real notifications. Complete the organization’s copy-review process before saving. This page is not used to send an individual message to a user manually. If the preview is incorrect, fix the variables or Payload first; do not repeatedly save unverified versions.
+---

@@ -1,73 +1,93 @@
 ---
-title: Stock Management
+title: stock management
 sidebar_position: 1
 ---
 
 ## 4. Stock Management
 
-**Navigation**: Left sidebar → “Stock Management”
+### 4.1 Overview of Huanghe Account Positions
 
-### 4.1 Position Overview and List
+**Operation path**: Left navigation bar → "Stock Management"
 
-The page summarizes the number of stocks held, total configured quantity, allocated quantity, available quantity, investors involved, and over-allocated stocks. If an over-allocation appears, verify the corresponding stock immediately.
+The top shows the overall position status of the platform:
 
-Search the list by stock name, stock code, and market.
+| Indicator | Description |
+|------|------|
+| **Number of stocks held** | Number of stock types managed by the platform |
+| **Total positions of Huanghe account** | Total market value of positions of the platform's own accounts |
+| **Number of positions that can be allocated** | Number of positions that have not yet been allocated to investors |
+| **Number of positions allocated** | Number of positions allocated to investors |
+| **Over-allocated stocks** | Stocks that have been allocated more than the total number of positions (risk indicator) |
+| **Number of stocks managed** | Total number of stocks currently being managed |
+| **Total number of positions set** | Total number of positions set for all stocks |
+| **Number of positions allocated** | Total number of positions allocated to investors |
+| **Investors involved** | Number of investors holding stocks |
+
+> 🚨 **Focus on**: "Over-allocated stocks" indicate abnormal allocation and need to be verified immediately.
+![](../assets/06-stockManage-accountPosition.jpg)
+
+
+### 4.2 Stock management list
+
+#### Search function
+
+| Search conditions | Description |
+|---------|------|
+| **Stock Name** | Enter the Chinese/English name of the stock |
+| **Stock Code** | Enter the stock code (such as 00700) |
+| **Market Search** | Filter by market (Hong Kong stocks/US stocks/A shares) |
+
+#### Table field description
 
 | Field | Description |
-| --- | --- |
-| **Stock** | Stock name and code |
-| **Market** | Hong Kong, US, or another market supported by the page |
-| **Total quantity** | Total quantity configured for the stock in the back office |
-| **Allocated quantity** | Total quantity allocated to investors |
-| **Remaining quantity** | Total quantity minus allocated quantity |
-| **Investors** | Number of investors currently holding the stock |
-| **Created at** | Time when the stock record was created |
-| **Actions** | Management entry points visible to the current role |
+|------|------|
+| **Stock** | Stock name |
+| **Market** | Market (Hong Kong stocks HK/US stocks/A shares CN) |
+| **Total positions** | The total number of positions set for this stock |
+| **Number of positions allocated** | Number of positions allocated to investors |
+| **Number of remaining warehouses** | Total number of warehouses - Number of allocated warehouses |
+| **Number of investors** | Number of investors holding the stock |
+| **Establishment Time** | The time when the stock was added to the system |
+| **Operation** | Edit/delete operations |
 
-<!-- screenshot-slot: stocks-overview; status: placeholder -->
-> 📷 **Screenshot pending: Stock Management overview, search, and list.**
+### 4.3 Add new stocks
 
-If an “over-allocated” status appears, stop adding allocations and verify the stock’s total quantity and each investor’s quantity. Do not conceal the anomaly by creating another stock record.
+**Operation path**: Stock management page → Click the "Add Stock" button
+![](../assets/07-stockManage-addStock.jpg)
 
-### 4.2 Add and Allocate a Stock
+#### Step 1: Configure stock information
 
-Click “Add Stock,” then configure it in this order:
+| Field | Description | Required |
+|------|------|------|
+| **Stocks** | Search and select stocks (supports name/symbol search) | ✅ |
+| **Total number of stock positions** | Set the total number of positions of the stock | ✅ |
+| **Initial Price (Cost Price)** | The initial cost price of the stock | ✅ |
 
-1. Search by region or stock code and select the stock.
-2. Enter the total stock quantity and initial cost price.
-3. Click “Add Investor” and enter the allocated quantity and cost price for one or more investors.
-4. Verify the automatically calculated allocation percentage, allocated quantity, and available position.
-5. Review the configuration summary, then create the stock.
+#### Step 2: Investor Allocation
 
-![Add a stock and allocate it to investors](../assets/V102/stocks-create-and-allocate.png)
+Allocate positions to investors:
 
-| Validation Rule | Description |
-|----------|------|
-| **No duplicate investors** | The same investor cannot be added more than once for the same stock |
-| **Quantity cannot exceed the limit** | The total quantity allocated to all investors cannot exceed the stock’s total quantity |
-| **Percentage is calculated automatically** | Percentage = investor quantity ÷ total stock quantity |
-| **Available position updates dynamically** | After an allocation row is edited or deleted, the available position and summary update in real time |
+| Field | Description |
+|------|------|
+| **Investors** | Select investors to allocate to |
+| **Number of positions** | Number of positions allocated to this investor |
+| **Cost Price** | The investor’s position cost price |
+| **Proportion** | The proportion of the investor's positions to the total number of positions (automatically calculated) |
+| **Action** | Delete this allocation row |
 
-### 4.3 Complete the Allocation
+> 💡 **Tip**: You can add multiple rows to allocate to multiple investors at the same time.
 
-When the allocated quantity equals the total stock quantity, the page shows that allocation is complete and the available position is 0. Even then, check every investor, quantity, and cost price before clicking Create.
+#### Step 3: Configuration summary
 
-![Stock fully allocated](../assets/V102/stocks-allocation-complete.png)
+The system automatically calculates and displays:
+- **Total number of stock positions**: The set total number of positions
+- **Number of allocated positions**: The total number of currently allocated positions
+- **Number of remaining warehouses**: Total number of warehouses - Number of allocated warehouses
 
-> ⚠️ The initial cost price and investor cost prices affect the displayed holding cost. Verify them against actual settlement data before creation; do not substitute estimates.
+> ⚠️ **Verification Rules**: The number of allocated warehouses cannot exceed the total number of warehouses.
 
-### 4.4 Pre-Creation Checklist
 
-1. The stock code, name, and market agree.
-2. The total stock quantity agrees with actual settlement or position records.
-3. No investor with a similar name was selected by mistake; the VC User ID has been verified.
-4. The sum of row quantities does not exceed the total quantity, and the cost-price currency is correct.
-5. The unallocated quantity matches the business expectation.
-6. After creation, return to the list and check the total quantity, allocated quantity, and investor count.
 
-### 4.5 Troubleshooting
+![](../assets/08-stock-allocateStock.jpg)
 
-- **Stock not found**: Check the market and code format, then confirm that market data has synchronized.
-- **Cannot add an investor**: Confirm that the user exists, their status permits allocation, and they have not already been added.
-- **Quantity exceeds the limit**: Reduce the allocated quantity or verify the total quantity first; do not bypass validation.
-- **Data differs after creation**: Stop further allocations, record the stock code and operation time, and investigate with the audit log.
+---

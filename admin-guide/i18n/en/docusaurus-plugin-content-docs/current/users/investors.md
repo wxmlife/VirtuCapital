@@ -1,69 +1,68 @@
 ---
-title: Investor Management
+title: investor management
 sidebar_position: 1
 ---
 
 ## 3. Investor Management
 
-### 3.1 Investor List
+### 3.1 Investors List
 
-**Navigation**: Left sidebar → “Investors”
+**Operation path**: Left navigation bar → "Investor"
 
-Use the search box above the list to locate users by mobile number, name, email, or VC User ID. When search results contain assets and contact details, confirm that the matched name, mobile number, and VC User ID belong to the same person.
+#### Search function
 
-#### Table Fields
+Supports multi-dimensional investor search:
+- **Mobile phone number**: Enter the complete or partial mobile phone number
+- **Name**: Enter the investor’s name
+- **Email**: Enter your registered email address
+
+> 🔍 **Tips**: Support fuzzy search, enter part of the information to match.
+
+#### Table field description
 
 | Field | Description |
-| --- | --- |
-| **Name / VC User ID** | User display name, onboarding indicator, and platform user number |
-| **Mobile number** | Registered mobile number |
-| **Total assets** | Total assets according to the page’s current calculation basis |
-| **Cost** | Aggregate holding cost currently recorded |
-| **Profit/Loss** | Cumulative profit or loss amount and percentage |
-| **Today’s profit/loss** | Current-day profit or loss amount and percentage |
-| **Role** | Investor, administrator, or super administrator |
-| **Actions** | Row-level actions the current account is authorized to perform |
+|------|------|
+| **Name** | Investor’s real name |
+| **Mobile phone number** | Register mobile number |
+| **Email** | Registered email address |
+| **Total Assets** | The investor’s stock market value + cash balance |
+| **Cost** | The investor’s historical investment cost |
+| **Profit and Loss** | Cumulative profit and loss amount and percentage increase or decrease |
+| **Today's profit and loss** | Today's profit and loss amount and percentage increase or decrease |
+| **Role** | User permission level |
+| **Operations** | Executable management operations |
 
-<!-- screenshot-slot: investors-list; status: placeholder -->
-> 📷 **Screenshot pending: current investor list and search results.**
+#### Role type
 
-### 3.2 Investor Actions
+| Role | Permission Scope |
+|------|---------|
+| **Investor** | Ordinary users, can conduct transactions, view positions, etc. |
+| **Administrator** | Can manage investors, review records, and view data |
+| **Super Administrator** | Has all permissions, including system settings, role changes, etc. |
 
-Click the “Actions” button at the far right of the target row. Menu items vary with the current role, target-user status, and system version. Perform only actions that are actually displayed and for which you have authorization.
+![](../assets/04-investor-list.jpg)
 
-<!-- screenshot-slot: investors-actions; status: placeholder -->
-> 📷 **Screenshot pending: investor row action menu.**
+### 3.2 Investor operations
 
-### 3.3 View Details
+Click the button in the "Action" column to perform the following operations:
 
-1. First verify the name, mobile number, and VC User ID.
-2. Open “View Details.”
-3. Review basic information, account status, assets or holdings, business records, and activity history using the sections actually available on the details page.
-4. When investigating a specific business item, follow the identifier shown on the details page or continue checking in “Records” and “Audit Log.”
-5. Return to the list when finished so that information from the previous customer is not mistakenly used for the next task.
+#### check the details
+- View the investor's complete profile
+-Including: personal information, position details, transaction records, capital flow, etc.
 
-<!-- screenshot-slot: investors-detail; status: placeholder -->
-> 📷 **Screenshot pending: investor details page and primary information sections.**
+#### Edit user
+- Modify investors’ basic information (name, contact information, etc.)
+- Modify investor’s account settings
 
-:::warning Sensitive information
-The details page may contain contact details, identity information, assets, and transaction records. View it only when required for the business task, and do not copy it into unauthorized documents or chats.
-:::
+#### Change role
+- Promote investors to administrators
+- Demote admin to investor
+- **Super Administrator** can perform this operation
 
-### 3.4 Change Role
+> ⚠️ **Risk Warning**: Please confirm the user identity before changing roles to avoid permission abuse.
 
-A role change alters the scope of back-office access and must be performed by an authorized person who has the required permission.
-
-1. Locate the target user precisely in the list.
-2. Open the row action menu and enter the role-change interface.
-3. Verify the current role, target role, and user identifier.
-4. Confirm that an approval record already exists, then apply the change.
-5. After the change, ask the user to log in again and verify the record in the audit log.
-
-<!-- screenshot-slot: investors-role-change-dialog; status: placeholder -->
-> 📷 **Screenshot pending: role-change confirmation interface.**
-
-> ⚠️ An ordinary administrator must not elevate their own permissions. If you open the dialog only to view it, click Cancel or Close; never confirm a demonstration action on a real account.
-
-### 3.5 Operations That Must Not Be Inferred
-
-If the current row menu does not show actions such as edit, deactivate, or delete, the current account or version does not provide that entry point. Do not use old screenshots or procedures to infer an alternative operation. Escalate account-status requests through the organization’s approved internal process.
+#### Delete user
+- Permanently delete the investor account
+- **This operation is irreversible**, the system will ask for a second confirmation before deletion
+- Please confirm that necessary data verification and business traces have been completed before deletion
+![](../assets/07-stockManage-addStock.jpg)
