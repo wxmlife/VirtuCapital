@@ -11,12 +11,16 @@ export default {
           items: ['getting-started/admin-role', 'getting-started/login', 'getting-started/dashboard']
         },
         {
-          type: 'category', label: '用户与客户管理', collapsed: true,
+          type: 'category', label: '投资者与客户管理', collapsed: true,
           items: ['users/investors', 'users/customers']
         },
         {
-          type: 'category', label: '股票与市场数据', collapsed: true,
-          items: ['stocks/stock-management', 'market/market-data']
+          type: 'category', label: '股票管理', collapsed: true,
+          items: ['stocks/stock-management']
+        },
+        {
+          type: 'category', label: '市场数据', collapsed: true,
+          items: ['market/market-data']
         },
         {
           type: 'category', label: '审核与风控', collapsed: true,

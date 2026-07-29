@@ -3,13 +3,13 @@ title: Market Data Management
 sidebar_position: 2
 ---
 
-## 5. Market Data Management
+## Market Data Management
 
 **Navigation**: Left sidebar → “Market Data”
 
 The Market Data page manages exchange rates used by the business and shows synchronization status for China A-shares, Hong Kong stocks, and US stocks. The upper-right controls provide “Force Resync,” “Sync All,” and “Refresh”; each market can also be synchronized independently.
 
-### 5.1 Active Exchange-Rate Mode
+### Active Exchange-Rate Mode
 
 Administrators can choose which exchange rates are used for client asset conversion and currency exchange:
 
@@ -22,7 +22,7 @@ After changing the mode, click “Submit for Review.” The change takes effect 
 
 ![Market-rate mode and market synchronization status](../assets/V102/market-data-market-rate.jpg)
 
-### 5.2 Exchange-Rate Maintenance
+### Exchange-Rate Maintenance
 
 The system supports the following six exchange-rate pairs:
 
@@ -36,7 +36,7 @@ In Market Rates mode, click “Sync Market Rates” to retrieve the latest snaps
 
 ![Manual exchange-rate entry and review submission](../assets/V102/market-data-manual-rate.jpg)
 
-### 5.3 Stock-Market Data Synchronization
+### Stock-Market Data Synchronization
 
 Each market card shows:
 

@@ -3,11 +3,11 @@ title: Stock Management
 sidebar_position: 1
 ---
 
-## 4. Stock Management
+## Stock Management
 
 **Navigation**: Left sidebar → “Stock Management”
 
-### 4.1 Position Overview and List
+### Position Overview and List
 
 The page summarizes the number of stocks held, total configured quantity, allocated quantity, available quantity, investors involved, and over-allocated stocks. If an over-allocation appears, verify the corresponding stock immediately.
 
@@ -29,7 +29,7 @@ Search the list by stock name, stock code, and market.
 
 If an “over-allocated” status appears, stop adding allocations and verify the stock’s total quantity and each investor’s quantity. Do not conceal the anomaly by creating another stock record.
 
-### 4.2 Add and Allocate a Stock
+### Add and Allocate a Stock
 
 Click “Add Stock,” then configure it in this order:
 
@@ -48,7 +48,7 @@ Click “Add Stock,” then configure it in this order:
 | **Percentage is calculated automatically** | Percentage = investor quantity ÷ total stock quantity |
 | **Available position updates dynamically** | After an allocation row is edited or deleted, the available position and summary update in real time |
 
-### 4.3 Complete the Allocation
+### Complete the Allocation
 
 When the allocated quantity equals the total stock quantity, the page shows that allocation is complete and the available position is 0. Even then, check every investor, quantity, and cost price before clicking Create.
 
@@ -56,7 +56,7 @@ When the allocated quantity equals the total stock quantity, the page shows that
 
 > ⚠️ The initial cost price and investor cost prices affect the displayed holding cost. Verify them against actual settlement data before creation; do not substitute estimates.
 
-### 4.4 Pre-Creation Checklist
+### Pre-Creation Checklist
 
 1. The stock code, name, and market agree.
 2. The total stock quantity agrees with actual settlement or position records.
@@ -65,7 +65,7 @@ When the allocated quantity equals the total stock quantity, the page shows that
 5. The unallocated quantity matches the business expectation.
 6. After creation, return to the list and check the total quantity, allocated quantity, and investor count.
 
-### 4.5 Troubleshooting
+### Troubleshooting
 
 - **Stock not found**: Check the market and code format, then confirm that market data has synchronized.
 - **Cannot add an investor**: Confirm that the user exists, their status permits allocation, and they have not already been added.

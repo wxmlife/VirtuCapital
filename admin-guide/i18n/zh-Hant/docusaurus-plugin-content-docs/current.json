@@ -15,9 +15,13 @@
     "message": "用戶與客戶管理",
     "description": "The label for category '用户与客户管理' in sidebar 'adminSidebar'"
   },
-  "sidebar.adminSidebar.category.股票与市场数据": {
-    "message": "股票與市場數據",
-    "description": "The label for category '股票与市场数据' in sidebar 'adminSidebar'"
+  "sidebar.adminSidebar.category.股票管理": {
+    "message": "股票管理",
+    "description": "The label for category '股票管理' in sidebar 'adminSidebar'"
+  },
+  "sidebar.adminSidebar.category.市场数据管理": {
+    "message": "市場數據管理",
+    "description": "The label for category '市场数据管理' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.审核与风控": {
     "message": "審覈與風控",
