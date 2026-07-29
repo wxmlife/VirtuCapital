@@ -1,37 +1,30 @@
 ---
-title: User feedback processing
+title: User Feedback Handling
 sidebar_position: 2
 ---
 
-## 10. User feedback processing
+## 10. User Feedback Handling
 
-**Operation path**: Left navigation bar → "User Feedback"
+**Navigation**: Left sidebar → “User Feedback”
 
-The user feedback page is used to view business feedback and product feedback submitted by investors, and supports viewing the complete content and attached images.
+The User Feedback page is used to search business and product feedback submitted by investors and to view the complete content and attached images.
 
-![](../assets/37-userFeedback-list.png)
+![User feedback list](../assets/V102/feedback-list.png)
 
+### 10.1 Search and List
 
-### 10.1 Feedback List
+- Keywords match feedback content, user names, email addresses, and mobile numbers.
+- Feedback type can be All, Business Feedback, or Product Feedback.
+- Click “Search” to apply the filters, and click “Refresh” to retrieve the latest records.
+- The top of the page shows the total number of matches, number of records on the current page, and number of images on the current page.
 
-| Field | Description |
-|------|------|
-| **Username** | Investor who submitted feedback |
-| **Feedback Type** | Business Feedback / Product Feedback |
-| **Feedback content** | Specific feedback text filled in by the user |
-| **Number of pictures** | Number of attachment pictures uploaded by the user |
-| **Submission Time** | Feedback Submission Time |
-| **Operation** | View details |
+The list shows the user name and contact details, feedback type, content summary, image count, submission time, and a details entry point, with pagination.
 
-### 10.2 Feedback processing process
+### 10.2 View and Handle
 
-1. **Filter feedback**: You can search by feedback content, name, email or mobile phone number, and select "All Feedback/Business Feedback/Product Feedback"
-2. **View Details**: Click "View Details" to view the complete text and attached images
-3. **Classification processing**:
-- **Business Feedback** → Transfer to the business team for processing
-- **Product Feedback** → handed over to product team for evaluation
-4. **Follow-up results**: Record the processing opinions in the internal process, and contact the user through customer service or business personnel when necessary
+1. Click “View Details,” read the untruncated feedback, and review each attachment.
+2. Verify the submitting user, feedback type, and submission time.
+3. Forward business feedback to the business team and product feedback to the product team for evaluation.
+4. Record the handling decision in the internal workflow and, when necessary, contact the user through customer-service or business personnel.
 
-> 💡 **Recommendation**: Regularly summarize user feedback, identify high-frequency issues, and promote product and process optimization.
-
----
+> 💡 Summarize high-frequency feedback regularly. Investigate account, transaction, or fund-related issues together with the corresponding records and audit logs.

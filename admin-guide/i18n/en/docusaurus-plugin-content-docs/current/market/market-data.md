@@ -1,88 +1,56 @@
 ---
-title: Market data management
+title: Market Data Management
 sidebar_position: 2
 ---
 
-## 5. Market data management
+## 5. Market Data Management
 
-### 5.1 Exchange Rate Snapshot
+**Navigation**: Left sidebar → “Market Data”
 
-**Operation path**: Left navigation bar → "Market Data" → "Exchange Rate Snapshot"
+The Market Data page manages exchange rates used by the business and shows synchronization status for China A-shares, Hong Kong stocks, and US stocks. The upper-right controls provide “Force Resync,” “Sync All,” and “Refresh”; each market can also be synchronized independently.
 
-The Market Data page now manages both **Market Rate Synchronization**, **Manual Rate Maintenance** and **Rate Enablement Mode**. The administrator can choose to use the actual market exchange rate or manual exchange rate for client asset conversion and currency exchange; it must be reviewed by the super administrator after submission.
+### 5.1 Active Exchange-Rate Mode
 
-![](../assets/33-marketData-exchangeRateMode.png)
-
-#### Exchange rate list
-
-| Field | Description |
-|------|------|
-| **Source** | Exchange rate data source |
-| **Exchange Date** | The effective date of the current exchange rate |
-| **Market exchange rate | Fixed exchange rate** | Switch exchange rate type |
-| ├─ Automatic refresh | The system automatically obtains the latest exchange rate from the market |
-| └─ Manual editing | The administrator manually enters the exchange rate (submit for review) |
-
-#### Exchange rate enablement mode
+Administrators can choose which exchange rates are used for client asset conversion and currency exchange:
 
 | Mode | Description |
 |------|------|
-| **Market exchange rate** | Use the exchange rate snapshot automatically synchronized by HKAB as the effective business exchange rate |
-| **Manual exchange rate** | Use the exchange rate manually entered in the background as the business effective exchange rate |
+| **Market rates** | Uses exchange-rate snapshots synchronized automatically from HKAB |
+| **Manual rates** | Uses business exchange rates entered in the back office |
 
-**Operating steps**:
-1. Select market exchange rate or manual exchange rate in the "Exchange rate activation mode" area;
-2. Click "Submit for review";
-3. It will take effect after being approved by the super administrator.
+After changing the mode, click “Submit for Review.” The change takes effect only after approval by a super administrator. The page also shows the currently active mode, data source, exchange-rate date, and latest synchronization time.
 
-> 💡 **Note**: Market exchange rate capture and manual exchange rate value maintenance are still performed on the market data page; the "Exchange Rate Enablement Mode" only controls which set of exchange rates is actually used for the current business.
+![Market-rate mode and market synchronization status](../assets/V102/market-data-market-rate.jpg)
 
-#### Supported exchange rate pairs
+### 5.2 Exchange-Rate Maintenance
 
-| Exchange rate pair | Description |
-|--------|------|
-| 1 HKD → USD | Hong Kong Dollar to US Dollar |
-| 1 USD → HKD | USD to HKD |
-| 1 HKD → USDT | Hong Kong Dollar to USDT |
-| 1 USD → USDT | USD to USDT |
-| 1 USDT → HKD | USDT to HKD |
-| 1 USDT → USD | USDT to USD |
+The system supports the following six exchange-rate pairs:
 
-> ⚠️ **Audit Requirements**: Manually edited exchange rates need to be submitted for review and will take effect after passing the review.
+| Exchange-Rate Pair | Exchange-Rate Pair |
+|--------|--------|
+| 1 HKD → USD | 1 USD → HKD |
+| 1 HKD → USDT | 1 USD → USDT |
+| 1 USDT → HKD | 1 USDT → USD |
 
-![](../assets/09-marketData-exchangeRateDefault.jpg)
-#### Steps to edit exchange rate
+In Market Rates mode, click “Sync Market Rates” to retrieve the latest snapshot. In Manual Rates mode, enter each exchange-rate value and submit it for review. The current business exchange rates do not change until the review is approved.
 
-1. Click "Edit" in the corresponding exchange rate row
-2. Enter the new exchange rate value
-3. Click "Submit for Review"
-4. Wait for approval by the super administrator
-![](../assets/10-marketData-exchangeRateManual.jpg)
+![Manual exchange-rate entry and review submission](../assets/V102/market-data-manual-rate.jpg)
 
-### 5.2 Stock market data
+### 5.3 Stock-Market Data Synchronization
 
-Display the data synchronization status of each market:
+Each market card shows:
 
-#### Hong Kong stock market information
+| Field | Description |
+|------|------|
+| **Exchanges / Stocks / ETFs / Indices** | Amount of data currently synchronized |
+| **Synchronization status** | Successful, failed, or unavailable |
+| **Last synchronization / Duration** | Time and duration of the latest task |
+| **Trigger source** | API, scheduled task, or manual back-office trigger |
+| **Next schedule / Schedule identifier** | Automatic synchronization schedule information |
 
-| Field | Sample Value | Description |
-|------|--------|------|
-| **Exchange** | 1 | Number of exchanges |
-| **Stocks** | 3,106 | Number of stocks synced |
-| **Indices** | 4 | Number of synchronized indices |
-| **Last sync** | May 25, 2026 7:53 pm | Last sync time |
-| **Time consuming** | 4.0s | Last synchronization time |
-| **Trigger Source** | api | Synchronous triggering method |
-| **Next time plan** | May 25, 2026 8:00 pm | Next automatic synchronization time |
-| **Plan ID** | 2026-05-24 | Synchronization task ID |
+- “Sync” synchronizes only the corresponding market.
+- “Sync All” synchronizes all supported markets in sequence.
+- “Force Resync” ignores the existing state and retrieves all data again when required.
+- If the current China A-share card shows “Unavailable,” its button is disabled and no repeated attempt is needed.
 
-#### Supported markets
-
-- **China A-shares**
-- **Hong Kong Stocks**
-- **US Stocks**
-
-> 💡 **Note**: Stock market data is usually automatically synchronized by the system, and administrators generally do not need manual intervention. If you encounter data anomalies, you can contact the technical team to handle it.
-
-![](../assets/11-marketData-stockData.jpg)
----
+> ⚠️ A forced synchronization may take a long time. Before starting, confirm that no other synchronization task is running. When it finishes, use “Refresh” to view the latest status.
