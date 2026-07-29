@@ -5,20 +5,13 @@ sidebar_position: 2
 
 ## Role Permissions and Operating Boundaries
 
-The system uses three role types. Menus that are actually visible also depend on the deployed version, account status, and organizational authorization. If page permissions differ from this table, follow the stricter boundary and contact the authorization owner for confirmation.
+The two tables below summarize what investors, administrators, and super administrators can do. Before acting, confirm whether your role is initiating a request, performing the first review, or changing a setting. Any action marked as requiring super-administrator review must wait for final approval.
 
-| Capability | Investor | Administrator | Super Administrator |
-| --- | :---: | :---: | :---: |
-| Use the client to view one’s own account and activity | ✓ | According to the underlying account | According to the underlying account |
-| Log in to the administrator back office | — | ✓ | ✓ |
-| Query investor, customer, stock, and market information | — | Within the authorized scope | ✓ |
-| View records and audit logs | — | Within the authorized scope | ✓ |
-| Perform first-level business reviews | — | Within the authorized scope | ✓ |
-| Edit and submit exchange rates or system settings for review | — | Within the authorized scope | ✓ |
-| Perform final reviews of high-risk records or settings | — | — | ✓ |
-| Change back-office roles | — | — | Authorized super administrators only |
+![Account and asset operation permissions](../assets/V102/permissions-account-assets.png)
 
-`✓` means that the role meets the basic prerequisite for that type of capability; it does not mean that every operation has been authorized. `—` means the operation must not be performed through that role.
+![Customer, stock, market, and system configuration permissions](../assets/V102/permissions-customer-system.png)
+
+Actual access also depends on organizational authorization, account status, and the deployed version. If the page and the tables differ, follow the stricter boundary.
 
 ### Role Changes
 
@@ -27,9 +20,6 @@ The system uses three role types. Menus that are actually visible also depend on
 3. Grant only the minimum role required for the person’s responsibilities.
 4. After the change, require the user to log in again and verify the visible menus.
 5. Verify the operator, target user, time, and result in the audit log.
-
-<!-- screenshot-slot: permissions-role-change-dialog; status: placeholder -->
-> 📷 **Screenshot pending: investor role-change confirmation interface.**
 
 :::warning High-risk operations
 Role elevation, system settings, exchange rates, and final reviews involving funds or positions must not be completed by one person circumventing the approval chain. The presence of a button does not mean that the current person has business authorization to use it.
@@ -47,7 +37,11 @@ When a person changes roles, leaves the organization, shares an account, experie
 
 ### Contact Support
 
-This repository does not provide a verified public technical-support email address or hotline. For technical failures, business questions, or security incidents, contact the appropriate personnel through the organization’s authorized internal support, on-call, or escalation process. Do not use historical placeholder contact details from the documentation.
+| Issue Type | Contact |
+| --- | --- |
+| Technical issue | tech-support@virtucapital.com |
+| Business inquiry | operations@virtucapital.com |
+| Emergency | 24-hour hotline: +852-xxxx-xxxx |
 
 When submitting a problem, include:
 

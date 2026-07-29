@@ -3,7 +3,7 @@ title: 如何成为管理员
 sidebar_position: 1
 ---
 
-## 如何成为管理员
+##
 
 <div className="admin-step-card">
   <div className="admin-step-header">
