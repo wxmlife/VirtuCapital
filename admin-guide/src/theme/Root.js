@@ -1,8 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import {
+  hasActiveAdminSession,
+  startAdminSession,
+} from '../auth-session.mjs';
 
-const STORAGE_KEY = 'virtu-admin-guide-authenticated';
 const ADMIN_PASSCODE = '8888';
 
 export default function Root({children}) {
@@ -41,13 +44,13 @@ export default function Root({children}) {
   const copy = copies[i18n.currentLocale] ?? copies['zh-Hans'];
 
   useEffect(() => {
-    setIsAuthenticated(window.localStorage.getItem(STORAGE_KEY) === 'true');
+    setIsAuthenticated(hasActiveAdminSession(window));
   }, []);
 
   function handleSubmit(event) {
     event.preventDefault();
     if (passcode.trim() === ADMIN_PASSCODE) {
-      window.localStorage.setItem(STORAGE_KEY, 'true');
+      startAdminSession(window);
       setIsAuthenticated(true);
       setError('');
       return;

@@ -7,7 +7,7 @@ hide_table_of_contents: true
 
 # Virtu Capital Administrator Guide
 
-This manual is intended only for authorized system administrators, super administrators, operations personnel, and risk-control personnel. Each guide focuses on one type of back-office task. Confirmed V102 pages include screenshots, while locations still awaiting screenshots retain clear written descriptions and can be followed without them.
+This manual is intended only for authorized system administrators, super administrators, operations personnel, and risk-control personnel. Each guide focuses on one type of back-office task. Confirmed V102 pages include screenshots; sections still awaiting screenshots provide clear instructions that can be followed without them.
 
 | Getting Started & Dashboard | Customer Management |
 | --- | --- |

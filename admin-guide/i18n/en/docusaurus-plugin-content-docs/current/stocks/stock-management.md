@@ -3,13 +3,13 @@ title: Stock Management
 sidebar_position: 1
 ---
 
-## Stock Management
+##
 
 **Navigation**: Left sidebar → “Stock Management”
 
-### Position Overview and List
+### Holdings Overview and Stock List
 
-The page summarizes the number of stocks held, total configured quantity, allocated quantity, available quantity, investors involved, and over-allocated stocks. If an over-allocation appears, verify the corresponding stock immediately.
+The page summarizes the number of stocks held, total configured quantity, allocated quantity, remaining quantity, number of investors, and any over-allocated stocks. If an over-allocation appears, verify the affected stock immediately.
 
 Search the list by stock name, stock code, and market.
 
@@ -22,12 +22,13 @@ Search the list by stock name, stock code, and market.
 | **Remaining quantity** | Total quantity minus allocated quantity |
 | **Investors** | Number of investors currently holding the stock |
 | **Created at** | Time when the stock record was created |
-| **Actions** | Management entry points visible to the current role |
+| **Actions** | Management options available to the current role |
 
-<!-- screenshot-slot: stocks-overview; status: placeholder -->
-> 📷 **Screenshot pending: Stock Management overview, search, and list.**
+![Stock Management](../assets/V102/stocks-management.png)
 
+:::warning
 If an “over-allocated” status appears, stop adding allocations and verify the stock’s total quantity and each investor’s quantity. Do not conceal the anomaly by creating another stock record.
+:::
 
 ### Add and Allocate a Stock
 
@@ -36,7 +37,7 @@ Click “Add Stock,” then configure it in this order:
 1. Search by region or stock code and select the stock.
 2. Enter the total stock quantity and initial cost price.
 3. Click “Add Investor” and enter the allocated quantity and cost price for one or more investors.
-4. Verify the automatically calculated allocation percentage, allocated quantity, and available position.
+4. Verify the automatically calculated allocation percentage, allocated quantity, and remaining position.
 5. Review the configuration summary, then create the stock.
 
 ![Add a stock and allocate it to investors](../assets/V102/stocks-create-and-allocate.png)
@@ -45,12 +46,12 @@ Click “Add Stock,” then configure it in this order:
 |----------|------|
 | **No duplicate investors** | The same investor cannot be added more than once for the same stock |
 | **Quantity cannot exceed the limit** | The total quantity allocated to all investors cannot exceed the stock’s total quantity |
-| **Percentage is calculated automatically** | Percentage = investor quantity ÷ total stock quantity |
-| **Available position updates dynamically** | After an allocation row is edited or deleted, the available position and summary update in real time |
+| **Percentage is calculated automatically** | Percentage = quantity allocated to the investor ÷ total stock quantity |
+| **Available position updates dynamically** | After an allocation row is edited or deleted, the remaining position and summary update in real time |
 
 ### Complete the Allocation
 
-When the allocated quantity equals the total stock quantity, the page shows that allocation is complete and the available position is 0. Even then, check every investor, quantity, and cost price before clicking Create.
+When the allocated quantity equals the total stock quantity, the page shows that allocation is complete and the remaining position is 0. Even then, check every investor, quantity, and cost price before clicking Create.
 
 ![Stock fully allocated](../assets/V102/stocks-allocation-complete.png)
 

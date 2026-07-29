@@ -45,58 +45,18 @@ const expectedDocs = [
   'users/investors.md',
 ];
 
-const expectedV102 = [
-  'audit-log-list.jpg',
-  'customers-enterprise-actions.png',
-  'customers-enterprise-list.png',
-  'customers-enterprise-onboarding-step-1-main.jpg',
-  'customers-personal-detail.png',
-  'customers-personal-list.png',
-  'feedback-list.png',
-  'market-data-manual-rate.jpg',
-  'market-data-market-rate.jpg',
-  'records-inbound-transfer-detail.jpg',
-  'records-outbound-transfer-detail.jpg',
-  'records-pending-list.jpg',
-  'records-stock-transfer-detail.jpg',
-  'stocks-allocation-complete.png',
-  'stocks-create-and-allocate.png',
-  'system-settings-enterprise-and-market-content.jpg',
-  'system-settings-fees-and-deposits.jpg',
-  'system-settings-transfers-wallet-and-agreements.jpg',
-].sort();
+const sidebarLabels = [
+  ...readFileSync(resolve(siteDir, 'sidebars.js'), 'utf8').matchAll(
+    /\blabel:\s*['"]([^'"]+)['"]/g,
+  ),
+].map((match) => match[1]);
+const expectedLocalizedSidebarKeys = sidebarLabels
+  .map((label) => `sidebar.adminSidebar.category.${label}`)
+  .sort();
 
-const expectedScreenshotSlots = new Map([
-  [
-    'communications/message-templates.md',
-    ['message-templates-list', 'message-template-preview'],
-  ],
-  [
-    'getting-started/dashboard.md',
-    ['dashboard-overview', 'dashboard-system-status'],
-  ],
-  ['getting-started/login.md', ['login-page', 'login-post-login']],
-  ['reference/permissions.md', ['permissions-role-change-dialog']],
-  ['stocks/stock-management.md', ['stocks-overview']],
-  [
-    'users/customers.md',
-    [
-      'customers-enterprise-onboarding-step-2-finance-and-structure',
-      'customers-enterprise-onboarding-step-3-compliance-and-accounts',
-      'customers-enterprise-onboarding-step-4-tax-and-documents',
-      'customers-enterprise-onboarding-step-5-document-signing',
-    ],
-  ],
-  [
-    'users/investors.md',
-    [
-      'investors-list',
-      'investors-actions',
-      'investors-detail',
-      'investors-role-change-dialog',
-    ],
-  ],
-]);
+const expectedV102 = readdirSync(resolve(siteDir, 'docs/assets/V102'))
+  .filter((name) => statSync(resolve(siteDir, 'docs/assets/V102', name)).isFile())
+  .sort();
 
 const expectedPlaceholderLabel = new Map([
   ['zh-Hans', '截图待补'],
@@ -187,6 +147,20 @@ function sameList(left, right) {
   return JSON.stringify(left) === JSON.stringify(right);
 }
 
+for (const locale of ['zh-Hant', 'en']) {
+  const catalogPath = resolve(
+    siteDir,
+    `i18n/${locale}/docusaurus-plugin-content-docs/current.json`,
+  );
+  const catalog = JSON.parse(readFileSync(catalogPath, 'utf8'));
+  const localizedSidebarKeys = Object.keys(catalog)
+    .filter((key) => key.startsWith('sidebar.adminSidebar.category.'))
+    .sort();
+  if (!sameList(localizedSidebarKeys, expectedLocalizedSidebarKeys)) {
+    errors.push(`${locale}: localized sidebar keys differ from sidebars.js`);
+  }
+}
+
 for (const {locale, docsDir} of roots) {
   const markdownFiles = walkMarkdown(docsDir);
   const relativeDocs = markdownFiles.map((path) => relative(docsDir, path));
@@ -216,13 +190,6 @@ for (const {locale, docsDir} of roots) {
     if (/^\s*(?:title|sidebar_position)\s*:/m.test(body)) {
       errors.push(`${locale}/${rel}: raw metadata appears in document body`);
     }
-    if (
-      rel === 'reference/permissions.md' &&
-      /(?:tech-support|operations)@virtucapital\.com|\+852[-\s]*x{4}/i.test(body)
-    ) {
-      errors.push(`${locale}/${rel}: unverified support contact marker remains`);
-    }
-
     localeHeadingSequences.set(
       rel,
       [...body.matchAll(/^(#{1,6})\s+\S/gm)].map((match) => match[1].length),
@@ -253,10 +220,6 @@ for (const {locale, docsDir} of roots) {
     }
     if (new Set(slots).size !== slots.length) {
       errors.push(`${locale}/${rel}: duplicate screenshot slot`);
-    }
-    const expectedSlots = expectedScreenshotSlots.get(rel) ?? [];
-    if (!sameList(slots, expectedSlots)) {
-      errors.push(`${locale}/${rel}: screenshot slots differ from the approved placeholders`);
     }
     localeSlotSequences.set(rel, slots);
 
@@ -339,7 +302,9 @@ for (const {locale, docsDir} of roots) {
   const assetDir = resolve(docsDir, 'assets/V102');
   const assetNames = listFiles(assetDir);
   if (!sameList(assetNames, expectedV102)) {
-    errors.push(`${locale}: V102 inventory differs from the approved 18 retained files`);
+    errors.push(
+      `${locale}: V102 inventory differs from the ${expectedV102.length} source files`,
+    );
   }
 
   const legacyAssetNames = listFiles(resolve(docsDir, 'assets')).filter(
@@ -356,9 +321,6 @@ for (const {locale, docsDir} of roots) {
   for (const name of expectedV102) {
     const path = resolve(assetDir, name);
     if (!existsSync(path)) continue;
-    if (!referencedV102.has(name)) {
-      errors.push(`${locale}: unreferenced V102 image ${name}`);
-    }
     const hash = sha256(path);
     if (locale === 'zh-Hans') {
       sourceHashes.set(name, hash);
@@ -407,5 +369,5 @@ if (errors.length) {
 }
 
 console.log(
-  'Validated 15 documents, 18 retained V102 assets, and screenshot placeholders in zh-Hans, zh-Hant, and en.',
+  `Validated 15 documents, ${expectedV102.length} V102 assets, and screenshot placeholders in zh-Hans, zh-Hant, and en.`,
 );

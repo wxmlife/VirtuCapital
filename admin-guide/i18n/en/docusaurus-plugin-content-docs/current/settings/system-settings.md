@@ -3,13 +3,13 @@ title: System Settings
 sidebar_position: 1
 ---
 
-## 8. System Settings
+##
 
 **Navigation**: Left sidebar → “System Settings”
 
 > ⚠️ System settings affect all users. After a change, you must click “Submit for Review”; it takes effect only after approval by a super administrator.
 
-### 8.1 Currency Exchange, Trading, and Deposit Configuration
+### Currency Exchange, Trading, and Deposit Configuration
 
 ![Currency-exchange, stock-trading, and deposit configuration](../assets/V102/system-settings-fees-and-deposits.jpg)
 
@@ -22,9 +22,9 @@ sidebar_position: 1
 | **Hong Kong local deposit** | Bank and branch codes, account information, FPS identifier, and fee |
 | **USDT deposit** | Deposit-fee percentage |
 
-Trading fees are calculated according to the fixed-fee and percentage rules configured on the system page. After bank information is changed, another administrator should verify each item.
+Trading fees follow the fixed-fee and percentage rules configured on this page. After bank information is changed, another administrator should verify each item.
 
-### 8.2 Withdrawals, Stock Transfers, Wallets, and Agreements
+### Withdrawals, Stock Transfers, Wallets, and Agreements
 
 ![Withdrawal, stock-transfer, wallet, and agreement configuration](../assets/V102/system-settings-transfers-wallet-and-agreements.jpg)
 
@@ -37,7 +37,7 @@ Trading fees are calculated according to the fixed-fee and percentage rules conf
 
 New or replaced agreements also require review. Multilingual agreements should use the same agreement identifier, and their client display order and mandatory-signing status must be checked.
 
-### 8.3 Enterprise-Onboarding Display and Market Content
+### Enterprise-Onboarding Display and Market Content
 
 ![Enterprise-onboarding, broker, and recommended-index configuration](../assets/V102/system-settings-enterprise-and-market-content.jpg)
 
@@ -54,12 +54,12 @@ Add, edit, delete, and reorder brokers. Before changing anything, confirm that t
 
 #### Recommended Indices and Market Content
 
-Under Hong Kong stock, US stock, and other tabs, search for and add recommended indices, remove items that should no longer appear, and adjust the order before submitting for review. Maintain stock recommendations by market in the same way. Follow the current back-office limits for display quantity and order.
+Under the Hong Kong stock, US stock, and other market tabs, search for and add recommended indices, remove items that should no longer appear, and adjust the order before submitting for review. Maintain stock recommendations by market in the same way. Follow the limits shown in the back office for the number and order of displayed items.
 
-### 8.4 Pre-Submission Checklist
-
+:::warning Pre-Submission Checklist
 1. Verify currencies, units, percentages, and fixed amounts.
 2. Verify bank information, wallet addresses, customer-service links, and multilingual copy.
 3. Check recommended content for duplicates, omissions, and ordering errors.
 4. Click “Submit for Review” and record the reason for the change.
 5. After approval, return to the page to confirm the effective value and verify the action in the audit log.
+:::

@@ -19,12 +19,12 @@ hide_table_of_contents: true
 | --- | --- |
 | [股票管理](./stocks/stock-management)<br/><small>股票建檔、持倉與投資者分配</small> | [記錄審核](./reviews/records)<br/><small>入金、出金、訂單和轉倉審核</small> |
 | [市場數據](./market/market-data)<br/><small>匯率模式、手動匯率與行情同步</small> | [審計日誌](./reviews/audit-log)<br/><small>按操作人、資源和結果追溯記錄</small> |
-| [系統設定](./settings/system-settings)<br/><small>手續費、銀行、錢包與展示設定</small> | [常見問題](./reference/faq)<br/><small>審核、異常持倉和權限問題</small> |
+| [系統設定](./settings/system-settings)<br/><small>手續費、銀行、錢包與顯示設定</small> | [常見問題](./reference/faq)<br/><small>審核、異常持倉和權限問題</small> |
 
 | 訊息與營運 | 使用邊界 |
 | --- | --- |
 | [訊息模板](./communications/message-templates)<br/><small>多語言模板、變數和預覽</small> | 管理員手冊不應公開部署，也不應從用戶幫助中心提供入口。 |
-| [用戶反饋](./communications/feedback)<br/><small>篩選、查看附件與內部跟進</small> | 發布時應使用企業身份認證、VPN 或其他訪問控制。 |
+| [用戶反饋](./communications/feedback)<br/><small>篩選、查看附件與內部跟進</small> | 發佈時應使用企業身份認證、VPN 或其他存取控制。 |
 
 :::warning 內部資料
 後台頁面可能包含客戶身份、資產和操作記錄。不得把頁面截圖、帳號、審核資料或設定值發送給無權限人員。

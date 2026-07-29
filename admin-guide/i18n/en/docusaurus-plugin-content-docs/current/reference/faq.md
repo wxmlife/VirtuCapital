@@ -3,7 +3,7 @@ title: Frequently Asked Questions
 sidebar_position: 1
 ---
 
-## 11. Frequently Asked Questions
+##
 
 ### Q1: Why Did My Review Action Not Take Effect Immediately?
 
@@ -28,7 +28,7 @@ sidebar_position: 1
 
 ### Q5: How Do I Change My Own Administrator Information?
 
-**A**: The current back office directly provides language and theme controls and secure logout. If the page has no profile or password-change entry point, do not infer one from an old manual; request the change through the organization’s account-management process.
+**A**: The current back office provides language and theme controls and secure logout. If the page has no profile or password-change option, do not infer one from an old manual; request the change through the organization’s account-management process.
 
 ### Q6: Why Do Some Records Show “Pending Super Administrator Review”?
 
@@ -43,7 +43,7 @@ sidebar_position: 1
 
 ### Q8: Where Can I Resume an Enterprise-Onboarding Draft?
 
-**A**: Open “Customer Management → Enterprise Users,” find the enterprise record whose information status is Draft, and select “Continue Onboarding” from the action menu. Check the current stage and uploaded files before continuing. Do not create a duplicate draft for the same enterprise.
+**A**: Open “Customer Management → Enterprise Users,” find the enterprise record whose profile status is Draft, and select “Continue Onboarding” from the action menu. Check the current stage and uploaded files before continuing. Do not create a duplicate draft for the same enterprise.
 
 ### Q9: What If Variables Still Appear in the Message-Template Preview?
 
@@ -51,7 +51,7 @@ sidebar_position: 1
 
 ### Q10: What Should I Do If Market-Data Synchronization Fails?
 
-**A**: First click “Refresh” to confirm the latest status, then review the corresponding market’s last synchronization time, trigger source, and error status. Do not repeatedly trigger multiple synchronization tasks at the same time. Markets such as China A-shares that show “Unavailable” do not require a forced operation.
+**A**: First click “Refresh” to confirm the latest status, then review the selected market’s last synchronization time, trigger source, and error status. Do not repeatedly trigger multiple synchronization tasks at the same time. Markets such as China A-shares that show “Unavailable” do not require a forced operation.
 
 ### Q11: What Should I Do If a `ChunkLoadError` or Red Error Overlay Appears After Navigation?
 

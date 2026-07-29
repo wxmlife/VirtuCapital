@@ -3,35 +3,41 @@ title: Dashboard Overview
 sidebar_position: 3
 ---
 
-## 2. Dashboard Overview
+##
 
-The dashboard is the administrator’s overview page after login. Use it to assess platform assets, account balances, and system status quickly. Follow the definitions, currencies, and update times currently shown on the page.
+The dashboard is the administrator’s default home page after login and provides **real-time monitoring** of the platform’s core data.
 
-### 2.1 Market Overview Cards
+### Market Overview Cards
 
 | Metric | Description |
 | --- | --- |
-| **Total investors** | Number of investors currently included in the statistics |
-| **Total assets (HKD)** | Aggregate assets converted according to the exchange-rate basis shown on the page |
-| **Stock value (HKD)** | Aggregate market value of investors’ stock holdings |
-| **Cash** | Aggregate balances in HKD, USD, USDT, and other currencies |
+| Total investors | Total number of investors registered on the platform |
+| Total assets (HKD) | Sum of all investor assets, converted to HKD at the current exchange rate |
+| Stock value (HKD) | Total market value of all stocks held by investors |
+| ├── W/L 24-hour P/L | Change in profit or loss on stock holdings over the past 24 hours |
+| Cash | Aggregate cash balances by currency |
+| ├── HKD | HKD cash balance |
+| ├── USD | USD cash balance |
+| └── USDT | USDT balance |
 
-Use these cards to identify obvious anomalies; they do not replace business-detail checks or accounting reconciliation. If a value appears abnormal, check market-data exchange rates, stock quotes, investor holdings, and fund records in that order.
+:::tip Purpose
+Quickly understand the platform’s overall asset scale and distribution of funds.
+:::
 
-<!-- screenshot-slot: dashboard-overview; status: placeholder -->
-> 📷 **Screenshot pending: complete dashboard overview.**
+![Dashboard](../assets/V102/FirstPage.png)
 
-### 2.2 Yellow River Account
+### Yellow River Account
 
-This area shows visible currency balances for the platform account, such as USD and HKD. Use the balances only for viewing and reconciliation; perform actual transfers, credits, or debits through the corresponding business workflow.
+Displays the visible currency balances of the platform account.
+- USD balance
+- HKD balance\
+Balances are for viewing and reconciliation only. Perform actual transfers, credits, or debits through the corresponding business workflow.
 
-> ⚠️ If a dashboard balance differs from business records, do not try to “correct” the display by approving or entering a transaction again. Locate the original record and audit log first.
-
-### 2.3 Quick Actions
+### Quick Actions
 
 Quick-action cards open frequently used pages such as Investors, Stock Management, Market Data, and Message Templates. After clicking, confirm that the page title matches the intended destination before acting. Using the browser Back button does not automatically undo content that has already been saved or submitted.
 
-### 2.4 System Information
+### System Information
 
 | Item | Description |
 | --- | --- |
@@ -39,10 +45,9 @@ Quick-action cards open frequently used pages such as Investors, Stock Managemen
 | **Version** | Current deployment version, used for troubleshooting |
 | **Environment** | Current runtime environment; never mix test and production data |
 
-<!-- screenshot-slot: dashboard-system-status; status: placeholder -->
-> 📷 **Screenshot pending: platform account balances and system-information area.**
+![System information](../assets/V102/dashboard-information.png)
 
-### 2.5 Daily Inspection Recommendations
+### Daily Inspection Recommendations
 
 1. Confirm that total assets, stock value, and cash have no unexplained sudden changes.
 2. Check whether platform account balances agree with recently completed fund records.

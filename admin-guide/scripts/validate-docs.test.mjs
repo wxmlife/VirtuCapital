@@ -28,6 +28,10 @@ function createFixture() {
   cpSync(resolve(adminGuideDir, 'i18n'), resolve(fixtureDir, 'i18n'), {
     recursive: true,
   });
+  cpSync(
+    resolve(adminGuideDir, 'sidebars.js'),
+    resolve(fixtureDir, 'sidebars.js'),
+  );
   return fixtureDir;
 }
 
@@ -146,5 +150,27 @@ test('allows a legitimate Markdown horizontal rule in the document body', () => 
       0,
       `Validator rejected a legal horizontal rule:\n${result.stdout}${result.stderr}`,
     );
+  });
+});
+
+test('rejects a localized sidebar catalog that still uses a renamed source label', () => {
+  withFixture((fixtureDir) => {
+    const path = resolve(
+      fixtureDir,
+      'i18n/en/docusaurus-plugin-content-docs/current.json',
+    );
+    replaceRequired(
+      path,
+      'sidebar.adminSidebar.category.投资者与客户管理',
+      'sidebar.adminSidebar.category.用户与客户管理',
+    );
+
+    const result = runValidator(fixtureDir);
+    assert.notEqual(
+      result.status,
+      0,
+      `Validator unexpectedly accepted a stale sidebar key:\n${result.stdout}${result.stderr}`,
+    );
+    assert.match(result.stderr, /localized sidebar keys differ from sidebars\.js/);
   });
 });

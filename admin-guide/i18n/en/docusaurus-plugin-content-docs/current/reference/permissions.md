@@ -7,35 +7,34 @@ sidebar_position: 2
 
 The two tables below summarize what investors, administrators, and super administrators can do. Before acting, confirm whether your role is initiating a request, performing the first review, or changing a setting. Any action marked as requiring super-administrator review must wait for final approval.
 
+### Client Role Operation Permissions
+
 ![Account and asset operation permissions](../assets/V102/permissions-account-assets.png)
+
+### Administrator Role Operation Permissions
 
 ![Customer, stock, market, and system configuration permissions](../assets/V102/permissions-customer-system.png)
 
-Actual access also depends on organizational authorization, account status, and the deployed version. If the page and the tables differ, follow the stricter boundary.
-
-### Role Changes
-
-1. Locate the user precisely using the name, mobile number, and VC User ID.
-2. Verify the current role, target role, and approval basis.
-3. Grant only the minimum role required for the person’s responsibilities.
-4. After the change, require the user to log in again and verify the visible menus.
-5. Verify the operator, target user, time, and result in the audit log.
+Actual access also depends on organizational authorization, account status, and the deployed version. If the page and the images differ, follow the permissions and controls shown in the system.
 
 :::warning High-risk operations
-Role elevation, system settings, exchange rates, and final reviews involving funds or positions must not be completed by one person circumventing the approval chain. The presence of a button does not mean that the current person has business authorization to use it.
+Role changes, system settings, exchange rates, operations involving funds or positions, first reviews, and final reviews must not be completed by one person circumventing the approval chain.
 :::
 
-### Auditing and Traceability
+#### Auditing and Traceability
 
-After completing a role change, review, or configuration operation, verify the record in the audit log. Narrow the search using the operator, target user, resource ID, result, and time range. Failed records must also be retained and investigated.
+- After completing a role change, review, or configuration operation, verify the record in the audit log.
+- Narrow the search using the operator, target user, resource ID, result, and time range.
+- Failed records must also be retained and investigated.
 
 ![Audit-log list and filters](../assets/V102/audit-log-list.jpg)
 
-### Permission Revocation
+##### Permission Revocation
 
-When a person changes roles, leaves the organization, shares an account, experiences an anomalous login, or reaches the end of an authorization period, promptly reduce or revoke access through the organization’s approval process and inspect recent audit logs. Do not use a display-name change as a substitute for revoking permissions.
+- When a person changes roles, leaves the organization, shares an account, experiences an anomalous login, or reaches the end of an authorization period, promptly reduce access through the organization’s approval process.
+- Do not delete a user as a substitute for changing their role and revoking permissions.
 
-### Contact Support
+## Contact Support
 
 | Issue Type | Contact |
 | --- | --- |

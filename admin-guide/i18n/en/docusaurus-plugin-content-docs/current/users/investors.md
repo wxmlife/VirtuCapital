@@ -3,67 +3,61 @@ title: Investor Management
 sidebar_position: 1
 ---
 
-## 3. Investor Management
-
-### 3.1 Investor List
+## Investor List
 
 **Navigation**: Left sidebar → “Investors”
 
-Use the search box above the list to locate users by mobile number, name, email, or VC User ID. When search results contain assets and contact details, confirm that the matched name, mobile number, and VC User ID belong to the same person.
+Use the search box to locate users by mobile number, name, email, or VC User ID. Before taking action, verify the name, mobile number, and VC User ID to avoid selecting the wrong account.
 
-#### Table Fields
+### List Information
 
 | Field | Description |
 | --- | --- |
 | **Name / VC User ID** | User display name, onboarding indicator, and platform user number |
 | **Mobile number** | Registered mobile number |
-| **Total assets** | Total assets according to the page’s current calculation basis |
-| **Cost** | Aggregate holding cost currently recorded |
-| **Profit/Loss** | Cumulative profit or loss amount and percentage |
-| **Today’s profit/loss** | Current-day profit or loss amount and percentage |
+| **Total assets / Cost** | Current total assets and holding cost |
+| **Profit/Loss / Today’s profit/loss** | Cumulative and current-day profit or loss amount and percentage |
 | **Role** | Investor, administrator, or super administrator |
-| **Actions** | Row-level actions the current account is authorized to perform |
+| **Actions** | View holdings, view details, edit user, change role, or delete user |
 
-<!-- screenshot-slot: investors-list; status: placeholder -->
-> 📷 **Screenshot pending: current investor list and search results.**
+![Investor list and action menu](../assets/V102/investors-list-actions.png)
 
-### 3.2 Investor Actions
+### View Holdings
 
-Click the “Actions” button at the far right of the target row. Menu items vary with the current role, target-user status, and system version. Perform only actions that are actually displayed and for which you have authorization.
+Expand a user in the investor list to view the stocks they hold, market, holding quantity, cost price, current price, market value, and profit or loss. Open “View Details” when you need the complete account information.
 
-<!-- screenshot-slot: investors-actions; status: placeholder -->
-> 📷 **Screenshot pending: investor row action menu.**
+![Investor holdings](../assets/V102/investors-holdings-expanded.png)
 
-### 3.3 View Details
+## User Actions
 
-1. First verify the name, mobile number, and VC User ID.
-2. Open “View Details.”
-3. Review basic information, account status, assets or holdings, business records, and activity history using the sections actually available on the details page.
-4. When investigating a specific business item, follow the identifier shown on the details page or continue checking in “Records” and “Audit Log.”
-5. Return to the list when finished so that information from the previous customer is not mistakenly used for the next task.
+Click the “Actions” button on the right of the target user and select the function you need.
 
-<!-- screenshot-slot: investors-detail; status: placeholder -->
-> 📷 **Screenshot pending: investor details page and primary information sections.**
+### View Details
+
+Click “Actions” → “View Details” on the right of the user to view the user’s information, role, assets, currency balances, and holdings. Use this page to verify account and asset information.
+
+![Investor details](../assets/V102/investors-detail.png)
 
 :::warning Sensitive information
-The details page may contain contact details, identity information, assets, and transaction records. View it only when required for the business task, and do not copy it into unauthorized documents or chats.
+The details page contains contact details, assets, and holding information. View and use it only when required for the business task.
 :::
 
-### 3.4 Change Role
+### Edit User
 
-A role change alters the scope of back-office access and must be performed by an authorized person who has the required permission.
+You can edit the name, email address, and mobile number. Verify that the information belongs to the current user before saving. Editing a user does not change their assets or role.
 
-1. Locate the target user precisely in the list.
-2. Open the row action menu and enter the role-change interface.
-3. Verify the current role, target role, and user identifier.
-4. Confirm that an approval record already exists, then apply the change.
-5. After the change, ask the user to log in again and verify the record in the audit log.
+![Edit user](../assets/V102/investors-edit-user.png)
 
-<!-- screenshot-slot: investors-role-change-dialog; status: placeholder -->
-> 📷 **Screenshot pending: role-change confirmation interface.**
+### Change Role
 
-> ⚠️ An ordinary administrator must not elevate their own permissions. If you open the dialog only to view it, click Cancel or Close; never confirm a demonstration action on a real account.
+Select one of the roles available on the page and save. A role affects back-office access. Before taking action, verify the user and confirm that authorization has been granted.
 
-### 3.5 Operations That Must Not Be Inferred
+![Change role](../assets/V102/investors-change-role.png)
 
-If the current row menu does not show actions such as edit, deactivate, or delete, the current account or version does not provide that entry point. Do not use old screenshots or procedures to infer an alternative operation. Escalate account-status requests through the organization’s approved internal process.
+### Delete User
+
+The delete option is in the “Actions” menu on the right of the user. Before taking action, verify the name, mobile number, VC User ID, assets, and holdings again.
+
+:::danger Do Not Delete Users Lightly
+Deleting a user is not a routine cleanup operation. Do so only after confirming the target account, ensuring that the related assets and holdings have been handled properly, and obtaining explicit authorization. If anything is uncertain, cancel the operation and do not delete the user.
+:::

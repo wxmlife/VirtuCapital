@@ -3,7 +3,7 @@ title: Audit Log
 sidebar_position: 2
 ---
 
-## 7. Audit Log
+##
 
 **Navigation**: Left sidebar → “Audit Log”
 
@@ -11,7 +11,7 @@ The audit log records administrator actions on resources such as users, transact
 
 ![Audit-log list and filters](../assets/V102/audit-log-list.jpg)
 
-### 7.1 Search Logs
+### Search Logs
 
 Combine the following filters:
 
@@ -27,9 +27,9 @@ Combine the following filters:
 
 After setting the filters, run the search. To view a newly completed action, click “Refresh” to retrieve the latest data.
 
-### 7.2 Log Fields and Details
+### Log Fields and Details
 
-The list shows the time, action, administrator, target user, resource type and ID, result, source IP, summary, and a details entry point. Click “View Details” to verify complete information such as request parameters, changes, and execution results.
+The list shows the time, action, administrator, target user, resource type and ID, result, source IP, summary, and a link to the details. Click “View Details” to verify the request parameters, changes, and execution result.
 
 When investigating an issue, narrow the scope in this order:
 

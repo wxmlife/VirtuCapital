@@ -1,21 +1,21 @@
 ---
-title: Individual and Enterprise Customer Management
+title: Customer Management
 sidebar_position: 2
 ---
 
-## Customer Management
+##
 
 **Navigation**: Left sidebar → “Customer Management” → “Individual Users / Enterprise Users”
 
 Customer Management is used to view individual KYC, enterprise KYB, onboarding information, and onboarding progress. The “Investors” module focuses more on trading accounts and asset management.
 
-### Individual User List
+## Individual Users
 
-Search by name, mobile number, email, or VC User ID, and filter by onboarding status. The list shows user information, contact details, preferred language, onboarding status, Sumsub status, information preview, registration time, and a details entry point.
+Search by name, mobile number, email, or VC User ID, and filter by onboarding status. The list shows user information, contact details, preferred language, onboarding status, Sumsub status, profile preview, registration time, and a link to the details.
 
 ![Individual customer list](../assets/V102/customers-personal-list.png)
 
-### Individual User Details
+### Individual User Information
 
 After opening the details page, verify the following sections:
 
@@ -25,20 +25,22 @@ After opening the details page, verify the following sections:
 | **KYC** | Sumsub status, Applicant ID, Inspection ID, application platform, and IP country |
 | **Risk and supplementary information** | Risk-assessment results, supplementary questionnaires, and outstanding items |
 | **Employment and finances** | Occupation, income, assets, source of funds, and investment experience |
-| **Contracts and fees** | Agreement confirmations, onboarding information, and current fee configuration |
-| **System information** | Internal user ID, VC User ID, role, customer type, and update time |
+| **Document signing** | Individual account-opening application, CRS tax form, W-8BEN tax form, and signature information |
+| **Fee configuration** | Fee configuration; the user’s fees can be **edited** |
 
 ![Individual customer details](../assets/V102/customers-personal-detail.png)
 
 > ⚠️ Document images, contact details, and financial data are sensitive information. View and use them only when required for the business task.
 
-### Enterprise User List
+## Enterprise Users
 
-Search the enterprise list by company name, registration number, contact person, email, mobile number, or VC User ID, and filter by information status or onboarding status.
+### Enterprise User Information
+
+Search the enterprise list by company name, registration number, contact person, email, mobile number, or VC User ID, and filter by profile status or onboarding status.
 
 ![Enterprise customer list](../assets/V102/customers-enterprise-list.png)
 
-The list shows company information, contact details, enterprise type and jurisdiction of registration, information status, onboarding status, creation time, and an actions entry point. Confirm the record using the company name and registration number before opening the action menu.
+The list shows company information, contact details, enterprise type and jurisdiction of registration, profile status, onboarding status, creation time, and available actions. Confirm the record using the company name and registration number before opening the action menu.
 
 ![Enterprise customer action menu](../assets/V102/customers-enterprise-actions.png)
 
@@ -48,7 +50,7 @@ Available actions depend on the record status:
 - **Continue onboarding**: Resume from the last saved stage of a draft.
 - **Delete draft**: Use only after confirming that onboarding will not continue, that no information needs to be retained, and that deletion has been authorized.
 
-## Enterprise Onboarding Tutorial
+### Enterprise Onboarding Process
 
 ### Preparation
 

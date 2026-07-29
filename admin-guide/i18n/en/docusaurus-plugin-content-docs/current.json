@@ -4,39 +4,39 @@
     "description": "The label for version current"
   },
   "sidebar.adminSidebar.category.管理员使用指南": {
-    "message": "Administrator's Guide",
+    "message": "Administrator Guide",
     "description": "The label for category '管理员使用指南' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.入门与仪表盘": {
-    "message": "Getting Started & Dashboard",
+    "message": "Getting Started and Dashboard",
     "description": "The label for category '入门与仪表盘' in sidebar 'adminSidebar'"
   },
-  "sidebar.adminSidebar.category.用户与客户管理": {
-    "message": "User and customer management",
-    "description": "The label for category '用户与客户管理' in sidebar 'adminSidebar'"
+  "sidebar.adminSidebar.category.投资者与客户管理": {
+    "message": "Investor and Customer Management",
+    "description": "The label for category '投资者与客户管理' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.股票管理": {
     "message": "Stock Management",
     "description": "The label for category '股票管理' in sidebar 'adminSidebar'"
   },
-  "sidebar.adminSidebar.category.市场数据管理": {
-    "message": "Market Data Management",
-    "description": "The label for category '市场数据管理' in sidebar 'adminSidebar'"
+  "sidebar.adminSidebar.category.市场数据": {
+    "message": "Market Data",
+    "description": "The label for category '市场数据' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.审核与风控": {
-    "message": "Audit and risk control",
+    "message": "Review and Risk Control",
     "description": "The label for category '审核与风控' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.系统管理": {
-    "message": "System management",
+    "message": "System Management",
     "description": "The label for category '系统管理' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.消息与支持": {
-    "message": "News and support",
+    "message": "Messages and Support",
     "description": "The label for category '消息与支持' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.参考资料": {
-    "message": "References",
+    "message": "Reference",
     "description": "The label for category '参考资料' in sidebar 'adminSidebar'"
   }
 }

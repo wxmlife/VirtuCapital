@@ -3,9 +3,9 @@ title: Login and Basic Controls
 sidebar_position: 2
 ---
 
-## 1. System Login and Basic Controls
+##
 
-### 1.1 Log In
+### Log In
 
 **Navigation**: Open the administrator URL provided by your organization → Enter your administrator account and password → Click “Log In”
 
@@ -14,21 +14,20 @@ sidebar_position: 2
 3. Click “Log In” and wait for the back-office home page to load completely.
 4. On first use or after a recent permission change, verify that the left navigation matches your approved role.
 
-<!-- screenshot-slot: login-page; status: placeholder -->
-> 📷 **Screenshot pending: administrator login page.**
+![Administrator login](../assets/V102/login.png)
 
 :::warning Account security
 Administrator accounts must not be shared. Do not send passwords, browser sessions, verification codes, or login screenshots to anyone. Lock the device before leaving it unattended, and log out securely when finished.
 :::
 
-### 1.2 Login Failures and Session Issues
+### Login Failures and Session Issues
 
 - **Incorrect account or password**: Check capitalization, the input method, and whether the account has an administrator role. Do not make numerous repeated password attempts.
 - **Returned to the login page after logging in**: Check whether the session has expired, then log in again. If the issue repeats, record the time and current URL and contact internal technical support.
 - **Page remains in a loading state**: Refresh once. If it still does not recover, preserve the error text and route; do not resubmit business operations.
 - **Permission menus are missing**: First confirm the current account role. If the role was just changed, log out and log in again.
 
-### 1.3 Basic Controls After Login
+### Basic Controls After Login
 
 | Control | How to Use It |
 | --- | --- |
@@ -37,10 +36,9 @@ Administrator accounts must not be shared. Do not send passwords, browser sessio
 | **Current account** | The bottom of the sidebar shows the current login name; use it to confirm that you are not using someone else’s session |
 | **Log out** | When finished, click “Log Out” at the bottom of the sidebar and confirm that the page returns to the logged-out state |
 
-<!-- screenshot-slot: login-post-login; status: placeholder -->
-> 📷 **Screenshot pending: post-login navigation, language, theme, and logout controls.**
+![Dashboard](../assets/V102/FirstPage.png)
 
-### 1.4 Secure Logout Checklist
+### Secure Logout Checklist
 
 1. Confirm that any form being edited has been saved as a draft when required by the business process, or that you have explicitly chosen to discard it.
 2. Close any open customer profiles, attachments, and sensitive details.

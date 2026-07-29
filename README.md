@@ -36,15 +36,22 @@ npm run start:user
 npm run start:admin
 ```
 
-`start:user` 是快速编辑模式，只加载简体中文；修改 Markdown 后会自动刷新。管理员站使用 `http://localhost:3001`。
+`start:user` 和 `start:admin` 是快速编辑模式，只加载简体中文；修改 Markdown 后会自动刷新。管理员站使用 `http://localhost:3001`。
 
 需要在同一个地址预览并切换简体中文、繁体中文和英文时，使用：
 
 ```bash
 npm run preview:user -- --port 3000
+npm run preview:admin
 ```
 
-完整用户站会打开在 `http://localhost:3000`。这个模式会先清理旧路径缓存，再构建全部语言，因此启动稍慢，但可以避免 GitHub Pages 路径残留，并正常验证语言切换和所有正式路由。
+完整用户站会打开在 `http://localhost:3000`，完整管理员站会打开在 `http://localhost:3001`。完整预览会先构建全部语言，因此启动稍慢，但可以正常验证语言切换和所有正式路由。管理员站的语言路径分别为：
+
+- 简体中文：`/getting-started/dashboard`
+- 繁体中文：`/zh-Hant/getting-started/dashboard`
+- 英文：`/en/getting-started/dashboard`
+
+`docusaurus start` 一次只加载一种语言，因此不要使用快速编辑模式验证带 `/en/` 或 `/zh-Hant/` 前缀的路由。运行完整预览前，请先停止占用相同端口的快速编辑进程。
 
 ## 生产构建
 
@@ -52,9 +59,10 @@ npm run preview:user -- --port 3000
 npm run build:user
 npm run build:admin
 npm run build:all
+npm run check:admin-routes
 ```
 
-用户站构建产物位于 `build/`，管理员站构建产物位于 `admin-guide/build/`。管理员站上线时必须另行配置身份认证、VPN 或访问白名单，不应直接部署到公开 GitHub Pages。
+用户站构建产物位于 `build/`，管理员站构建产物位于 `admin-guide/build/`。管理员站构建会自动检查简体中文、繁体中文和英文的全部页面路由；也可使用 `check:admin-routes` 单独复查现有构建。管理员口令只在当前浏览器标签会话内有效，关闭会话后需要重新输入；这只是前端访问提示，不能替代真正的身份认证。管理员站上线时必须另行配置身份认证、VPN 或访问白名单，不应直接部署到公开 GitHub Pages。
 
 ## 推荐写作规范
 
