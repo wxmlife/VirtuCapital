@@ -12,6 +12,7 @@ export default {
   projectName: 'virtu-capital-help-center',
   onBrokenLinks: 'throw',
   markdown: {hooks: {onBrokenMarkdownLinks: 'warn'}},
+  clientModules: ['./src/chunk-load-recovery.mjs'],
   i18n: {
     defaultLocale: 'zh-Hans',
     locales: ['zh-Hans', 'zh-Hant', 'en'],

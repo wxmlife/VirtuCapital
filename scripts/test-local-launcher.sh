@@ -47,12 +47,21 @@ wait_for_log() {
 }
 
 install_fake_commands() {
-  mkdir -p "$FAKE_PROJECT/node_modules/.bin" "$FAKE_BIN"
+  mkdir -p \
+    "$FAKE_PROJECT/node_modules/.bin" \
+    "$FAKE_BIN"
   : >"$FAKE_PROJECT/node_modules/.bin/docusaurus"
   chmod +x "$FAKE_PROJECT/node_modules/.bin/docusaurus"
 
   cat >"$FAKE_BIN/node" <<'EOF'
 #!/usr/bin/env bash
+if [[ "$*" == *"scripts/check-local-preview-ready.mjs"* ]]; then
+  echo "node $*" >>"$CALL_LOG"
+  if [[ ! -f "$READY_MARKER" ]]; then
+    : >"$READY_MARKER"
+    exit 1
+  fi
+fi
 exit 0
 EOF
 
@@ -65,11 +74,6 @@ if [[ "${FAKE_OCCUPIED_PORT:-}" == "3001" && "$*" == *"-iTCP:3001"* ]]; then
   exit 0
 fi
 exit 1
-EOF
-
-  cat >"$FAKE_BIN/curl" <<'EOF'
-#!/usr/bin/env bash
-exit 0
 EOF
 
   cat >"$FAKE_BIN/open" <<'EOF'
@@ -91,7 +95,7 @@ while :; do
 done
 EOF
 
-  chmod +x "$FAKE_BIN/node" "$FAKE_BIN/lsof" "$FAKE_BIN/curl" \
+  chmod +x "$FAKE_BIN/node" "$FAKE_BIN/lsof" \
     "$FAKE_BIN/open" "$FAKE_BIN/npm"
 }
 
@@ -128,20 +132,31 @@ run_happy_path_test() {
   local output="$TEST_ROOT/happy-path.log"
   (
     cd /
-    PATH="$FAKE_BIN:/usr/bin:/bin" CALL_LOG="$CALL_LOG" \
+    PATH="$FAKE_BIN:/usr/bin:/bin" \
+      CALL_LOG="$CALL_LOG" \
+      LOCAL_PREVIEW_SESSION=1722330000 \
+      READY_MARKER="$TEST_ROOT/ready.marker" \
       exec bash "$FAKE_PROJECT/一键本地运行.command"
   ) >"$output" 2>&1 &
   LAUNCHER_PID=$!
 
-  wait_for_log "open http://localhost:3001"
+  wait_for_log "node scripts/check-local-preview-ready.mjs"
+  wait_for_log "open http://localhost:3001/?local-preview=1722330000"
   kill -TERM "$LAUNCHER_PID"
   wait "$LAUNCHER_PID" || true
   LAUNCHER_PID=""
 
   assert_contains "$CALL_LOG" "npm run start:user -- --no-open"
   assert_contains "$CALL_LOG" "npm run start:admin -- --no-open"
-  assert_contains "$CALL_LOG" "open http://localhost:3000"
-  assert_contains "$CALL_LOG" "open http://localhost:3001"
+  assert_contains "$CALL_LOG" "node scripts/check-local-preview-ready.mjs"
+  local ready_check_count
+  ready_check_count="$(
+    grep -c "node scripts/check-local-preview-ready.mjs" "$CALL_LOG"
+  )"
+  [[ $ready_check_count -ge 2 ]] ||
+    fail "资源尚未就绪时启动器没有等待重试"
+  assert_contains "$CALL_LOG" "open http://localhost:3000/?local-preview=1722330000"
+  assert_contains "$CALL_LOG" "open http://localhost:3001/?local-preview=1722330000"
   assert_contains "$CALL_LOG" "TERM user"
   assert_contains "$CALL_LOG" "TERM admin"
 }

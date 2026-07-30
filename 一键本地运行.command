@@ -62,24 +62,29 @@ check_port() {
 }
 
 wait_until_ready() {
-  local name="$1"
-  local url="$2"
-  local pid="$3"
   local attempts=0
 
   while (( attempts < 120 )); do
-    if curl --silent --fail --output /dev/null "$url"; then
-      echo "$name 已就绪：$url"
+    if ! kill -0 "$USER_PID" 2>/dev/null; then
+      die "APP 端启动进程已意外退出，请查看上方日志。"
+    fi
+    if ! kill -0 "$ADMIN_PID" 2>/dev/null; then
+      die "管理员端启动进程已意外退出，请查看上方日志。"
+    fi
+
+    if node scripts/check-local-preview-ready.mjs &&
+      kill -0 "$USER_PID" 2>/dev/null &&
+      kill -0 "$ADMIN_PID" 2>/dev/null; then
+      echo "APP 端已就绪：http://localhost:3000/"
+      echo "管理员端已就绪：http://localhost:3001/"
       return 0
     fi
-    if ! kill -0 "$pid" 2>/dev/null; then
-      die "$name 启动进程已意外退出，请查看上方日志。"
-    fi
+
     sleep 0.5
     attempts=$((attempts + 1))
   done
 
-  die "等待 $name 启动超时，请查看上方日志。"
+  die "等待两个站点启动超时，请查看上方日志。"
 }
 
 trap cleanup EXIT
@@ -90,7 +95,6 @@ echo
 
 check_command node "Node.js"
 check_command npm "npm"
-check_command curl "curl"
 check_command lsof "lsof"
 check_command open "macOS open 命令"
 
@@ -108,11 +112,11 @@ echo "正在启动管理员端（http://localhost:3001）……"
 npm run start:admin -- --no-open &
 ADMIN_PID=$!
 
-wait_until_ready "APP 端" "http://localhost:3000/" "$USER_PID"
-wait_until_ready "管理员端" "http://localhost:3001/" "$ADMIN_PID"
+wait_until_ready
 
-open "http://localhost:3000"
-open "http://localhost:3001"
+PREVIEW_SESSION="${LOCAL_PREVIEW_SESSION:-$(date +%s)-$$}"
+open "http://localhost:3000/?local-preview=$PREVIEW_SESSION"
+open "http://localhost:3001/?local-preview=$PREVIEW_SESSION"
 
 echo
 echo "两个站点均已启动。保持此窗口开启；按 Ctrl+C 可同时停止。"
