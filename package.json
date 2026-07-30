@@ -6,7 +6,7 @@
     "start": "docusaurus start",
     "start:user": "docusaurus start",
     "preview:user": "DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus-preview docusaurus clear && DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus-preview docusaurus serve --build --host 0.0.0.0",
-    "start:admin": "npm --prefix admin-guide start",
+    "start:admin": "npm --prefix admin-guide run start --",
     "preview:admin": "npm --prefix admin-guide run preview",
     "build": "DOCUSAURUS_GENERATED_FILES_DIR_NAME=${DOCUSAURUS_GENERATED_FILES_DIR_NAME:-.docusaurus-build} docusaurus build",
     "build:user": "DOCUSAURUS_GENERATED_FILES_DIR_NAME=${DOCUSAURUS_GENERATED_FILES_DIR_NAME:-.docusaurus-build} docusaurus build",
