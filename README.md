@@ -36,7 +36,7 @@ npm run publish
 
 ## 本地预览
 
-在 macOS Finder 中双击根目录的 `一键本地运行.command`，可同时启动 APP 用户端和管理员端。两个站点就绪后会自动在浏览器中打开：
+在 macOS Finder 中双击根目录的 `一键本地运行.command`，可构建并同时启动 APP 用户端和管理员端的三语言完整预览。首次构建需要稍等，两个站点就绪后会自动在浏览器中打开：
 
 - APP 用户端：`http://localhost:3000`
 - 管理员端：`http://localhost:3001`

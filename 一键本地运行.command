@@ -64,7 +64,7 @@ check_port() {
 wait_until_ready() {
   local attempts=0
 
-  while (( attempts < 120 )); do
+  while (( attempts < 240 )); do
     if ! kill -0 "$USER_PID" 2>/dev/null; then
       die "APP 端启动进程已意外退出，请查看上方日志。"
     fi
@@ -90,7 +90,7 @@ wait_until_ready() {
 trap cleanup EXIT
 trap handle_signal INT TERM HUP
 
-echo "Virtu Capital 本地开发环境"
+echo "Virtu Capital 本地多语言预览"
 echo
 
 check_command node "Node.js"
@@ -105,11 +105,11 @@ check_port 3000
 check_port 3001
 
 echo "正在启动 APP 端（http://localhost:3000）……"
-npm run start:user -- --no-open &
+npm run preview:user -- --no-open &
 USER_PID=$!
 
 echo "正在启动管理员端（http://localhost:3001）……"
-npm run start:admin -- --no-open &
+npm run preview:admin -- --no-open &
 ADMIN_PID=$!
 
 wait_until_ready

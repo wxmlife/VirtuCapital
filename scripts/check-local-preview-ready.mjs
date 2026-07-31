@@ -1,37 +1,9 @@
-import {readFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {pathToFileURL} from 'node:url';
 
 const DEFAULT_REQUEST_TIMEOUT_MS = 1_500;
 
-function collectContentChunkNames(value, chunks) {
-  if (!value || typeof value !== 'object') {
-    return;
-  }
-
-  if (typeof value.content === 'string') {
-    chunks.add(value.content);
-  }
-
-  for (const child of Object.values(value)) {
-    collectContentChunkNames(child, chunks);
-  }
-}
-
-async function readContentChunkNames(manifestPath) {
-  const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
-  const chunks = new Set();
-  collectContentChunkNames(manifest, chunks);
-
-  if (chunks.size === 0) {
-    throw new Error(`No content chunks found in ${manifestPath}`);
-  }
-
-  return [...chunks];
-}
-
-async function fetchAsset({
-  expectJavaScript,
+async function fetchHtmlPage({
   fetchImpl,
   requestTimeoutMs,
   url,
@@ -43,9 +15,7 @@ async function fetchAsset({
     let response;
     try {
       response = await fetchImpl(url, {
-        headers: expectJavaScript
-          ? {Accept: 'application/javascript'}
-          : {Accept: 'text/html'},
+        headers: {Accept: 'text/html'},
         signal: controller.signal,
       });
       await response.arrayBuffer();
@@ -60,13 +30,11 @@ async function fetchAsset({
       throw new Error(`${url} returned HTTP ${response.status}`);
     }
 
-    if (expectJavaScript) {
-      const contentType = response.headers.get('content-type') ?? '';
-      if (!/(?:java|ecma)script/i.test(contentType)) {
-        throw new Error(
-          `${url} expected JavaScript but received ${contentType || 'no Content-Type'}`,
-        );
-      }
+    const contentType = response.headers.get('content-type') ?? '';
+    if (!/text\/html/i.test(contentType)) {
+      throw new Error(
+        `${url} expected HTML but received ${contentType || 'no Content-Type'}`,
+      );
     }
   } finally {
     clearTimeout(timeout);
@@ -76,41 +44,43 @@ async function fetchAsset({
 export async function checkPreviewSite({
   baseUrl,
   fetchImpl = globalThis.fetch,
-  manifestPath,
   requestTimeoutMs = DEFAULT_REQUEST_TIMEOUT_MS,
+  routes,
 }) {
-  const contentChunks = await readContentChunkNames(manifestPath);
-  const assets = [
-    {expectJavaScript: false, url: `${baseUrl}/`},
-    {expectJavaScript: true, url: `${baseUrl}/runtime~main.js`},
-    ...contentChunks.map((chunkName) => ({
-      expectJavaScript: true,
-      url: `${baseUrl}/${chunkName}.js`,
-    })),
-  ];
-
   await Promise.all(
-    assets.map((asset) =>
-      fetchAsset({
-        ...asset,
+    routes.map((route) =>
+      fetchHtmlPage({
         fetchImpl,
         requestTimeoutMs,
+        url: new URL(route, `${baseUrl}/`).href,
       }),
     ),
   );
 }
 
-export async function checkLocalPreviews() {
+export async function checkLocalPreviews({
+  fetchImpl = globalThis.fetch,
+} = {}) {
   await Promise.all([
     checkPreviewSite({
       baseUrl: 'http://localhost:3000',
-      manifestPath: resolve('.docusaurus/routesChunkNames.json'),
+      fetchImpl,
+      routes: [
+        '/',
+        '/app-guide/',
+        '/zh-Hant/app-guide/',
+        '/en/app-guide/',
+      ],
     }),
     checkPreviewSite({
       baseUrl: 'http://localhost:3001',
-      manifestPath: resolve(
-        'admin-guide/.docusaurus/routesChunkNames.json',
-      ),
+      fetchImpl,
+      routes: [
+        '/',
+        '/users/customers/',
+        '/zh-Hant/users/customers/',
+        '/en/users/customers/',
+      ],
     }),
   ]);
 }

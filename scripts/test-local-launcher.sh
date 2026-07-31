@@ -84,8 +84,8 @@ EOF
   cat >"$FAKE_BIN/npm" <<'EOF'
 #!/usr/bin/env bash
 case "$*" in
-  *"start:user"*) service="user" ;;
-  *"start:admin"*) service="admin" ;;
+  *"preview:user"*) service="user" ;;
+  *"preview:admin"*) service="admin" ;;
   *) service="unknown" ;;
 esac
 echo "npm $*" >>"$CALL_LOG"
@@ -146,8 +146,8 @@ run_happy_path_test() {
   wait "$LAUNCHER_PID" || true
   LAUNCHER_PID=""
 
-  assert_contains "$CALL_LOG" "npm run start:user -- --no-open"
-  assert_contains "$CALL_LOG" "npm run start:admin -- --no-open"
+  assert_contains "$CALL_LOG" "npm run preview:user -- --no-open"
+  assert_contains "$CALL_LOG" "npm run preview:admin -- --no-open"
   assert_contains "$CALL_LOG" "node scripts/check-local-preview-ready.mjs"
   local ready_check_count
   ready_check_count="$(
