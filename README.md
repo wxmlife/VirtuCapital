@@ -28,6 +28,12 @@ npm run publish
 
 脚本会构建两套网站、提交正式内容、推送 `main`，并更新 GitHub Pages。
 
+- APP 用户指南：<https://wxmlife.github.io/VirtuCapital/app-guide/>
+- 管理员手册：<https://wxmlife.github.io/VirtuCapital/admin/>
+- 管理员手册 Release 快捷入口：<https://github.com/wxmlife/VirtuCapital/releases/tag/Web>
+
+两套网站会合并为一次 GitHub Pages 部署，管理员手册位于 `admin/` 子目录。`Web` Release 不包含下载附件，只保存管理员手册在线网址，方便从仓库首页快速进入。
+
 ## 本地预览
 
 在 macOS Finder 中双击根目录的 `一键本地运行.command`，可同时启动 APP 用户端和管理员端。两个站点就绪后会自动在浏览器中打开：
@@ -71,7 +77,9 @@ npm run build:all
 npm run check:admin-routes
 ```
 
-用户站构建产物位于 `build/`，管理员站构建产物位于 `admin-guide/build/`。管理员站构建会自动检查简体中文、繁体中文和英文的全部页面路由；也可使用 `check:admin-routes` 单独复查现有构建。管理员口令只在当前浏览器标签会话内有效，关闭会话后需要重新输入；这只是前端访问提示，不能替代真正的身份认证。管理员站上线时必须另行配置身份认证、VPN 或访问白名单，不应直接部署到公开 GitHub Pages。
+用户站构建产物位于 `build/`，管理员站构建产物位于 `admin-guide/build/`。管理员站构建会自动检查简体中文、繁体中文和英文的全部页面路由；也可使用 `check:admin-routes` 单独复查现有构建。发布 GitHub Pages 时，管理员构建会复制到 `build/admin/` 后与用户站一起发布。
+
+管理员口令只在当前浏览器标签会话内有效，关闭会话后需要重新输入；这只是前端访问提示，不能替代真正的身份认证。当前 GitHub Pages 仅用于临时公开预览，不得放入敏感资料；正式上线时必须改用身份认证、VPN 或访问白名单。
 
 ## 推荐写作规范
 
