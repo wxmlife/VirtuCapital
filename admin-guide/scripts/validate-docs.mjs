@@ -69,6 +69,7 @@ const expectedEnterpriseOnboarding = new Map([
     'zh-Hans',
     {
       stages: [
+        '### 第 0 步：关联投资者',
         '### 第 1 步：主体资料',
         '### 第 2 步：财务与结构',
         '### 第 3 步：合规与账户',
@@ -76,13 +77,14 @@ const expectedEnterpriseOnboarding = new Map([
         '### 第 5 步：文件签署',
       ],
       stagePattern: /^### 第 \d+ 步：.+$/gm,
-      boundaryHeading: '### 草稿与提交边界',
+      statusHeading: '### 提交状态',
     },
   ],
   [
     'zh-Hant',
     {
       stages: [
+        '### 第 0 步：關聯投資者',
         '### 第 1 步：主體資料',
         '### 第 2 步：財務與結構',
         '### 第 3 步：合規與帳戶',
@@ -90,13 +92,14 @@ const expectedEnterpriseOnboarding = new Map([
         '### 第 5 步：文件簽署',
       ],
       stagePattern: /^### 第 \d+ 步：.+$/gm,
-      boundaryHeading: '### 草稿與提交邊界',
+      statusHeading: '### 提交狀態',
     },
   ],
   [
     'en',
     {
       stages: [
+        '### Step 0: Link an Investor',
         '### Step 1: Company Profile',
         '### Step 2: Finance and Structure',
         '### Step 3: Compliance and Accounts',
@@ -104,13 +107,10 @@ const expectedEnterpriseOnboarding = new Map([
         '### Step 5: Document Signing',
       ],
       stagePattern: /^### Step \d+: .+$/gm,
-      boundaryHeading: '### Draft and Submission Boundaries',
+      statusHeading: '### Submission Status',
     },
   ],
 ]);
-
-const enterpriseBoundaryMarker =
-  '<!-- enterprise-onboarding-submission-boundary: authorized-review-required -->';
 
 const errors = [];
 const sequences = new Map();
@@ -145,6 +145,28 @@ function sha256(path) {
 
 function sameList(left, right) {
   return JSON.stringify(left) === JSON.stringify(right);
+}
+
+function extractImageTargets(text) {
+  const references = [];
+
+  for (const match of text.matchAll(/!\[[^\]]*]\(([^)]+)\)/g)) {
+    let target = match[1].trim();
+    if (target.startsWith('<') && target.endsWith('>')) {
+      target = target.slice(1, -1);
+    }
+    references.push({index: match.index, target});
+  }
+
+  const imgPattern =
+    /<img\b[^>]*?\bsrc\s*=\s*(?:\{require\(\s*(['"])([^'"]+)\1\s*\)\.default\}|(['"])([^'"]+)\3)[^>]*>/g;
+  for (const match of text.matchAll(imgPattern)) {
+    references.push({index: match.index, target: match[2] ?? match[4]});
+  }
+
+  return references
+    .sort((left, right) => left.index - right.index)
+    .map(({target}) => target);
 }
 
 for (const locale of ['zh-Hant', 'en']) {
@@ -234,44 +256,31 @@ for (const {locale, docsDir} of roots) {
         );
       }
 
-      const markerCount = body.split(enterpriseBoundaryMarker).length - 1;
-      const markerIndex = body.indexOf(enterpriseBoundaryMarker);
-      const nextBoundaryLine =
-        markerIndex >= 0
-          ? body
-              .slice(markerIndex + enterpriseBoundaryMarker.length)
-              .split(/\r?\n/)
-              .find((line) => line.trim().length > 0)
-              ?.trim()
-          : undefined;
-      if (
-        markerCount !== 1 ||
-        nextBoundaryLine !== expectedWorkflow.boundaryHeading
-      ) {
+      const statusMatches = [...body.matchAll(/^### .+$/gm)].filter(
+        (match) => match[0] === expectedWorkflow.statusHeading,
+      );
+      if (statusMatches.length !== 1) {
         errors.push(
-          `${locale}/${rel}: enterprise onboarding submission boundary marker is missing or misplaced`,
+          `${locale}/${rel}: enterprise onboarding submission status heading is missing or duplicated`,
         );
       }
-      const finalStageSlotIndex = body.indexOf(
-        '<!-- screenshot-slot: customers-enterprise-onboarding-step-5-document-signing; status: placeholder -->',
+      const finalStageIndex = body.indexOf(
+        expectedWorkflow.stages[expectedWorkflow.stages.length - 1],
       );
+      const statusIndex = statusMatches[0]?.index ?? -1;
       if (
-        markerIndex >= 0 &&
-        finalStageSlotIndex >= 0 &&
-        markerIndex < finalStageSlotIndex
+        statusIndex >= 0 &&
+        finalStageIndex >= 0 &&
+        statusIndex < finalStageIndex
       ) {
         errors.push(
-          `${locale}/${rel}: enterprise onboarding submission boundary must follow Step 5`,
+          `${locale}/${rel}: enterprise onboarding submission status must follow Step 5`,
         );
       }
     }
 
     const imageNames = [];
-    for (const match of text.matchAll(/!\[[^\]]*]\(([^)]+)\)/g)) {
-      let target = match[1].trim();
-      if (target.startsWith('<') && target.endsWith('>')) {
-        target = target.slice(1, -1);
-      }
+    for (const target of extractImageTargets(text)) {
       if (/^(?:https?:|data:|#)/.test(target)) continue;
 
       const resolved = resolve(dirname(path), target);
@@ -369,5 +378,5 @@ if (errors.length) {
 }
 
 console.log(
-  `Validated 15 documents, ${expectedV102.length} V102 assets, and screenshot placeholders in zh-Hans, zh-Hant, and en.`,
+  `Validated 15 documents, ${expectedV102.length} V102 assets, image references, and localized structure in zh-Hans, zh-Hant, and en.`,
 );

@@ -8,12 +8,12 @@ sidebar_position: 2
 客户管理用于查看个人 KYC、企业 KYB、开户资料和开户进度；\
 「投资者」模块则更偏向交易账户及资产管理。
 
-## 个人用户
+## 个人用户开户
 
 可按姓名、手机号、邮箱或 VC User ID 搜索，并按开户状态筛选。\
 列表展示用户信息、联系方式、首选语言、开户状态、Sumsub 状态、资料预览、注册时间和详情入口。
 
-![个人客户列表](../assets/V102/customers-personal-list.png)
+<img src={require('../assets/V102/customers-personal-list.png').default} alt="个人客户列表" style={{ display: 'block', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
 
 ### 个人用户资料
 
@@ -28,21 +28,22 @@ sidebar_position: 2
 | **文件签署** | 个人版开户申请表、CRS税务表、W-8BEN税务表 签名资料 |
 | **手续费配置** | 手续费配置，可以**修改**用户的各项手续费 |
 
-![个人客户详情](../assets/V102/customers-personal-detail.png)
+<img src={require('../assets/V102/customers-personal-detail.png').default} alt="个人客户详情" style={{ display: 'block', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
 
 > ⚠️ 证件影像、联系资料、财务数据等属于敏感信息，仅应在业务需要范围内查看和使用。
 
-## 企业用户
+## 企业用户开户
 
 ### 企业用户资料
 
-企业列表支持按公司名称、注册号、联系人、邮箱、手机号或 VC 用户 ID 搜索，并可按资料或开户状态筛选。
+- 企业列表支持按公司名称、注册号、联系人、邮箱、手机号或 VC 用户 ID 搜索，并可按资料或开户状态筛选。
+- 开户状态包括：全部、草稿、文件生成中、待签署、开户完成中、生成失败、已开户
 
-![企业客户列表](../assets/V102/customers-enterprise-list.png)
+<img src={require('../assets/V102/customers-enterprise-list.png').default} alt="企业客户列表" style={{ display: 'block', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
 
-列表展示公司信息、联系方式、企业类型与注册地、资料状态、开户状态、创建时间和操作入口。先用公司名称和注册号确认记录，再打开操作菜单。
+列表展示公司信息、联系方式、企业类型与注册地、资料状态、开户状态、创建时间和操作入口。
 
-![企业客户操作菜单](../assets/V102/customers-enterprise-actions.png)
+<img src={require('../assets/V102/customers-enterprise-actions.png').default} alt="企业客户操作菜单" style={{ display: 'block', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
 
 可见操作以记录状态为准：
 
@@ -54,7 +55,7 @@ sidebar_position: 2
 
 ### 开始前准备
 
-办理前准备经过批准的企业资料。不要使用未授权的真实文件进行演示或测试。
+办理前准备经过批准的企业资料。
 
 - 企业法定名称、类型、注册司法管辖区、成立日期和注册编号；
 - 注册、营业及通讯地址；
@@ -66,14 +67,21 @@ sidebar_position: 2
 
 ### 进入、保存与恢复
 
-1. 在「企业用户」列表点击「企业开户」，或对已有草稿选择「继续开户」；
-2. 顶部步骤栏显示当前阶段：**主体资料 → 财务与结构 → 合规与账户 → 税务与文件 → 文件签署**；
-3. 「保存草稿」保存当前已填内容，适合暂时离开；
-4. 「保存并下一步」先校验当前阶段的必填项，再进入下一阶段；
-5. 使用「上一步」返回时，先保存当前修改；
-6. 重新进入列表后，从同一草稿继续，先检查阶段、字段和已上传文件是否完整。
+1. 在「企业用户」列表点击「企业开户」；
+2. 关联投资者，为其进行开户；
+3. 步骤栏显示当前阶段：**主体资料 → 财务与结构 → 合规与账户 → 税务与文件 → 文件签署**；
+4. 「保存草稿」保存当前已填内容，适合暂时离开；
+5. 「保存并下一步」先校验当前阶段的必填项，再进入下一阶段；
+6. 使用「上一步」返回时，先保存当前修改；
+7. 重新进入列表后，从同一草稿继续，先检查阶段、字段和已上传文件是否完整。
 
 带 `*` 的字段为当前阶段必填项。校验未通过时，应按页面提示逐项修正，不要用无意义字符绕过校验。
+
+### 第 0 步：关联投资者
+
+搜索手机/邮箱/UID，关联投资者，为其进行开户；
+
+<img src={require('../assets/V102/costomers-e-open-connectVC.png').default} alt="企业开户第 0 步：关联投资者" style={{ display: 'block', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
 
 ### 第 1 步：主体资料
 
@@ -88,58 +96,65 @@ sidebar_position: 2
 | **业务性质** | 业务性质、主要业务说明和经营年限 |
 | **联系人** | 联系人姓名、邮箱、区号与电话、办公室电话、可选传真、结单邮箱和补充信息 |
 
-![企业开户第 1 步：主体资料](../assets/V102/customers-enterprise-onboarding-step-1-main.jpg)
+<img src={require('../assets/V102/costomer-e-s1.png').default} alt="企业开户第 1 步：主体资料" style={{ display: 'block', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
 
 ### 第 2 步：财务与结构
 
 该阶段用于说明企业财务状况及控制结构。按当前页面填写财务概况、资金或财富来源，并逐项登记董事、股东和最终受益人。
 
+:::warning
 - 通过「新增」类控件添加多人或多层结构时，每一项都应使用独立资料；
 - 持股或控制比例的合计应与企业结构文件一致；
 - 同一自然人同时担任董事、股东或最终受益人时，仍应按页面要求在对应区块申报；
-- 删除重复条目前先确认不会破坏比例、控制人或必填项校验。
+:::
 
-<!-- screenshot-slot: customers-enterprise-onboarding-step-2-finance-and-structure; status: placeholder -->
-> 📷 **截图待补：第 2 步「财务与结构」。**
+<img src={require('../assets/V102/costomer-e-s2.png').default} alt="企业开户第 2 步：财务与结构" style={{ display: 'block', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
 
 ### 第 3 步：合规与账户
 
 该阶段用于记录合规声明、预期账户用途和账户相关选择。逐项阅读问题，根据获批资料作答，并核对账户联系人或结算资料。
 
-- 不确定的合规问题不得凭猜测选择；
-- 涉及受制裁地区、政治公众人物、受监管业务或第三方资金时，应暂停并交由合规人员处理；
+:::warning
 - 此阶段的“账户”选择只是开户申请资料，不代表账户已经创建或获批。
+- 涉及受制裁地区、政治公众人物、受监管业务或第三方资金时，应暂停并交由合规人员处理；
+:::
 
-<!-- screenshot-slot: customers-enterprise-onboarding-step-3-compliance-and-accounts; status: placeholder -->
-> 📷 **截图待补：第 3 步「合规与账户」。**
+<img src={require('../assets/V102/costomer-e-s3.png').default} alt="企业开户第 3 步：合规与账户" style={{ display: 'block', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
 
 ### 第 4 步：税务与文件
 
 填写税务居住地、税号或页面要求的税务声明，并上传当前界面列出的企业文件。
 
+:::warning
 1. 文件名称、公司名称和有效期应与主体资料一致；
 2. 上传前确认文件清晰、完整、未加无关密码且属于该企业；
 3. 仅上传获授权的正式文件；测试环境只使用批准的测试文件；
 4. 页面显示已接收或上传成功后，再进入下一步；
 5. 更换文件时确认旧文件是否已被替换，避免同时保留冲突版本。
+:::
 
-<!-- screenshot-slot: customers-enterprise-onboarding-step-4-tax-and-documents; status: placeholder -->
-> 📷 **截图待补：第 4 步「税务与文件」。**
+<img src={require('../assets/V102/costomer-e-s4.png').default} alt="企业开户第 4 步：税务与文件" style={{ display: 'block', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
 
 ### 第 5 步：文件签署
 
 最后阶段用于复核待签文件和执行获授权的签署流程。
 
+:::warning
 - 核对企业名称、签署人身份、协议版本和语言；
 - 确认签署人具有有效授权，且所有前置审批已完成；
 - 发现资料错误时返回对应阶段修改并重新复核；
-- 未获授权时只能查看和保存草稿，不得勾选同意、签名或最终提交。
+- 确认无误后，签名与最终提交。
+:::
 
-<!-- screenshot-slot: customers-enterprise-onboarding-step-5-document-signing; status: placeholder -->
-> 📷 **截图待补：第 5 步「文件签署」（签署与提交前）。**
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: '16px', justifyItems: 'start' }}>
+  <img src={require('../assets/V102/costomer-e-s5.png').default} alt="企业开户第 5 步：文件签署" style={{ display: 'block', width: '100%', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
+  <img src={require('../assets/V102/costomer-e-s5onlinesign.png').default} alt="企业开户：在线签署" style={{ display: 'block', width: '100%', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
+  <img src={require('../assets/V102/costomer-e-s5onlinesignfull.png').default} alt="企业开户：在线签署文件" style={{ display: 'block', width: '100%', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
+  <img src={require('../assets/V102/costomer-e-s5onlinesignfull2.png').default} alt="企业开户：完成在线签署" style={{ display: 'block', width: '100%', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
+  <img src={require('../assets/V102/costomer-e-s5over.png').default} alt="企业开户：签署完成" style={{ display: 'block', width: '100%', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
+</div>
 
-<!-- enterprise-onboarding-submission-boundary: authorized-review-required -->
-### 草稿与提交边界
+### 提交状态
 
 | 状态 | 处理方式 |
 | --- | --- |

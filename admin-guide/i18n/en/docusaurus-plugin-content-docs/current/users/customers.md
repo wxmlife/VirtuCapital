@@ -9,11 +9,11 @@ sidebar_position: 2
 
 Customer Management is used to view individual KYC, enterprise KYB, onboarding information, and onboarding progress. The “Investors” module focuses more on trading accounts and asset management.
 
-## Individual Users
+## Individual User Onboarding
 
 Search by name, mobile number, email, or VC User ID, and filter by onboarding status. The list shows user information, contact details, preferred language, onboarding status, Sumsub status, profile preview, registration time, and a link to the details.
 
-![Individual customer list](../assets/V102/customers-personal-list.png)
+<img src={require('../assets/V102/customers-personal-list.png').default} alt="Individual customer list" style={{ display: 'block', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
 
 ### Individual User Information
 
@@ -28,21 +28,22 @@ After opening the details page, verify the following sections:
 | **Document signing** | Individual account-opening application, CRS tax form, W-8BEN tax form, and signature information |
 | **Fee configuration** | Fee configuration; the user’s fees can be **edited** |
 
-![Individual customer details](../assets/V102/customers-personal-detail.png)
+<img src={require('../assets/V102/customers-personal-detail.png').default} alt="Individual customer details" style={{ display: 'block', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
 
 > ⚠️ Document images, contact details, and financial data are sensitive information. View and use them only when required for the business task.
 
-## Enterprise Users
+## Enterprise User Onboarding
 
 ### Enterprise User Information
 
-Search the enterprise list by company name, registration number, contact person, email, mobile number, or VC User ID, and filter by profile status or onboarding status.
+- Search the enterprise list by company name, registration number, contact person, email, mobile number, or VC User ID, and filter by profile status or onboarding status.
+- Onboarding statuses include All, Draft, Generating Documents, Pending Signature, Opening Account, Generation Failed, and Account Opened.
 
-![Enterprise customer list](../assets/V102/customers-enterprise-list.png)
+<img src={require('../assets/V102/customers-enterprise-list.png').default} alt="Enterprise customer list" style={{ display: 'block', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
 
-The list shows company information, contact details, enterprise type and jurisdiction of registration, profile status, onboarding status, creation time, and available actions. Confirm the record using the company name and registration number before opening the action menu.
+The list shows company information, contact details, enterprise type and jurisdiction of registration, profile status, onboarding status, creation time, and available actions.
 
-![Enterprise customer action menu](../assets/V102/customers-enterprise-actions.png)
+<img src={require('../assets/V102/customers-enterprise-actions.png').default} alt="Enterprise customer action menu" style={{ display: 'block', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
 
 Available actions depend on the record status:
 
@@ -54,7 +55,7 @@ Available actions depend on the record status:
 
 ### Preparation
 
-Prepare approved enterprise information before starting. Do not use unauthorized real documents for demonstrations or testing.
+Prepare approved enterprise information before starting.
 
 - Legal company name, entity type, jurisdiction of registration, date of incorporation, and registration number;
 - Registered, business, and correspondence addresses;
@@ -66,14 +67,21 @@ Prepare approved enterprise information before starting. Do not use unauthorized
 
 ### Enter, Save, and Resume
 
-1. In the “Enterprise Users” list, click “Enterprise Onboarding,” or select “Continue Onboarding” for an existing draft.
-2. The step bar at the top shows the current stage: **Company Profile → Finance and Structure → Compliance and Accounts → Tax and Documents → Document Signing**.
-3. “Save Draft” saves the content entered so far and is appropriate when leaving temporarily.
-4. “Save & Next” validates the required fields in the current stage before moving to the next stage.
-5. Save current changes before using “Previous” to go back.
-6. After returning to the list, resume the same draft and first check whether the stage, fields, and uploaded files are complete.
+1. In the “Enterprise Users” list, click “Enterprise Onboarding.”
+2. Link an investor to begin onboarding for that investor.
+3. The step bar shows the current stage: **Company Profile → Finance and Structure → Compliance and Accounts → Tax and Documents → Document Signing**.
+4. “Save Draft” saves the content entered so far and is appropriate when leaving temporarily.
+5. “Save & Next” validates the required fields in the current stage before moving to the next stage.
+6. Save current changes before using “Previous” to go back.
+7. After returning to the list, resume the same draft and first check whether the stage, fields, and uploaded files are complete.
 
 Fields marked with `*` are required in the current stage. If validation fails, correct each item according to the page prompts; do not use meaningless characters to bypass validation.
+
+### Step 0: Link an Investor
+
+Search by mobile number, email, or UID, then link the investor for whom enterprise onboarding will be completed.
+
+<img src={require('../assets/V102/costomers-e-open-connectVC.png').default} alt="Enterprise onboarding Step 0: Link an Investor" style={{ display: 'block', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
 
 ### Step 1: Company Profile
 
@@ -88,58 +96,65 @@ Enter the enterprise’s identity, address, business, and contact information.
 | **Nature of business** | Nature of business, principal-business description, and years in operation |
 | **Contact person** | Contact name, email, country/area code and telephone number, office telephone number, optional fax, statement email, and supplementary information |
 
-![Enterprise onboarding Step 1: Company Profile](../assets/V102/customers-enterprise-onboarding-step-1-main.jpg)
+<img src={require('../assets/V102/costomer-e-s1.png').default} alt="Enterprise onboarding Step 1: Company Profile" style={{ display: 'block', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
 
 ### Step 2: Finance and Structure
 
 This stage records the enterprise’s financial position and control structure. Complete the financial profile and sources of funds or wealth shown on the current page, then register each director, shareholder, and ultimate beneficial owner.
 
+:::warning
 - When using “Add” controls to enter multiple people or multiple layers, use separate information for every entry.
 - Total ownership or control percentages must agree with the enterprise’s structure documents.
 - If the same natural person is a director, shareholder, and/or ultimate beneficial owner, disclose that person in each corresponding section as required by the page.
-- Before deleting a duplicate entry, confirm that doing so will not break percentage, controller, or required-field validation.
+:::
 
-<!-- screenshot-slot: customers-enterprise-onboarding-step-2-finance-and-structure; status: placeholder -->
-> 📷 **Screenshot pending: Step 2, “Finance and Structure.”**
+<img src={require('../assets/V102/costomer-e-s2.png').default} alt="Enterprise onboarding Step 2: Finance and Structure" style={{ display: 'block', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
 
 ### Step 3: Compliance and Accounts
 
 This stage records compliance declarations, the expected use of the account, and account-related selections. Read each question, answer it using approved information, and verify the account contact or settlement details.
 
-- Do not guess when answering an uncertain compliance question.
-- If the information involves sanctioned jurisdictions, politically exposed persons, regulated activities, or third-party funds, stop and refer the case to compliance personnel.
+:::warning
 - “Account” selections in this stage are onboarding-application information; they do not mean that an account has been created or approved.
+- If the information involves sanctioned jurisdictions, politically exposed persons, regulated activities, or third-party funds, stop and refer the case to compliance personnel.
+:::
 
-<!-- screenshot-slot: customers-enterprise-onboarding-step-3-compliance-and-accounts; status: placeholder -->
-> 📷 **Screenshot pending: Step 3, “Compliance and Accounts.”**
+<img src={require('../assets/V102/costomer-e-s3.png').default} alt="Enterprise onboarding Step 3: Compliance and Accounts" style={{ display: 'block', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
 
 ### Step 4: Tax and Documents
 
 Enter the tax residence, tax identification number, or tax declarations required by the page, and upload the enterprise documents listed in the current interface.
 
+:::warning
 1. File names, company names, and validity periods must agree with the entity information.
 2. Before uploading, confirm that each file is clear, complete, not protected by an unrelated password, and belongs to the enterprise.
 3. Upload only authorized official documents. In a test environment, use only approved test files.
 4. Move to the next stage only after the page shows that the file has been received or uploaded successfully.
 5. When replacing a file, confirm whether the old file has been replaced so that conflicting versions are not retained together.
+:::
 
-<!-- screenshot-slot: customers-enterprise-onboarding-step-4-tax-and-documents; status: placeholder -->
-> 📷 **Screenshot pending: Step 4, “Tax and Documents.”**
+<img src={require('../assets/V102/costomer-e-s4.png').default} alt="Enterprise onboarding Step 4: Tax and Documents" style={{ display: 'block', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
 
 ### Step 5: Document Signing
 
 The final stage is used to review documents awaiting signature and complete the authorized signing workflow.
 
+:::warning
 - Verify the company name, signer identity, agreement version, and language.
 - Confirm that the signer has valid authorization and that all prerequisite approvals are complete.
 - If information is incorrect, return to the corresponding stage, correct it, and review it again.
-- Without authorization, you may only view and save a draft; do not accept terms, sign, or complete final submission.
+- After confirming that everything is correct, sign and complete the final submission.
+:::
 
-<!-- screenshot-slot: customers-enterprise-onboarding-step-5-document-signing; status: placeholder -->
-> 📷 **Screenshot pending: Step 5, “Document Signing” (before signing and submission).**
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: '16px', justifyItems: 'start' }}>
+  <img src={require('../assets/V102/costomer-e-s5.png').default} alt="Enterprise onboarding Step 5: Document Signing" style={{ display: 'block', width: '100%', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
+  <img src={require('../assets/V102/costomer-e-s5onlinesign.png').default} alt="Enterprise onboarding: Online Signing" style={{ display: 'block', width: '100%', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
+  <img src={require('../assets/V102/costomer-e-s5onlinesignfull.png').default} alt="Enterprise onboarding: Online Signing Document" style={{ display: 'block', width: '100%', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
+  <img src={require('../assets/V102/costomer-e-s5onlinesignfull2.png').default} alt="Enterprise onboarding: Complete Online Signing" style={{ display: 'block', width: '100%', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
+  <img src={require('../assets/V102/costomer-e-s5over.png').default} alt="Enterprise onboarding: Signing Complete" style={{ display: 'block', width: '100%', marginLeft: 0, marginRight: 'auto', objectPosition: 'left top' }} />
+</div>
 
-<!-- enterprise-onboarding-submission-boundary: authorized-review-required -->
-### Draft and Submission Boundaries
+### Submission Status
 
 | Status | Handling |
 | --- | --- |

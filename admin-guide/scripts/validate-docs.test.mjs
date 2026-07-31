@@ -58,13 +58,13 @@ function withFixture(run) {
   }
 }
 
-test('rejects a screenshot slot without an immediately following visible placeholder', () => {
+test('rejects a missing image referenced by an MDX require expression', () => {
   withFixture((fixtureDir) => {
     const path = resolve(fixtureDir, 'docs/users/customers.md');
     replaceRequired(
       path,
-      '<!-- screenshot-slot: customers-enterprise-onboarding-step-5-document-signing; status: placeholder -->\n> 📷 **截图待补：第 5 步「文件签署」（签署与提交前）。**',
-      '<!-- screenshot-slot: customers-enterprise-onboarding-step-5-document-signing; status: placeholder -->',
+      "require('../assets/V102/costomer-e-s5over.png').default",
+      "require('../assets/V102/costomer-e-s5-missing.png').default",
     );
 
     const result = runValidator(fixtureDir);
@@ -73,21 +73,24 @@ test('rejects a screenshot slot without an immediately following visible placeho
       0,
       `Validator unexpectedly passed:\n${result.stdout}${result.stderr}`,
     );
-    assert.match(result.stderr, /has no visible placeholder/);
+    assert.match(
+      result.stderr,
+      /missing image \.\.\/assets\/V102\/costomer-e-s5-missing\.png/,
+    );
   });
 });
 
 test('rejects an identically missing enterprise-onboarding stage in every locale', () => {
   withFixture((fixtureDir) => {
     const headings = [
-      ['docs/users/customers.md', '### 第 5 步：文件签署'],
+      ['docs/users/customers.md', '### 第 0 步：关联投资者'],
       [
         'i18n/zh-Hant/docusaurus-plugin-content-docs/current/users/customers.md',
-        '### 第 5 步：文件簽署',
+        '### 第 0 步：關聯投資者',
       ],
       [
         'i18n/en/docusaurus-plugin-content-docs/current/users/customers.md',
-        '### Step 5: Document Signing',
+        '### Step 0: Link an Investor',
       ],
     ];
     for (const [relativePath, heading] of headings) {
@@ -108,21 +111,20 @@ test('rejects an identically missing enterprise-onboarding stage in every locale
   });
 });
 
-test('rejects a submission-boundary block placed before enterprise-onboarding Step 5', () => {
+test('rejects a submission-status section placed before enterprise-onboarding Step 5', () => {
   withFixture((fixtureDir) => {
     const path = resolve(fixtureDir, 'docs/users/customers.md');
-    const boundaryBlock =
-      '<!-- enterprise-onboarding-submission-boundary: authorized-review-required -->\n### 草稿与提交边界';
+    const statusHeading = '### 提交状态';
     const text = readFileSync(path, 'utf8');
-    assert.ok(text.includes(boundaryBlock));
+    assert.ok(text.includes(statusHeading));
     assert.ok(text.includes('### 第 5 步：文件签署'));
     writeFileSync(
       path,
       text
-        .replace(`${boundaryBlock}\n`, '')
+        .replace(`${statusHeading}\n`, '')
         .replace(
           '### 第 5 步：文件签署',
-          `${boundaryBlock}\n\n### 第 5 步：文件签署`,
+          `${statusHeading}\n\n### 第 5 步：文件签署`,
         ),
     );
 
@@ -134,7 +136,7 @@ test('rejects a submission-boundary block placed before enterprise-onboarding St
     );
     assert.match(
       result.stderr,
-      /enterprise onboarding submission boundary must follow Step 5/,
+      /enterprise onboarding submission status must follow Step 5/,
     );
   });
 });
