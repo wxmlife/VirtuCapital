@@ -54,7 +54,11 @@ export default {
       copyright: `内部资料 · Copyright © ${new Date().getFullYear()} Virtu Capital.`
     },
     docs: {sidebar: {hideable: true, autoCollapseCategories: true}},
-    colorMode: {defaultMode: 'light', disableSwitch: false, respectPrefersColorScheme: true},
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: true,
+      respectPrefersColorScheme: false
+    },
     prism: {theme: prismThemes.github, darkTheme: prismThemes.dracula}
   }
 };
