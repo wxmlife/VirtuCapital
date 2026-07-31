@@ -12,7 +12,7 @@ const ADMIN_PASSCODE = '8888';
 export default function Root({children}) {
   const {i18n} = useDocusaurusContext();
   const logoUrl = useBaseUrl('/img/logo.png');
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [authState, setAuthState] = useState('checking');
   const [passcode, setPasscode] = useState('');
   const [error, setError] = useState('');
 
@@ -45,14 +45,18 @@ export default function Root({children}) {
   const copy = copies[i18n.currentLocale] ?? copies['zh-Hans'];
 
   useEffect(() => {
-    setIsAuthenticated(hasActiveAdminSession(window));
+    setAuthState(
+      hasActiveAdminSession(window)
+        ? 'authenticated'
+        : 'unauthenticated',
+    );
   }, []);
 
   function handleSubmit(event) {
     event.preventDefault();
     if (passcode.trim() === ADMIN_PASSCODE) {
       startAdminSession(window);
-      setIsAuthenticated(true);
+      setAuthState('authenticated');
       setError('');
       return;
     }
@@ -60,7 +64,11 @@ export default function Root({children}) {
     setError(copy.error);
   }
 
-  if (!isAuthenticated) {
+  if (authState === 'checking') {
+    return null;
+  }
+
+  if (authState === 'unauthenticated') {
     return (
       <main className="admin-auth-page">
         <form className="admin-auth-card" onSubmit={handleSubmit}>

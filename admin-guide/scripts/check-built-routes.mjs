@@ -1,4 +1,4 @@
-import {existsSync, readdirSync} from 'node:fs';
+import {existsSync, readFileSync, readdirSync} from 'node:fs';
 import {dirname, relative, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 
@@ -41,6 +41,13 @@ const expectedRoutes = locales.flatMap((locale) => {
 const missingRoutes = expectedRoutes.filter(
   (route) => !existsSync(resolve(buildDir, route)),
 );
+const serverRenderedPasscodeRoutes = expectedRoutes
+  .filter((route) => existsSync(resolve(buildDir, route)))
+  .filter((route) =>
+    /class=["'][^"']*\badmin-auth-(?:page|card)\b/.test(
+      readFileSync(resolve(buildDir, route), 'utf8'),
+    ),
+  );
 
 if (missingRoutes.length > 0) {
   console.error(
@@ -49,7 +56,21 @@ if (missingRoutes.length > 0) {
       .join('\n')}`,
   );
   process.exitCode = 1;
-} else {
+}
+
+if (serverRenderedPasscodeRoutes.length > 0) {
+  console.error(
+    `Administrator-guide build contains a server-rendered passcode form:\n${serverRenderedPasscodeRoutes
+      .map((route) => `- ${route}`)
+      .join('\n')}`,
+  );
+  process.exitCode = 1;
+}
+
+if (
+  missingRoutes.length === 0 &&
+  serverRenderedPasscodeRoutes.length === 0
+) {
   console.log(
     `Administrator-guide build verified: ${expectedRoutes.length} routes across ${locales.join(', ')}.`,
   );

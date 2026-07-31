@@ -25,15 +25,16 @@ function createStorage(initialEntries = []) {
 function createBrowserWindow({
   persistentAuthentication = false,
   sessionAuthentication = false,
+  sessionStorage,
 } = {}) {
   const authenticatedEntry = [[ADMIN_AUTH_SESSION_KEY, 'true']];
   return {
     localStorage: createStorage(
       persistentAuthentication ? authenticatedEntry : [],
     ),
-    sessionStorage: createStorage(
-      sessionAuthentication ? authenticatedEntry : [],
-    ),
+    sessionStorage:
+      sessionStorage ??
+      createStorage(sessionAuthentication ? authenticatedEntry : []),
   };
 }
 
@@ -61,4 +62,18 @@ test('keeps authentication only in the active tab session', () => {
     browserWindow.localStorage.getItem(ADMIN_AUTH_SESSION_KEY),
     null,
   );
+});
+
+test('keeps authentication across a full-page language navigation in one tab', () => {
+  const sharedSessionStorage = createStorage();
+  const simplifiedPage = createBrowserWindow({
+    sessionStorage: sharedSessionStorage,
+  });
+
+  startAdminSession(simplifiedPage);
+
+  const englishPage = createBrowserWindow({
+    sessionStorage: sharedSessionStorage,
+  });
+  assert.equal(hasActiveAdminSession(englishPage), true);
 });

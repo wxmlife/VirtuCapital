@@ -88,3 +88,25 @@ test('reports the exact missing localized route', () => {
     rmSync(buildDir, {recursive: true, force: true});
   }
 });
+
+test('rejects a build that server-renders the passcode form', () => {
+  const affectedRoute = 'en/users/customers/index.html';
+  const buildDir = createBuild();
+  try {
+    writeFileSync(
+      resolve(buildDir, affectedRoute),
+      '<!doctype html><main class="admin-auth-page"><form class="admin-auth-card"></form></main>',
+    );
+
+    const result = runChecker(buildDir);
+    assert.notEqual(
+      result.status,
+      0,
+      'Route checker unexpectedly accepted a server-rendered passcode form',
+    );
+    assert.match(result.stderr, /server-rendered passcode form/);
+    assert.match(result.stderr, new RegExp(affectedRoute));
+  } finally {
+    rmSync(buildDir, {recursive: true, force: true});
+  }
+});
