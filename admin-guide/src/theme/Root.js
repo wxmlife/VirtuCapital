@@ -5,6 +5,7 @@ import {
   hasActiveAdminSession,
   startAdminSession,
 } from '../auth-session.mjs';
+import DocImagePreview from './DocImagePreview';
 
 const ADMIN_PASSCODE = '8888';
 
@@ -85,5 +86,10 @@ export default function Root({children}) {
     );
   }
 
-  return children;
+  return (
+    <>
+      {children}
+      <DocImagePreview locale={i18n.currentLocale} />
+    </>
+  );
 }
